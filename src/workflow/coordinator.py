@@ -14,7 +14,7 @@ from PyQt5.QtCore import QObject, pyqtSignal, QTimer
 # Import the existing workflow step system
 try:
     from ..plugins.plugin_workflow_integration import WorkflowStepManager
-    from ..plugins.plugin_workflow_integration import BaseWorkflowStep
+    from .base_step import BaseWorkflowStep
     from ..plugins.plugin_manager import create_plugin_manager, PluginType
 except ImportError:
     try:

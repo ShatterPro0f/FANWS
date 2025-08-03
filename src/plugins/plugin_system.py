@@ -1456,7 +1456,7 @@ class PluginTemplateGenerator:
 """
 
 from typing import Dict, Any, List
-from src.plugin_system import WorkflowStepPlugin, PluginInfo, PluginType
+from src.plugins.plugin_system import WorkflowStepPlugin, PluginInfo, PluginType
 
 class {class_name}(WorkflowStepPlugin):
     """Custom workflow step plugin."""
@@ -1526,7 +1526,7 @@ PLUGIN_CLASS = {class_name}
 """
 
 from typing import Dict, Any, List
-from src.plugin_system import ContentGeneratorPlugin, PluginInfo, PluginType
+from src.plugins.plugin_system import ContentGeneratorPlugin, PluginInfo, PluginType
 
 class {class_name}(ContentGeneratorPlugin):
     """Custom content generator plugin."""
@@ -1570,7 +1570,7 @@ PLUGIN_CLASS = {class_name}
 """
 
 from typing import Dict, Any, List
-from src.plugin_system import ExportFormatPlugin, PluginInfo, PluginType
+from src.plugins.plugin_system import ExportFormatPlugin, PluginInfo, PluginType
 
 class {class_name}(ExportFormatPlugin):
     """Custom export format plugin."""
@@ -1625,7 +1625,7 @@ PLUGIN_CLASS = {class_name}
 """
 
 from typing import Dict, Any, List
-from src.plugin_system import TextProcessorPlugin, PluginInfo, PluginType
+from src.plugins.plugin_system import TextProcessorPlugin, PluginInfo, PluginType
 
 class {class_name}(TextProcessorPlugin):
     """Custom text processor plugin."""

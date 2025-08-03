@@ -14,12 +14,13 @@ from typing import Dict, Any, Optional, List, Callable
 
 from PyQt5.QtCore import QThread, pyqtSignal, QObject
 
-from ..core.error_handling_system import APIManager
-from ..core.error_handling_system import ProjectFileCache
+from ..system.api_manager import APIManager
+from ..system.memory_manager import ProjectFileCache
 from ..text.text_processing import SynonymCache
-from ..core.error_handling_system import project_file_path, create_backup, load_wordsapi_log, get_wordsapi_call_count, save_to_file
-from ..plugins.plugin_workflow_integration import NovelWritingWorkflowModular
-from ..workflow_steps.base_step import BaseWorkflowStep as WorkflowStep
+from ..core.utils import project_file_path
+from ..system.file_operations import create_backup, load_wordsapi_log, get_wordsapi_call_count, save_to_file
+from ..workflow.coordinator import NovelWritingWorkflowModular
+from ..workflow.steps.base_step import BaseWorkflowStep as WorkflowStep
 
 
 class AIWorkflowThread(QThread):

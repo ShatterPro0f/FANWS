@@ -7,7 +7,7 @@ Comprehensive structural planning and outline creation.
 import json
 import os
 import logging
-from ...plugins.plugin_workflow_integration import BaseWorkflowStep
+from .base_step import BaseWorkflowStep
 
 class Step04StructuralPlanning(BaseWorkflowStep):
     def execute(self) -> dict:

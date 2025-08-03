@@ -597,7 +597,7 @@ class ExportManagerWidget(QWidget):
 
         # Validate files
         try:
-            from src.export_formats import validate_export_files
+            from src.export_formats.validator import validate_export_files
             results = validate_export_files(export_files)
 
             # Display results

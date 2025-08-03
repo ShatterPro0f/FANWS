@@ -43,21 +43,20 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
 # Modular imports
-from src.error_handling_system import ErrorHandler, create_styled_message_box, ProjectError, APIError, FileOperationError
-from src.file_operations import (
+from src.core.error_handling_system import ErrorHandler, create_styled_message_box, ProjectError, APIError, FileOperationError
+from src.system.file_operations import (
     save_to_file, read_file, load_project_env, save_project_env,
     get_project_list, create_backup, load_synonym_cache, save_synonym_cache,
     load_wordsapi_log, save_wordsapi_log, log_wordsapi_call,
     get_wordsapi_call_count, validate_project_name, initialize_project_files
 )
-from src.utils import project_file_path
-from src.memory_manager import FileCache, ProjectFileCache, get_cache_manager
-from src.text_processing import SynonymCache, TextAnalyzer, get_text_analyzer, get_synonym_cache
-from src.module_compatibility import MARKDOWN_AVAILABLE, markdown2
-from src.api_manager import get_api_manager, APIManager
-from src.workflow_coordinator import NovelWritingWorkflowModular
-from src.input_validation import validator, InputType, APIProvider
-from src.atomic_backup import backup_manager, create_projects_backup, auto_backup_before_operation
+from src.core.utils import project_file_path
+from src.system.memory_manager import FileCache, ProjectFileCache, get_cache_manager
+from src.text.text_processing import SynonymCache, TextAnalyzer, get_text_analyzer, get_synonym_cache
+from src.system.module_compatibility import MARKDOWN_AVAILABLE, markdown2
+from src.system.api_manager import get_api_manager, APIManager
+from src.workflow.coordinator import NovelWritingWorkflowModular
+from src.system.input_validation import validator, InputType, APIProvider
 
 # Import AI content generation modules (now enhanced)
 from src.ai.content_generator import (
@@ -75,7 +74,7 @@ except ImportError:
 
 # Quality Manager (Consolidated)
 try:
-    from src.quality_manager import (
+    from src.system.quality_manager import (
         QualityManager, get_quality_manager
     )
     QUALITY_ASSURANCE_AVAILABLE = True
@@ -84,11 +83,11 @@ except ImportError:
     QUALITY_ASSURANCE_AVAILABLE = False
 
 try:
-    from src.error_handling_system import (
+    from src.core.error_handling_system import (
         initialize_error_handling_integration, get_error_integration,
         ErrorHandlingIntegration, handle_errors, error_context
     )
-    from src.error_handling_system import ErrorHandlingDashboard
+    from src.core.error_handling_system import ErrorHandlingDashboard
     ERROR_HANDLING_AVAILABLE = True
     print("✓ Advanced error handling system loaded successfully")
 except ImportError as e:
@@ -97,7 +96,7 @@ except ImportError as e:
 
 # Memory Manager (Consolidated)
 try:
-    from src.memory_manager import (
+    from src.system.memory_manager import (
         MemoryManager, get_memory_manager
     )
     from src.ui.analytics_ui import create_memory_management_dashboard
@@ -108,7 +107,7 @@ except ImportError as e:
     MEMORY_MANAGEMENT_AVAILABLE = False
 
 try:
-    from src.configuration_manager import (
+    from src.core.configuration_manager import (
         ConfigManager, get_global_config, initialize_global_config,
         create_configuration_compatibility_layer, initialize_configuration_migration
     )
@@ -120,7 +119,7 @@ except ImportError as e:
 
 # Per-project configuration management
 try:
-    from src.per_project_config_manager import PerProjectConfigManager, migrate_all_projects_to_isolation
+    from src.project.per_project_config_manager import PerProjectConfigManager, migrate_all_projects_to_isolation
     PER_PROJECT_CONFIG_AVAILABLE = True
 except ImportError:
     PER_PROJECT_CONFIG_AVAILABLE = False
@@ -128,7 +127,7 @@ except ImportError:
 
 # AI Provider Integration
 try:
-    from src.ai_provider_abstraction import (
+    from src.ai.ai_provider_abstraction import (
         MultiProviderConfig, ProviderConfig, initialize_multi_provider_ai,
         get_memory_integration
     )
@@ -151,11 +150,7 @@ except ImportError as e:
 
 # Database Integration
 try:
-    from src.database_manager import DatabaseManager, get_database_manager
-    from src.database_integration import (
-        DatabaseAnalyticsIntegration, DatabaseCollaborationIntegration,
-        get_db_analytics_integration, get_db_collaboration_integration
-    )
+    from src.database.database_manager import DatabaseManager, get_database_manager
     DATABASE_INTEGRATION_AVAILABLE = True
     print("✓ Database integration system loaded successfully")
 except ImportError as e:
@@ -164,7 +159,7 @@ except ImportError as e:
 
 # Analytics and Collaboration
 try:
-    from src.analytics_system import (
+    from src.analytics.analytics_system import (
         AnalyticsManager, create_analytics_manager, WritingSessionTracker,
         PerformanceAnalyzer, GoalTracker, AnalyticsIntegration
     )
@@ -175,7 +170,7 @@ except ImportError as e:
     WRITING_ANALYTICS_AVAILABLE = False
 
 try:
-    from src.collaborative_manager import (
+    from src.collaboration.features import (
         CollaborativeManager, CollaborationSession, TeamMember,
         create_collaborative_manager, CollaborativeIntegration
     )
@@ -198,7 +193,7 @@ except ImportError as e:
     ANALYTICS_UI_AVAILABLE = False
 
 try:
-    from src.ui.collaborative_ui import (
+    from src.ui.collaboration_notifications import (
         create_collaborative_ui, CollaborativeUI,
         CollaborativeDialog, TeamMemberWidget
     )
@@ -210,7 +205,7 @@ except ImportError as e:
 
 # Template Manager and Consolidation
 try:
-    from src.template_manager import (
+    from src.templates.template_manager import (
         TemplateManager, TemplateSystem, TemplateCollection,
         TemplateRecommendationEngine, TemplateVersionManager,
         create_template_manager, TemplateIntegration
@@ -223,7 +218,7 @@ except ImportError as e:
 
 # Advanced plugin system
 try:
-    from src.plugin_manager import (
+    from src.plugins.plugin_manager import (
         PluginManager, Plugin, PluginConfig,
         create_plugin_manager, PluginIntegration,
         initialize_plugin_system
@@ -235,7 +230,7 @@ except ImportError as e:
 
 # Performance and monitoring
 try:
-    from src.performance_monitor import (
+    from src.core.performance_monitor import (
         PerformanceMonitor, MemoryProfiler, CPUProfiler,
         NetworkMonitor, DiskIOMonitor, create_performance_monitor
     )
@@ -246,7 +241,7 @@ except ImportError as e:
 
 # Enhanced UI components
 try:
-    from src.main_gui import (
+    from src.ui.main_gui import (
         MainWindow, DesignSystem, Components, Animations,
         LayoutManager, create_modern_gui
     )
@@ -258,7 +253,7 @@ except ImportError as e:
 
 # Async operations
 try:
-    from src.async_operations import (
+    from src.system.async_operations import (
         AsyncManager, BackgroundTaskManager, ProgressTracker,
         AsyncWorkflowHandler, get_async_manager
     )
@@ -835,7 +830,8 @@ class FANWSWindow(FANWSMainWindow):
         """Save API keys with validation and backup"""
         try:
             # Create backup before making changes
-            backup_path = auto_backup_before_operation("api_key_update")
+            # backup_path = auto_backup_before_operation("api_key_update")  # TODO: Implement backup system
+            backup_path = None
             if backup_path:
                 logging.info(f"Created backup before API key update: {backup_path}")
 
@@ -1147,7 +1143,7 @@ class FANWSWindow(FANWSMainWindow):
     def initialize_workflow_manager(self):
         """Initialize the workflow manager"""
         try:
-            from src.workflow_coordinator import NovelWritingWorkflowModular
+            from src.workflow.coordinator import NovelWritingWorkflowModular
             self.novel_workflow = NovelWritingWorkflowModular()
 
             # Connect signals
@@ -1218,7 +1214,7 @@ class FANWSWindow(FANWSMainWindow):
         try:
             if hasattr(self, 'async_manager') and self.async_manager and not hasattr(self, 'async_workflow_manager'):
                 try:
-                    from src.workflow_coordinator import AsyncWorkflowOperations
+                    from src.workflow.coordinator import AsyncWorkflowOperations
                     self.async_workflow_manager = AsyncWorkflowOperations(self.novel_workflow)
                     print("✓ Async workflow manager initialized")
                 except ImportError:
@@ -1241,7 +1237,7 @@ class FANWSWindow(FANWSMainWindow):
         """Update sub-tone options based on selected tone."""
         try:
             # Import tone mappings
-            from src.constants import TONE_MAP
+            from src.core.constants import TONE_MAP
 
             selected_tone = self.tone_input.currentText()
             if selected_tone in TONE_MAP:
@@ -1676,8 +1672,8 @@ class FANWSWindow(FANWSMainWindow):
     def init_plugin_system(self):
         """Initialize the plugin system for extensibility and customization."""
         try:
-            from src.plugin_system import get_plugin_manager, PluginManager
-            from src.plugin_workflow_integration import PluginWorkflowIntegration
+            from src.plugins.plugin_system import get_plugin_manager, PluginManager
+            from src.plugins.plugin_workflow_integration import PluginWorkflowIntegration
 
             # Initialize plugin manager
             self._plugin_manager = get_plugin_manager()
@@ -1976,7 +1972,8 @@ class FANWSWindow(FANWSMainWindow):
                 return
 
             # Create backup before making changes to projects directory
-            backup_path = auto_backup_before_operation("project_creation")
+            # backup_path = auto_backup_before_operation("project_creation")  # TODO: Implement backup system
+            backup_path = None
             if backup_path:
                 logging.info(f"Created backup before project creation: {backup_path}")
 
@@ -2059,7 +2056,7 @@ class FANWSWindow(FANWSMainWindow):
     def init_multi_provider_ai_system(self):
         """Initialize multi-provider AI system (Phase 2.1 First Half)."""
         try:
-            if not AI_AVAILABLE:
+            if not AI_PROVIDERS_AVAILABLE:
                 print("⚠ Multi-provider AI system not available")
                 self.multi_provider_ai = None
                 return
@@ -2545,7 +2542,7 @@ class FANWSWindow(FANWSMainWindow):
     def _initialize_project_collaboration(self):
         """Initialize collaboration for the current project."""
         try:
-            from src.collaboration_system import UserRole
+            from src.collaboration.system import UserRole
 
             # Create project member entry for current user as owner
             success = self.collaborative_manager.invite_user_to_project(
@@ -2885,7 +2882,7 @@ class FANWSWindow(FANWSMainWindow):
         print("🔍 Testing All Workflow Steps...")
 
         try:
-            from src.workflow_steps import (
+            from src.workflow.steps import (
                 Step01Initialization, Step02SynopsisGeneration, Step03SynopsisRefinement,
                 Step04StructuralPlanning, Step05TimelineSynchronization, Step06IterativeWriting,
                 Step07UserReview, Step08RefinementLoop, Step09ProgressionManagement,

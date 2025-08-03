@@ -8,7 +8,7 @@ import os
 import json
 import logging
 from typing import Dict, Any
-from ...plugins.plugin_workflow_integration import BaseWorkflowStep
+from .base_step import BaseWorkflowStep
 
 class Step02SynopsisGeneration(BaseWorkflowStep):
     """

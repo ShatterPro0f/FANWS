@@ -10,7 +10,7 @@ import logging
 from datetime import datetime
 from typing import Dict, Any
 try:
-    from ...plugins.plugin_workflow_integration import BaseWorkflowStep
+    from .base_step import BaseWorkflowStep
 except ImportError:
     from base_step import BaseWorkflowStep
 

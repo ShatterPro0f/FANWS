@@ -11,7 +11,7 @@ import shutil
 import pickle
 from datetime import datetime, timedelta
 from typing import Dict, Any, List, Optional
-from ...plugins.plugin_workflow_integration import BaseWorkflowStep
+from .base_step import BaseWorkflowStep
 
 class Step10Recovery(BaseWorkflowStep):
     """

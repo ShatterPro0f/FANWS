@@ -29,7 +29,7 @@ except ImportError:
 from PyQt5.QtCore import QThread, pyqtSignal, QObject
 from ..database.database_manager import DatabaseManager
 from ..core.error_handling_system import ErrorHandler, APIError
-from ..core.error_handling_system import MemoryCache
+# from ..core.error_handling_system import MemoryCache  # MemoryCache not available
 
 class RateLimiter:
     """Rate limiter for API requests."""
@@ -307,7 +307,7 @@ class APIManager(QObject):
         super().__init__()
 
         self.db_manager = DatabaseManager()
-        self.memory_cache = MemoryCache(max_size=200, ttl_seconds=1800)  # 30 minutes
+        self.memory_cache = {}  # Simple dict cache instead of MemoryCache
         self.sqlite_cache = SQLiteCache()  # New SQLite cache with compression
         self.rate_limiters = {}
         self.api_keys = {}

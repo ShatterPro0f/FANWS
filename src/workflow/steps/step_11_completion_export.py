@@ -11,7 +11,7 @@ import shutil
 import zipfile
 from datetime import datetime
 from typing import Dict, Any, List
-from ...plugins.plugin_workflow_integration import BaseWorkflowStep
+from .base_step import BaseWorkflowStep
 
 class Step11CompletionExport(BaseWorkflowStep):
     def execute(self) -> dict:

@@ -9,7 +9,7 @@ import os
 import logging
 import re
 from datetime import datetime
-from ...plugins.plugin_workflow_integration import BaseWorkflowStep
+from .base_step import BaseWorkflowStep
 
 class Step08RefinementLoop(BaseWorkflowStep):
     def execute(self) -> dict:

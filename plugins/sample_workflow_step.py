@@ -3,8 +3,21 @@ Sample Workflow Step Plugin
 Demonstrates how to create a custom workflow step plugin for FANWS.
 """
 
+import sys
+import os
 from typing import Dict, Any, List
-from src.plugin_system import WorkflowStepPlugin, PluginInfo, PluginType
+
+# Add src to path for plugin imports
+plugin_dir = os.path.dirname(os.path.abspath(__file__))
+src_path = os.path.join(plugin_dir, '..', 'src')
+if src_path not in sys.path:
+    sys.path.insert(0, src_path)
+
+try:
+    from plugin_system import WorkflowStepPlugin, PluginInfo, PluginType
+except ImportError:
+    # Fallback for when running from src directory
+    from src.plugin_system import WorkflowStepPlugin, PluginInfo, PluginType
 
 class SampleWorkflowStepPlugin(WorkflowStepPlugin):
     """Sample workflow step plugin for demonstration."""

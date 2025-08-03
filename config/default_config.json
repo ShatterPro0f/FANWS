@@ -39,17 +39,17 @@
     "name": "fanws_dev"
   },
   "project": {
-    "idea": "None",
+    "idea": "",
     "tone": "Formal",
     "sub_tone": "Neutral",
     "theme": "Adventure",
     "soft_target": 250000,
-    "reading_level": "College",
-    "thesaurus_weight": 0.5,
-    "characters_seed": "None",
-    "world_seed": "None",
-    "themes_seed": "None",
-    "structure_seed": "None",
+    "reading_level": "Elementary",
+    "thesaurus_weight": 0.3,
+    "characters_seed": "",
+    "world_seed": "",
+    "themes_seed": "",
+    "structure_seed": "25 chapters, 5 sections each",
     "custom_prompt": ""
   },
   "workflow": {

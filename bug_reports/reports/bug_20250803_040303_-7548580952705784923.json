@@ -1,0 +1,197 @@
+{
+  "id": "bug_20250803_040303_-7548580952705784923",
+  "timestamp": "2025-08-03T04:03:03.376562",
+  "version": "version = \"1.0.0\"",
+  "user_data": {
+    "title": "Exception: ValueError",
+    "description": "Exception occurred: Test exception for bug reporting\n\nContext: Test context\n\nTraceback:\nTraceback (most recent call last):\n  File \"C:\\Users\\samue\\Documents\\FANWS\\test_advanced_features.py\", line 125, in test_bug_reporting\n    raise ValueError(\"Test exception for bug reporting\")\nValueError: Test exception for bug reporting\n",
+    "category": "Exception",
+    "priority": "High",
+    "automatic": true
+  },
+  "system_info": {
+    "platform": {
+      "system": "Windows",
+      "release": "10",
+      "version": "10.0.19045",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 94 Stepping 3, GenuineIntel"
+    },
+    "python": {
+      "version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+      "executable": "C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "platform": "win32"
+    },
+    "memory": {
+      "total": 34318786560,
+      "available": 17847537664,
+      "used": 16471146496,
+      "percent": 48.0
+    },
+    "disk": {
+      "total": 1024085454848,
+      "free": 504806629376,
+      "used": 519278825472
+    },
+    "cpu": {
+      "count": 8,
+      "percent": 13.0
+    }
+  },
+  "environment": {
+    "python_packages": [
+      "aiofiles==24.1.0",
+      "aiohappyeyeballs==2.6.1",
+      "aiohttp==3.12.13",
+      "aiosignal==1.4.0",
+      "attrs==25.3.0",
+      "certifi==2025.6.15",
+      "charset-normalizer==3.4.2",
+      "click==8.2.2",
+      "cmudict==1.0.33",
+      "colorama==0.4.6",
+      "contourpy==1.3.3",
+      "cycler==0.12.1",
+      "EbookLib==0.19",
+      "fonttools==4.59.0",
+      "frozenlist==1.7.0",
+      "greenlet==3.2.3",
+      "idna==3.10",
+      "importlib_metadata==8.7.0",
+      "importlib_resources==6.5.2",
+      "iniconfig==2.1.0",
+      "joblib==1.5.1",
+      "kiwisolver==1.4.8",
+      "lxml==6.0.0",
+      "lz4==4.4.4",
+      "markdown2==2.5.3",
+      "matplotlib==3.10.5",
+      "MouseInfo==0.1.3",
+      "multidict==6.6.3",
+      "nltk==3.9.1",
+      "numpy==2.2.6",
+      "opencv-python==4.12.0.88",
+      "packaging==25.0",
+      "pdfkit==1.0.0",
+      "pillow==11.3.0",
+      "pip==25.2",
+      "pluggy==1.6.0",
+      "propcache==0.3.2",
+      "psutil==7.0.0",
+      "PyAutoGUI==0.9.54",
+      "PyGetWindow==0.0.9",
+      "Pygments==2.19.2",
+      "PyMsgBox==1.0.9",
+      "pyparsing==3.2.3",
+      "pyperclip==1.9.0",
+      "pyphen==0.17.2",
+      "PyQt5==5.15.11",
+      "PyQt5-Qt5==5.15.2",
+      "PyQt5_sip==12.17.0",
+      "PyQtWebEngine==5.15.7",
+      "PyQtWebEngine-Qt5==5.15.2",
+      "PyRect==0.2.0",
+      "PyScreeze==1.0.1",
+      "pytest==8.4.1",
+      "python-dateutil==2.9.0.post0",
+      "python-docx==1.2.0",
+      "python-dotenv==1.1.1",
+      "pytweening==1.2.0",
+      "PyYAML==6.0.2",
+      "regex==2025.7.34",
+      "reportlab==4.4.2",
+      "requests==2.32.4",
+      "responses==0.25.7",
+      "scikit-learn==1.7.1",
+      "scipy==1.16.1",
+      "setuptools==80.9.0",
+      "six==1.17.0",
+      "SQLAlchemy==2.0.42",
+      "tenacity==9.1.2",
+      "textstat==0.7.7",
+      "threadpoolctl==3.6.0",
+      "tqdm==4.67.1",
+      "typing_extensions==4.14.1",
+      "urllib3==2.5.0",
+      "yarl==1.20.1",
+      "zipp==3.23.0"
+    ],
+    "environment_vars": {
+      "PATH": "C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyQt5\\Qt5\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR;C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\Scripts;C:\\Program Files\\Git\\cmd;C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\;C:\\Users\\samue\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samue\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;c:\\Users\\samue\\.vscode\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts;c:\\Users\\samue\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand",
+      "PYTHONPATH": "",
+      "HOME": "",
+      "USER": ""
+    },
+    "working_directory": "C:\\Users\\samue\\Documents\\FANWS",
+    "command_line": "test_advanced_features.py",
+    "git": {
+      "branch": "main",
+      "commit": "4b626d0d"
+    }
+  },
+  "logs": [
+    {
+      "file": "error_tracker.log",
+      "size": 26953,
+      "content": "2025-08-02 17:50:06,436 - ErrorTracker - INFO - Error monitoring started\n2025-08-02 17:50:06,886 - ErrorTracker - ERROR - Error reported: ImportError_test_component_5582 - Test module not found\n2025-08-02 17:50:06,887 - ErrorTracker - ERROR - Error reported: FileNotFoundError_test_component_2560 - Test file not found\n2025-08-02 17:50:06,887 - ErrorTracker - ERROR - Error reported: ValueError_test_component_573 - Test validation error\n2025-08-02 17:50:06,888 - ErrorTracker - ERROR - Error reported: KeyError_test_component_1649 - 'test_key'\n2025-08-02 17:50:06,888 - ErrorTracker - ERROR - Error reported: RuntimeError_test_component_2997 - Test runtime error\n2025-08-02 17:50:06,902 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9936 - Stress test error 0\n2025-08-02 17:50:06,905 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5217 - Stress test error 1\n2025-08-02 17:50:06,906 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7118 - Stress test error 2\n2025-08-02 17:50:06,907 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8559 - Stress test error 3\n2025-08-02 17:50:06,908 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9804 - Stress test error 4\n2025-08-02 17:50:06,909 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5960 - Stress test error 5\n2025-08-02 17:50:06,911 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5421 - Stress test error 6\n2025-08-02 17:50:06,912 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9527 - Stress test error 7\n2025-08-02 17:50:06,913 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9935 - Stress test error 8\n2025-08-02 17:50:06,914 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2311 - Stress test error 9\n2025-08-02 17:50:06,914 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_77 - Stress test error 10\n2025-08-02 17:50:06,915 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8779 - Stress test error 11\n2025-08-02 17:50:06,916 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4073 - Stress test error 12\n2025-08-02 17:50:06,916 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1611 - Stress test error 13\n2025-08-02 17:50:06,917 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6206 - Stress test error 14\n2025-08-02 17:50:06,918 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1446 - Stress test error 15\n2025-08-02 17:50:06,918 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3751 - Stress test error 16\n2025-08-02 17:50:06,919 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8725 - Stress test error 17\n2025-08-02 17:50:06,919 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6250 - Stress test error 18\n2025-08-02 17:50:06,920 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5441 - Stress test error 19\n2025-08-02 17:50:06,921 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9626 - Stress test error 20\n2025-08-02 17:50:06,922 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8585 - Stress test error 21\n2025-08-02 17:50:06,922 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3762 - Stress test error 22\n2025-08-02 17:50:06,924 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_373 - Stress test error 23\n2025-08-02 17:50:06,925 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3497 - Stress test error 24\n2025-08-02 17:50:06,926 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8985 - Stress test error 25\n2025-08-02 17:50:06,927 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_377 - Stress test error 26\n2025-08-02 17:50:06,928 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8685 - Stress test error 27\n2025-08-02 17:50:06,929 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9267 - Stress test error 28\n2025-08-02 17:50:06,930 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6976 - Stress test error 29\n2025-08-02 17:50:06,931 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6277 - Stress test error 30\n2025-08-02 17:50:06,932 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8004 - Stress test error 31\n2025-08-02 17:50:06,933 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3488 - Stress test error 32\n2025-08-02 17:50:06,934 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9282 - Stress test error 33\n2025-08-02 17:50:06,935 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5641 - Stress test error 34\n2025-08-02 17:50:06,936 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6285 - Stress test error 35\n2025-08-02 17:50:06,937 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9789 - Stress test error 36\n2025-08-02 17:50:06,938 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8561 - Stress test error 37\n2025-08-02 17:50:06,939 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1787 - Stress test error 38\n2025-08-02 17:50:06,940 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7378 - Stress test error 39\n2025-08-02 17:50:06,941 - ErrorTracker - CRITICAL - CRITICAL ERROR: Test module not found in test_component\n2025-08-02 17:50:06,943 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_224 - Stress test error 40\n2025-08-02 17:50:06,945 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8073 - Stress test error 41\n2025-08-02 17:50:06,946 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6526 - Stress test error 42\n2025-08-02 17:50:06,947 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9923 - Stress test error 43\n2025-08-02 17:50:06,948 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7207 - Stress test error 44\n2025-08-02 17:50:06,949 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1882 - Stress test error 45\n2025-08-02 17:50:06,950 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5616 - Stress test error 46\n2025-08-02 17:50:06,950 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_991 - Stress test error 47\n2025-08-02 17:50:06,951 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_813 - Stress test error 48\n2025-08-02 17:50:06,953 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9332 - Stress test error 49\n2025-08-02 17:50:07,050 - ErrorTracker - INFO - Error monitoring stopped\n2025-08-02 17:50:12,939 - ErrorTracker - INFO - Error monitoring started\n2025-08-02 17:50:13,402 - ErrorTracker - ERROR - Error reported: ImportError_test_component_6736 - Test module not found\n2025-08-02 17:50:13,403 - ErrorTracker - ERROR - Error reported: FileNotFoundError_test_component_6558 - Test file not found\n2025-08-02 17:50:13,404 - ErrorTracker - ERROR - Error reported: ValueError_test_component_5623 - Test validation error\n2025-08-02 17:50:13,404 - ErrorTracker - ERROR - Error reported: KeyError_test_component_3272 - 'test_key'\n2025-08-02 17:50:13,405 - ErrorTracker - ERROR - Error reported: RuntimeError_test_component_1226 - Test runtime error\n2025-08-02 17:50:13,422 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6505 - Stress test error 0\n2025-08-02 17:50:13,423 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5078 - Stress test error 1\n2025-08-02 17:50:13,424 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3209 - Stress test error 2\n2025-08-02 17:50:13,425 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9479 - Stress test error 3\n2025-08-02 17:50:13,426 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2923 - Stress test error 4\n2025-08-02 17:50:13,427 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8411 - Stress test error 5\n2025-08-02 17:50:13,427 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3948 - Stress test error 6\n2025-08-02 17:50:13,428 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2997 - Stress test error 7\n2025-08-02 17:50:13,429 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1139 - Stress test error 8\n2025-08-02 17:50:13,430 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1139 - Stress test error 9\n2025-08-02 17:50:13,431 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8154 - Stress test error 10\n2025-08-02 17:50:13,432 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9887 - Stress test error 11\n2025-08-02 17:50:13,432 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2756 - Stress test error 12\n2025-08-02 17:50:13,433 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3555 - Stress test error 13\n2025-08-02 17:50:13,434 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2920 - Stress test error 14\n2025-08-02 17:50:13,435 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5737 - Stress test error 15\n2025-08-02 17:50:13,436 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2483 - Stress test error 16\n2025-08-02 17:50:13,436 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9212 - Stress test error 17\n2025-08-02 17:50:13,437 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9776 - Stress test error 18\n2025-08-02 17:50:13,438 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2314 - Stress test error 19\n2025-08-02 17:50:13,439 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5910 - Stress test error 20\n2025-08-02 17:50:13,441 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5736 - Stress test error 21\n2025-08-02 17:50:13,442 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_754 - Stress test error 22\n2025-08-02 17:50:13,446 - ErrorTracker - CRITICAL - CRITICAL ERROR: Test module not found in test_component\n2025-08-02 17:50:13,449 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9655 - Stress test error 23\n2025-08-02 17:50:13,452 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_272 - Stress test error 24\n2025-08-02 17:50:13,454 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3735 - Stress test error 25\n2025-08-02 17:50:13,455 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4100 - Stress test error 26\n2025-08-02 17:50:13,456 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5293 - Stress test error 27\n2025-08-02 17:50:13,456 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2803 - Stress test error 28\n2025-08-02 17:50:13,459 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9795 - Stress test error 29\n2025-08-02 17:50:13,460 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9362 - Stress test error 30\n2025-08-02 17:50:13,460 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2392 - Stress test error 31\n2025-08-02 17:50:13,461 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8315 - Stress test error 32\n2025-08-02 17:50:13,462 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6544 - Stress test error 33\n2025-08-02 17:50:13,463 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7917 - Stress test error 34\n2025-08-02 17:50:13,465 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_14 - Stress test error 35\n2025-08-02 17:50:13,467 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4840 - Stress test error 36\n2025-08-02 17:50:13,470 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7523 - Stress test error 37\n2025-08-02 17:50:13,471 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_425 - Stress test error 38\n2025-08-02 17:50:13,472 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_916 - Stress test error 39\n2025-08-02 17:50:13,473 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1295 - Stress test error 40\n2025-08-02 17:50:13,474 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5024 - Stress test error 41\n2025-08-02 17:50:13,474 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8887 - Stress test error 42\n2025-08-02 17:50:13,475 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3960 - Stress test error 43\n2025-08-02 17:50:13,478 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7865 - Stress test error 44\n2025-08-02 17:50:13,479 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8571 - Stress test error 45\n2025-08-02 17:50:13,480 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_278 - Stress test error 46\n2025-08-02 17:50:13,481 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5637 - Stress test error 47\n2025-08-02 17:50:13,482 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_963 - Stress test error 48\n2025-08-02 17:50:13,483 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_764 - Stress test error 49\n2025-08-02 17:50:13,551 - ErrorTracker - INFO - Error monitoring stopped\n2025-08-02 17:51:16,587 - ErrorTracker - INFO - Error monitoring started\n2025-08-02 17:51:17,054 - ErrorTracker - ERROR - Error reported: ImportError_test_component_7724 - Test module not found\n2025-08-02 17:51:17,054 - ErrorTracker - ERROR - Error reported: FileNotFoundError_test_component_8828 - Test file not found\n2025-08-02 17:51:17,055 - ErrorTracker - ERROR - Error reported: ValueError_test_component_734 - Test validation error\n2025-08-02 17:51:17,056 - ErrorTracker - ERROR - Error reported: KeyError_test_component_6721 - 'test_key'\n2025-08-02 17:51:17,056 - ErrorTracker - ERROR - Error reported: RuntimeError_test_component_4919 - Test runtime error\n2025-08-02 17:51:17,069 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5209 - Stress test error 0\n2025-08-02 17:51:17,069 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5012 - Stress test error 1\n2025-08-02 17:51:17,070 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1433 - Stress test error 2\n2025-08-02 17:51:17,071 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3761 - Stress test error 3\n2025-08-02 17:51:17,072 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1072 - Stress test error 4\n2025-08-02 17:51:17,074 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9953 - Stress test error 5\n2025-08-02 17:51:17,075 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7118 - Stress test error 6\n2025-08-02 17:51:17,076 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4133 - Stress test error 7\n2025-08-02 17:51:17,077 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8028 - Stress test error 8\n2025-08-02 17:51:17,078 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8374 - Stress test error 9\n2025-08-02 17:51:17,079 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3493 - Stress test error 10\n2025-08-02 17:51:17,080 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1044 - Stress test error 11\n2025-08-02 17:51:17,081 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1004 - Stress test error 12\n2025-08-02 17:51:17,082 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8954 - Stress test error 13\n2025-08-02 17:51:17,082 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9100 - Stress test error 14\n2025-08-02 17:51:17,083 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_561 - Stress test error 15\n2025-08-02 17:51:17,083 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2176 - Stress test error 16\n2025-08-02 17:51:17,084 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7091 - Stress test error 17\n2025-08-02 17:51:17,085 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9973 - Stress test error 18\n2025-08-02 17:51:17,085 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6979 - Stress test error 19\n2025-08-02 17:51:17,086 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2775 - Stress test error 20\n2025-08-02 17:51:17,087 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5492 - Stress test error 21\n2025-08-02 17:51:17,088 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4363 - Stress test error 22\n2025-08-02 17:51:17,089 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7341 - Stress test error 23\n2025-08-02 17:51:17,091 - ErrorTracker - CRITICAL - CRITICAL ERROR: Test module not found in test_component\n2025-08-02 17:51:17,091 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7476 - Stress test error 24\n2025-08-02 17:51:17,093 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2976 - Stress test error 25\n2025-08-02 17:51:17,096 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_108 - Stress test error 26\n2025-08-02 17:51:17,098 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6576 - Stress test error 27\n2025-08-02 17:51:17,101 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7793 - Stress test error 28\n2025-08-02 17:51:17,102 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5582 - Stress test error 29\n2025-08-02 17:51:17,105 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9293 - Stress test error 30\n2025-08-02 17:51:17,106 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_128 - Stress test error 31\n2025-08-02 17:51:17,106 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9570 - Stress test error 32\n2025-08-02 17:51:17,107 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8506 - Stress test error 33\n2025-08-02 17:51:17,108 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_107 - Stress test error 34\n2025-08-02 17:51:17,108 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8893 - Stress test error 35\n2025-08-02 17:51:17,109 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5638 - Stress test error 36\n2025-08-02 17:51:17,110 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4644 - Stress test error 37\n2025-08-02 17:51:17,110 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9504 - Stress test error 38\n2025-08-02 17:51:17,111 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6933 - Stress test error 39\n2025-08-02 17:51:17,112 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1910 - Stress test error 40\n2025-08-02 17:51:17,113 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4577 - Stress test error 41\n2025-08-02 17:51:17,113 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5798 - Stress test error 42\n2025-08-02 17:51:17,114 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_265 - Stress test error 43\n2025-08-02 17:51:17,114 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7683 - Stress test error 44\n2025-08-02 17:51:17,115 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_494 - Stress test error 45\n2025-08-02 17:51:17,116 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7877 - Stress test error 46\n2025-08-02 17:51:17,116 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_551 - Stress test error 47\n2025-08-02 17:51:17,117 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3167 - Stress test error 48\n2025-08-02 17:51:17,118 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7717 - Stress test error 49\n2025-08-02 17:51:17,198 - ErrorTracker - INFO - Error monitoring stopped\n2025-08-02 17:51:55,901 - ErrorTracker - INFO - Error monitoring started\n2025-08-02 17:51:56,355 - ErrorTracker - ERROR - Error reported: ImportError_test_component_8575 - Test module not found\n2025-08-02 17:51:56,356 - ErrorTracker - ERROR - Error reported: FileNotFoundError_test_component_1682 - Test file not found\n2025-08-02 17:51:56,357 - ErrorTracker - ERROR - Error reported: ValueError_test_component_3384 - Test validation error\n2025-08-02 17:51:56,358 - ErrorTracker - ERROR - Error reported: KeyError_test_component_7764 - 'test_key'\n2025-08-02 17:51:56,358 - ErrorTracker - ERROR - Error reported: RuntimeError_test_component_7167 - Test runtime error\n2025-08-02 17:51:56,378 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9362 - Stress test error 0\n2025-08-02 17:51:56,378 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5253 - Stress test error 1\n2025-08-02 17:51:56,379 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5059 - Stress test error 2\n2025-08-02 17:51:56,380 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1564 - Stress test error 3\n2025-08-02 17:51:56,381 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9904 - Stress test error 4\n2025-08-02 17:51:56,381 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3314 - Stress test error 5\n2025-08-02 17:51:56,382 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1066 - Stress test error 6\n2025-08-02 17:51:56,383 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4610 - Stress test error 7\n2025-08-02 17:51:56,383 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7870 - Stress test error 8\n2025-08-02 17:51:56,384 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3134 - Stress test error 9\n2025-08-02 17:51:56,385 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8829 - Stress test error 10\n2025-08-02 17:51:56,385 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7482 - Stress test error 11\n2025-08-02 17:51:56,386 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3435 - Stress test error 12\n2025-08-02 17:51:56,387 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4911 - Stress test error 13\n2025-08-02 17:51:56,387 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2409 - Stress test error 14\n2025-08-02 17:51:56,388 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5582 - Stress test error 15\n2025-08-02 17:51:56,389 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1085 - Stress test error 16\n2025-08-02 17:51:56,389 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6577 - Stress test error 17\n2025-08-02 17:51:56,390 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5980 - Stress test error 18\n2025-08-02 17:51:56,391 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9268 - Stress test error 19\n2025-08-02 17:51:56,391 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5745 - Stress test error 20\n2025-08-02 17:51:56,392 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5831 - Stress test error 21\n2025-08-02 17:51:56,393 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6742 - Stress test error 22\n2025-08-02 17:51:56,393 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5444 - Stress test error 23\n2025-08-02 17:51:56,394 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4788 - Stress test error 24\n2025-08-02 17:51:56,394 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6821 - Stress test error 25\n2025-08-02 17:51:56,395 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9039 - Stress test error 26\n2025-08-02 17:51:56,395 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7807 - Stress test error 27\n2025-08-02 17:51:56,396 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_6509 - Stress test error 28\n2025-08-02 17:51:56,397 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7758 - Stress test error 29\n2025-08-02 17:51:56,397 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4197 - Stress test error 30\n2025-08-02 17:51:56,398 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8919 - Stress test error 31\n2025-08-02 17:51:56,398 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1019 - Stress test error 32\n2025-08-02 17:51:56,399 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_563 - Stress test error 33\n2025-08-02 17:51:56,401 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_7328 - Stress test error 34\n2025-08-02 17:51:56,402 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_292 - Stress test error 35\n2025-08-02 17:51:56,403 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_397 - Stress test error 36\n2025-08-02 17:51:56,405 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_5506 - Stress test error 37\n2025-08-02 17:51:56,407 - ErrorTracker - CRITICAL - CRITICAL ERROR: Test module not found in test_component\n2025-08-02 17:51:56,409 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8049 - Stress test error 38\n2025-08-02 17:51:56,410 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3589 - Stress test error 39\n2025-08-02 17:51:56,412 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8131 - Stress test error 40\n2025-08-02 17:51:56,413 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_9221 - Stress test error 41\n2025-08-02 17:51:56,414 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_8800 - Stress test error 42\n2025-08-02 17:51:56,415 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3803 - Stress test error 43\n2025-08-02 17:51:56,416 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_3210 - Stress test error 44\n2025-08-02 17:51:56,417 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2640 - Stress test error 45\n2025-08-02 17:51:56,417 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_1330 - Stress test error 46\n2025-08-02 17:51:56,418 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_4628 - Stress test error 47\n2025-08-02 17:51:56,419 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2599 - Stress test error 48\n2025-08-02 17:51:56,419 - ErrorTracker - ERROR - Error reported: ValueError_stress_test_2085 - Stress test error 49\n2025-08-02 17:51:56,514 - ErrorTracker - INFO - Error monitoring stopped\n2025-08-02 17:52:21,401 - ErrorTracker - INFO - Error monitoring started\n2025-08-02 17:52:21,402 - ErrorTracker - ERROR - Error reported: ValueError_test_component_137 - Test error for monitoring system\n",
+      "truncated": false,
+      "line_count": 235
+    },
+    {
+      "file": "fanws.log",
+      "size": 0,
+      "content": "",
+      "truncated": false,
+      "line_count": 1
+    },
+    {
+      "file": "testing_campaign_campaign_1754171406.log",
+      "size": 101,
+      "content": "2025-08-02 17:50:06,430 - TestingOrchestrator - INFO - Testing campaign campaign_1754171406 started\n",
+      "truncated": false,
+      "line_count": 2
+    },
+    {
+      "file": "testing_campaign_campaign_1754171412.log",
+      "size": 101,
+      "content": "2025-08-02 17:50:12,936 - TestingOrchestrator - INFO - Testing campaign campaign_1754171412 started\n",
+      "truncated": false,
+      "line_count": 2
+    },
+    {
+      "file": "testing_campaign_campaign_1754171476.log",
+      "size": 101,
+      "content": "2025-08-02 17:51:16,584 - TestingOrchestrator - INFO - Testing campaign campaign_1754171476 started\n",
+      "truncated": false,
+      "line_count": 2
+    },
+    {
+      "file": "testing_campaign_campaign_1754171515.log",
+      "size": 101,
+      "content": "2025-08-02 17:51:55,899 - TestingOrchestrator - INFO - Testing campaign campaign_1754171515 started\n",
+      "truncated": false,
+      "line_count": 2
+    },
+    {
+      "file": "user_testing.log",
+      "size": 0,
+      "content": "",
+      "truncated": false,
+      "line_count": 1
+    },
+    {
+      "file": "logs\\errors.log",
+      "size": 122,
+      "content": "2025-08-02 23:29:39 | ERROR    | root:29 | test_logging_setup() | Error message - should appear in error log and console\n",
+      "truncated": false,
+      "line_count": 2
+    },
+    {
+      "file": "logs\\fanws.log",
+      "size": 1706,
+      "content": "2025-08-02 23:29:39 | INFO     | root:1336 | setup_logging() | ============================================================\n2025-08-02 23:29:39 | INFO     | root:1337 | setup_logging() | FANWS Application Starting\n2025-08-02 23:29:39 | INFO     | root:1338 | setup_logging() | Logging initialized - Main: C:\\Users\\samue\\Documents\\FANWS\\logs\\fanws.log\n2025-08-02 23:29:39 | INFO     | root:1339 | setup_logging() | Error logging: C:\\Users\\samue\\Documents\\FANWS\\logs\\errors.log\n2025-08-02 23:29:39 | INFO     | root:1340 | setup_logging() | ============================================================\n2025-08-02 23:29:39 | INFO     | root:27 | test_logging_setup() | Info message - should appear in main log\n2025-08-02 23:29:39 | WARNING  | root:28 | test_logging_setup() | Warning message - should appear in console and files\n2025-08-02 23:29:39 | ERROR    | root:29 | test_logging_setup() | Error message - should appear in error log and console\n2025-08-02 23:29:39 | INFO     | src.atomic_backup:67 | create_backup() | Starting atomic backup of projects to C:\\Users\\samue\\Documents\\FANWS\\backups\\tmpvadhk73y\\test_backup\n2025-08-02 23:29:39 | INFO     | src.atomic_backup:105 | create_backup() | Backup completed successfully in 0.08 seconds\n2025-08-02 23:29:39 | INFO     | src.atomic_backup:106 | create_backup() | Backup location: backups\\test_backup\n2025-08-02 23:29:39 | INFO     | src.atomic_backup:107 | create_backup() | Backup size: 0.00 MB, Files: 26\n2025-08-02 23:29:39 | INFO     | src.atomic_backup:256 | delete_backup() | Backup deleted successfully: test_backup\n2025-08-02 23:29:40 | INFO     | root:329 | __init__() | APIManager initialized with threading and SQLite caching\n",
+      "truncated": false,
+      "line_count": 15
+    }
+  ]
+}

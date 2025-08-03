@@ -1,0 +1,19 @@
+{
+  "project_name": "12",
+  "created": "2025-08-02T21:32:41.913455",
+  "last_modified": "2025-08-02T21:32:41.913478",
+  "version": "1.0",
+  "author": "",
+  "genre": "",
+  "target_word_count": 50000,
+  "current_word_count": 0,
+  "completion_percentage": 0,
+  "status": "active",
+  "tags": [],
+  "language": "en",
+  "writing_goals": {
+    "daily_word_target": 500,
+    "weekly_word_target": 3500,
+    "estimated_completion_date": null
+  }
+}

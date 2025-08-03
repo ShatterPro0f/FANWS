@@ -13,25 +13,31 @@
 ### 📚 Comprehensive Project Management
 - **Multi-Project Workspace** - Manage multiple novels simultaneously
 - **Modular Workflow System** - Customizable writing workflows and step-by-step guidance
-- **Version Control** - Track drafts, revisions, and template versions
+- **Version Control** - Track drafts, revisions, and template versions with conflict resolution
 - **Backup & Recovery** - Automated project backups and data protection
 
-### 🎨 Advanced Writing Tools
+### 🤝 Advanced Collaboration
+- **Real-time Notifications** - System tray notifications for collaborative features
+- **Version Conflict Handling** - Automatic detection and resolution of editing conflicts
+- **Bug Reporting System** - Comprehensive error reporting with automatic log collection
+- **User Activity Tracking** - Monitor active collaborators and concurrent edits
+
+### 🎨 Professional Writing Tools
 - **Template Collections** - Pre-built frameworks for character development, plot structures, world-building
+- **Export Validation** - Multi-format export with integrity checking (DOCX, EPUB, HTML, PDF)
 - **Text Analytics** - Readability analysis, word count tracking, writing statistics
-- **Consistency Checking** - Character arc validation, plot continuity analysis
-- **Synonym Integration** - Enhanced vocabulary suggestions with WordsAPI
+- **Database Optimization** - SQLAlchemy connection pooling for reliable data management
 
 ### 🔌 Extensible Plugin Architecture
-- **Plugin System** - Extend functionality with custom plugins
+- **Enhanced Plugin System** - Thread-safe plugin execution with validation
 - **Content Generators** - Specialized content creation tools
-- **Export Formats** - Multiple output formats (DOCX, EPUB, HTML, PDF)
+- **Export Formats** - Multiple output formats with validation
 - **Integration Support** - Third-party service integrations
 
 ### 🎯 Modern User Interface
-- **Intuitive Design** - Clean, responsive interface with modern UI components
+- **Intuitive Design** - Clean, responsive interface with PyQt5
 - **Performance Monitoring** - Real-time performance tracking and optimization
-- **Collaborative Features** - Multi-user support and shared project functionality
+- **System Tray Integration** - Background notifications and status monitoring
 - **Analytics Dashboard** - Writing progress, productivity insights, and goal tracking
 
 ## 🚀 Installation
@@ -43,9 +49,10 @@
 - **Storage** - 1GB free space for installation and project files
 
 ### Quick Start Installation
-1. **Clone or download FANWS**
+
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/FANWS.git
+   git clone https://github.com/ShatterPro0f/FANWS.git
    cd FANWS
    ```
 
@@ -54,175 +61,237 @@
    pip install -r requirements.txt
    ```
 
-3. **Run the application**
+3. **Run FANWS**
    ```bash
    python fanws.py
    ```
 
-### Alternative Installation Methods
-- **Virtual Environment** (Recommended):
-  ```bash
-  python -m venv fanws_env
-  fanws_env\Scripts\activate  # Windows
-  source fanws_env/bin/activate  # macOS/Linux
-  pip install -r requirements.txt
-  ```
+### Advanced Installation
 
-- **Manual dependency installation**:
-  ```bash
-  pip install PyQt5 PyQtWebEngine PyYAML python-dotenv psutil tenacity python-docx markdown2 lz4 aiohttp requests nltk textstat scikit-learn numpy reportlab ebooklib pdfkit matplotlib pytest
-  ```
+For development or testing purposes:
 
-## 🎯 Getting Started
+```bash
+# Install development dependencies
+pip install -r requirements-test.txt
 
-### First Time Setup
+# Run tests
+python -m pytest tests/
+
+# Run with collaboration features
+python fanws.py --enable-collaboration
+```
+
+## 📖 Usage
+
+### Creating Your First Project
+
 1. **Launch FANWS** - Run `python fanws.py`
-2. **Create your first project** - Click "Create New Project" in the sidebar
-3. **Configure AI providers** - Go to Advanced Settings and add your API keys
-4. **Choose a template** - Select from genre-specific writing templates
-5. **Start writing** - Use the guided workflow or free-form writing mode
+2. **Create New Project** - Click "New Project" and select your genre
+3. **Choose Template** - Select from pre-built templates or create custom
+4. **Start Writing** - Use AI assistance and workflow guidance
+5. **Export** - Generate professional documents in multiple formats
 
-### Essential Configuration
-- **OpenAI API Key** - For advanced AI writing assistance
-- **WordsAPI Key** - For enhanced vocabulary and synonyms
-- **Project Settings** - Configure word count goals, genres, and writing preferences
-- **Template Preferences** - Select and customize writing templates
+### Key Workflows
 
-## 🎨 Core Workflows
+#### AI-Assisted Writing
+1. Select your preferred AI provider (OpenAI, Claude, etc.)
+2. Choose content type (character, plot, world-building)
+3. Provide context and prompts
+4. Review and integrate AI suggestions
+5. Continue iterative development
 
-### Novel Writing Process
-1. **Project Creation** - Set up novel metadata, goals, and structure
-2. **Template Selection** - Choose appropriate templates for your genre
-3. **Character Development** - Create detailed character profiles and arcs
-4. **World Building** - Develop settings, cultures, and fictional elements
-5. **Plot Development** - Structure story arcs, conflicts, and resolutions
-6. **Drafting** - AI-assisted writing with context awareness
-7. **Review & Revision** - Consistency checking and readability analysis
-8. **Export** - Generate final output in multiple formats
+#### Collaborative Writing
+1. Initialize collaboration features
+2. Share project with team members
+3. Monitor real-time notifications
+4. Resolve version conflicts automatically
+5. Track team member activity
 
-### Template System
-- **Browse Collections** - Fantasy, Mystery, Romance, Sci-Fi, Character, Plot, World-building
-- **Customize Variables** - Fill template variables with your story elements
-- **Generate Content** - AI creates customized content based on templates
-- **Save Configurations** - Reuse successful template combinations
+#### Project Export
+1. Select export formats (DOCX, EPUB, PDF, HTML)
+2. Configure export settings
+3. Run validation checks
+4. Generate professional documents
+5. Review export reports
+
+## 🔧 Configuration
+
+### API Keys
+Configure AI providers in `config/app_config.json`:
+
+```json
+{
+  "ai_providers": {
+    "openai": {
+      "api_key": "your-openai-key",
+      "model": "gpt-4"
+    },
+    "claude": {
+      "api_key": "your-claude-key",
+      "model": "claude-3"
+    }
+  },
+  "collaboration": {
+    "notifications_enabled": true,
+    "conflict_detection": true,
+    "auto_backup": true
+  }
+}
+```
+
+### Database Configuration
+```json
+{
+  "database": {
+    "use_sqlalchemy": true,
+    "pool_size": 10,
+    "connection_timeout": 30
+  }
+}
+```
+
+## 🧪 Testing
+
+FANWS includes comprehensive testing infrastructure:
+
+### Run All Tests
+```bash
+python run_tests.py
+```
+
+### Specific Test Categories
+```bash
+# Unit tests
+python run_tests.py --type unit
+
+# Integration tests  
+python run_tests.py --type integration
+
+# UI tests
+python run_tests.py --type ui
+
+# Plugin tests
+python run_tests.py --type plugin
+```
+
+### Coverage Reports
+```bash
+python run_tests.py --coverage --report
+```
 
 ## 📁 Project Structure
 
 ```
 FANWS/
-├── fanws.py                    # Main application entry point
-├── requirements.txt            # Python dependencies
-├── src/                        # Core application modules
-│   ├── api_manager.py         # AI provider management
-│   ├── workflow_manager.py    # Writing workflow system
-│   ├── template_manager.py    # Template system
-│   ├── ui/                    # User interface components
-│   ├── plugin_system.py       # Plugin architecture
-│   └── ...                    # Additional modules
-├── plugins/                    # Plugin directory
-│   ├── content_generators/    # Content generation plugins
-│   ├── export_formats/        # Export format plugins
-│   ├── text_processors/       # Text processing plugins
-│   └── ...                    # Additional plugin categories
-├── templates/                  # Writing templates
-├── projects/                   # User project files
-├── config/                     # Configuration files
-├── metadata/                   # System metadata and templates
-└── docs/                       # Documentation
+├── fanws.py              # Main application entry point
+├── requirements.txt      # Core dependencies
+├── requirements-test.txt # Test dependencies
+├── src/                  # Source code
+│   ├── core/            # Core system modules
+│   ├── ai/              # AI integration
+│   ├── ui/              # User interface
+│   ├── workflow/        # Workflow management
+│   ├── collaboration/   # Collaboration features
+│   ├── database/        # Database management
+│   └── plugins/         # Plugin system
+├── tests/               # Test suite
+│   ├── unit/           # Unit tests
+│   ├── integration/    # Integration tests
+│   └── ui/             # UI tests
+├── docs/               # Documentation
+├── config/             # Configuration files
+├── templates/          # Writing templates
+├── projects/           # User projects
+└── scripts/            # Utility scripts
 ```
 
-## 🔧 Advanced Features
+## 🔌 Plugin Development
 
-### Plugin Development
-- **Custom Plugins** - Extend FANWS with your own functionality
-- **Plugin API** - Comprehensive plugin development interface
-- **Plugin Manager** - Install, configure, and manage plugins
-- **Hot Reloading** - Develop plugins with instant updates
+### Creating a Plugin
 
-### Database Integration
-- **Project Storage** - SQLite-based project and metadata storage
-- **Performance Optimization** - Connection pooling and query optimization
-- **Data Analytics** - Writing statistics and progress tracking
-- **Backup Systems** - Automated data protection and recovery
+1. **Plugin Structure**
+   ```python
+   class MyPlugin:
+       def get_info(self):
+           return {
+               "name": "My Plugin",
+               "version": "1.0.0",
+               "description": "Custom functionality"
+           }
+       
+       def execute(self, context):
+           # Plugin logic here
+           return {"success": True, "data": "result"}
+   ```
 
-### Collaborative Features
-- **Multi-User Support** - Share projects with other writers
-- **Real-Time Collaboration** - Simultaneous editing and feedback
-- **Version Tracking** - Track changes and contributions
-- **Notification System** - Stay updated on project activities
+2. **Plugin Registration**
+   Place your plugin file in the `plugins/` directory and it will be automatically discovered.
 
-## 📊 Export Formats
-
-FANWS supports comprehensive export options:
-- **Microsoft Word (.docx)** - Industry-standard manuscript format
-- **EPUB (.epub)** - E-book format for digital publishing
-- **HTML (.html)** - Web-ready format with styling
-- **PDF (.pdf)** - Print-ready format (requires wkhtmltopdf)
-- **Plain Text (.txt)** - Universal text format
-- **Markdown (.md)** - Writer-friendly markup format
-
-## 🛠️ Troubleshooting
-
-### Common Issues
-
-**Application won't start**
-- Verify Python 3.8+ is installed: `python --version`
-- Check all dependencies are installed: `pip install -r requirements.txt`
-- Review error logs in `logs/errors.log`
-
-**AI features not working**
-- Verify API keys in Advanced Settings
-- Check internet connectivity
-- Review API usage limits and quotas
-- Check logs for specific error messages
-
-**Performance issues**
-- Close unnecessary projects
-- Clear cache in Performance settings
-- Check available system memory
-- Review plugin performance in Plugin Manager
-
-**Export failures**
-- Verify write permissions in export directory
-- Check available disk space
-- For PDF export, ensure wkhtmltopdf is installed
-- Review export logs for specific errors
-
-### Getting Help
-- **Documentation** - Check `docs/` directory for detailed guides
-- **Template Guide** - See `metadata/template_usage_guide.md`
-- **Database Schema** - Review `metadata/database_schema_guide.md`
-- **System Information** - Check `metadata/system_information.json`
-- **Logs** - Review `logs/` directory for detailed error information
+3. **Plugin Validation**
+   FANWS automatically validates plugins for required methods, dependencies, and security.
 
 ## 🤝 Contributing
 
-FANWS is designed to be extensible and welcomes contributions:
-- **Plugin Development** - Create new plugins for specific writing needs
-- **Template Creation** - Develop genre-specific writing templates
-- **Bug Reports** - Report issues through the project's issue tracker
-- **Feature Requests** - Suggest new functionality and improvements
-- **Documentation** - Help improve user guides and technical documentation
+We welcome contributions! Please see our [Development Guide](docs/DEVELOPMENT.md) for details on:
+
+- Code style and standards
+- Testing requirements
+- Pull request process
+- Issue reporting
 
 ## 📄 License
 
-FANWS is released under the MIT License. See LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔗 Resources
+## 🆘 Support
 
-- **Project Website** - [Coming Soon]
-- **User Guide** - `docs/user_guide.md`
-- **Developer Documentation** - `docs/developer_guide.md`
-- **Plugin Development Guide** - `docs/plugin_development.md`
-- **Template Creation Guide** - `metadata/template_usage_guide.md`
-- **API Documentation** - `docs/api_reference.md`
+### Documentation
+- [Development Guide](docs/DEVELOPMENT.md) - Developer documentation
+- [API Reference](docs/API.md) - Complete API documentation
+- [Changelog](docs/CHANGELOG.md) - Version history and updates
+
+### Getting Help
+- **Issues** - Report bugs or request features on [GitHub Issues](https://github.com/ShatterPro0f/FANWS/issues)
+- **Bug Reports** - Use the built-in bug reporting system (`Help > Report Bug`)
+- **Discussions** - Join community discussions on [GitHub Discussions](https://github.com/ShatterPro0f/FANWS/discussions)
+
+### System Requirements
+
+#### Minimum Requirements
+- Python 3.8+
+- 4GB RAM
+- 1GB storage space
+- Internet connection for AI features
+
+#### Recommended Requirements
+- Python 3.10+
+- 8GB RAM
+- 2GB storage space
+- High-speed internet connection
+
+#### Supported Platforms
+- Windows 10/11
+- macOS 10.14+
+- Linux (Ubuntu 18.04+, CentOS 7+)
+
+## 🎯 Roadmap
+
+### Version 2.0 (Upcoming)
+- [ ] Real-time collaborative editing
+- [ ] Advanced AI model integration
+- [ ] Cloud synchronization
+- [ ] Mobile companion app
+- [ ] Advanced analytics dashboard
+
+### Version 1.5 (In Development)
+- [x] Enhanced collaboration features
+- [x] SQLAlchemy database optimization
+- [x] Advanced plugin system
+- [x] Comprehensive testing infrastructure
+- [x] Version conflict resolution
 
 ---
 
-**Happy Writing!** 📝✨
+**FANWS** - Empowering fiction authors with intelligent writing tools and collaborative features.
 
-*FANWS - Empowering authors with intelligent writing tools since 2025*
-- **Reset caches or logs**
-  - Use the Advanced tab to clear the synonym cache or reset the API log.
-- **Still having issues?**
-  - Restart the application and try again. If problems persist, check your internet connection and API limits.
+Made with ❤️ by the FANWS development team.

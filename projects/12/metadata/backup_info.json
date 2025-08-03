@@ -1,0 +1,6 @@
+{
+  "last_backup": null,
+  "backup_frequency": "daily",
+  "backup_retention": 30,
+  "auto_backup_enabled": true
+}

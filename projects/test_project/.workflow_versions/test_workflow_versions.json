@@ -1,0 +1,28 @@
+[
+  {
+    "version_number": 1,
+    "created_at": "2025-08-03T04:03:01.594954",
+    "modified_at": "2025-08-03T04:03:01.594961",
+    "created_by": "test_user",
+    "checksum": "0dbd453b599a65cc60c1fb9533b24a244a1466275fdedce921ee22382f14eb9c",
+    "workflow_data": {
+      "steps": [
+        {
+          "id": "step1",
+          "type": "input",
+          "config": {}
+        },
+        {
+          "id": "step2",
+          "type": "process",
+          "config": {}
+        }
+      ],
+      "metadata": {
+        "created": "2025-08-03T04:03:01.594377"
+      }
+    },
+    "is_active": true,
+    "conflict_resolved": false
+  }
+]

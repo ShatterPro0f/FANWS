@@ -1,0 +1,132 @@
+{
+  "id": "bug_20250803_040531_-5541622310385207074",
+  "timestamp": "2025-08-03T04:05:31.869080",
+  "version": "version = \"1.0.0\"",
+  "user_data": {
+    "title": "Test Bug Report",
+    "description": "This is a test bug report to verify the system works correctly.",
+    "category": "Testing",
+    "priority": "Low"
+  },
+  "system_info": {
+    "platform": {
+      "system": "Windows",
+      "release": "10",
+      "version": "10.0.19045",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 94 Stepping 3, GenuineIntel"
+    },
+    "python": {
+      "version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+      "executable": "C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "platform": "win32"
+    },
+    "memory": {
+      "total": 34318786560,
+      "available": 17851207680,
+      "used": 16470994944,
+      "percent": 48.0
+    },
+    "disk": {
+      "total": 1024085454848,
+      "free": 504804864000,
+      "used": 519280590848
+    },
+    "cpu": {
+      "count": 8,
+      "percent": 8.1
+    }
+  },
+  "environment": {
+    "python_packages": [
+      "aiofiles==24.1.0",
+      "aiohappyeyeballs==2.6.1",
+      "aiohttp==3.12.13",
+      "aiosignal==1.4.0",
+      "attrs==25.3.0",
+      "certifi==2025.6.15",
+      "charset-normalizer==3.4.2",
+      "click==8.2.2",
+      "cmudict==1.0.33",
+      "colorama==0.4.6",
+      "contourpy==1.3.3",
+      "cycler==0.12.1",
+      "EbookLib==0.19",
+      "fonttools==4.59.0",
+      "frozenlist==1.7.0",
+      "greenlet==3.2.3",
+      "idna==3.10",
+      "importlib_metadata==8.7.0",
+      "importlib_resources==6.5.2",
+      "iniconfig==2.1.0",
+      "joblib==1.5.1",
+      "kiwisolver==1.4.8",
+      "lxml==6.0.0",
+      "lz4==4.4.4",
+      "markdown2==2.5.3",
+      "matplotlib==3.10.5",
+      "MouseInfo==0.1.3",
+      "multidict==6.6.3",
+      "nltk==3.9.1",
+      "numpy==2.2.6",
+      "opencv-python==4.12.0.88",
+      "packaging==25.0",
+      "pdfkit==1.0.0",
+      "pillow==11.3.0",
+      "pip==25.2",
+      "pluggy==1.6.0",
+      "propcache==0.3.2",
+      "psutil==7.0.0",
+      "PyAutoGUI==0.9.54",
+      "PyGetWindow==0.0.9",
+      "Pygments==2.19.2",
+      "PyMsgBox==1.0.9",
+      "pyparsing==3.2.3",
+      "pyperclip==1.9.0",
+      "pyphen==0.17.2",
+      "PyQt5==5.15.11",
+      "PyQt5-Qt5==5.15.2",
+      "PyQt5_sip==12.17.0",
+      "PyQtWebEngine==5.15.7",
+      "PyQtWebEngine-Qt5==5.15.2",
+      "PyRect==0.2.0",
+      "PyScreeze==1.0.1",
+      "pytest==8.4.1",
+      "python-dateutil==2.9.0.post0",
+      "python-docx==1.2.0",
+      "python-dotenv==1.1.1",
+      "pytweening==1.2.0",
+      "PyYAML==6.0.2",
+      "regex==2025.7.34",
+      "reportlab==4.4.2",
+      "requests==2.32.4",
+      "responses==0.25.7",
+      "scikit-learn==1.7.1",
+      "scipy==1.16.1",
+      "setuptools==80.9.0",
+      "six==1.17.0",
+      "SQLAlchemy==2.0.42",
+      "tenacity==9.1.2",
+      "textstat==0.7.7",
+      "threadpoolctl==3.6.0",
+      "tqdm==4.67.1",
+      "typing_extensions==4.14.1",
+      "urllib3==2.5.0",
+      "yarl==1.20.1",
+      "zipp==3.23.0"
+    ],
+    "environment_vars": {
+      "PATH": "C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyQt5\\Qt5\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR;C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\Scripts;C:\\Program Files\\Git\\cmd;C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\Users\\samue\\AppData\\Local\\Programs\\Python\\Python313\\;C:\\Users\\samue\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samue\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;c:\\Users\\samue\\.vscode\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts;c:\\Users\\samue\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand",
+      "PYTHONPATH": "",
+      "HOME": "",
+      "USER": ""
+    },
+    "working_directory": "C:\\Users\\samue\\Documents\\FANWS",
+    "command_line": "test_advanced_features.py",
+    "git": {
+      "branch": "main",
+      "commit": "4b626d0d"
+    }
+  },
+  "logs": []
+}

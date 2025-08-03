@@ -7,6 +7,10 @@ Modular UI components broken down from mega-file in cleanup
 from . import core_ui
 from . import analytics_ui
 from . import management_ui
+from . import export_ui
+from .consolidated_ui import CategorizedSidebar
+from .onboarding_wizard import OnboardingWizard
+from .export_ui import ExportManagerWidget, create_export_manager
 
 # Legacy compatibility - create a placeholder UIComponents
 class UIComponents:
@@ -23,12 +27,8 @@ class UIComponents:
             return
 
         # Import PyQt5 widgets
-        from PyQt5.QtWidgets import (QPushButton, QComboBox, QLineEdit, QTextEdit, QSpinBox,
-                                   QDoubleSpinBox, QCheckBox, QWidget, QVBoxLayout, QHBoxLayout,
-                                   QTabWidget, QLabel, QSplitter, QGroupBox, QFormLayout, QTreeWidget,
-                                   QTreeWidgetItem, QScrollArea, QFrame, QStackedWidget)
-        from PyQt5.QtCore import Qt, pyqtSignal
-        from PyQt5.QtGui import QFont
+        from PyQt5.QtWidgets import (QWidget, QHBoxLayout, QSplitter, QStackedWidget)
+        from PyQt5.QtCore import Qt
 
         # Create main central widget and layout
         central_widget = QWidget()
@@ -36,92 +36,55 @@ class UIComponents:
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
 
-        # Create hierarchical sidebar (1/4 width)
-        sidebar = QFrame()
-        sidebar.setMaximumWidth(int(self.window.width() * 0.25))
-        sidebar.setMinimumWidth(300)
-        sidebar.setFrameStyle(QFrame.Box)
-        sidebar.setStyleSheet("QFrame { border-right: 2px solid #cccccc; background-color: #f5f5f5; }")
+        # Create horizontal splitter for sidebar and content
+        splitter = QSplitter(Qt.Horizontal)
 
-        sidebar_layout = QVBoxLayout(sidebar)
-        sidebar_layout.setContentsMargins(5, 5, 5, 5)
-        sidebar_layout.setSpacing(5)  # Add some spacing between elements
+        # Create the new categorized sidebar
+        self.categorized_sidebar = CategorizedSidebar()
+        splitter.addWidget(self.categorized_sidebar)
 
-        # Create sidebar title
-        sidebar_title = QLabel("Navigation")
-        sidebar_title.setFont(QFont("Arial", 14, QFont.Bold))
-        sidebar_title.setAlignment(Qt.AlignCenter)
-        sidebar_title.setStyleSheet("QLabel { background-color: #e0e0e0; padding: 10px; border-radius: 5px; }")
-        sidebar_layout.addWidget(sidebar_title)
-
-        # Create hierarchical navigation tree
-        self.window.nav_tree = QTreeWidget()
-        self.window.nav_tree.setHeaderHidden(True)
-
-        # Set size policy to expand and fill available space
-        from PyQt5.QtWidgets import QSizePolicy
-        self.window.nav_tree.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-
-        self.window.nav_tree.setStyleSheet("""
-            QTreeWidget {
-                background-color: #ffffff;
-                border: 1px solid #cccccc;
-                border-radius: 5px;
-                font-size: 12px;
-            }
-            QTreeWidget::item {
-                padding: 8px;
-                border-bottom: 1px solid #eeeeee;
-            }
-            QTreeWidget::item:selected {
-                background-color: #4a90e2;
-                color: white;
-            }
-            QTreeWidget::item:hover {
-                background-color: #e8f4fd;
-            }
-        """)
-
-        # Create main content area (3/4 width) with stacked widgets
+        # Create content area separately
         content_area = QStackedWidget()
         content_area.setStyleSheet("QStackedWidget { background-color: #ffffff; }")
+        splitter.addWidget(content_area)
 
-        # Store references
+        # Set splitter sizes (1/4 sidebar, 3/4 content)
+        splitter.setSizes([400, 1200])
+
+        # Add splitter to main layout
+        main_layout.addWidget(splitter)
+
+        # Store references for compatibility
+        self.window.central_widget = central_widget
         self.window._content_area = content_area
-        self.window._sidebar = sidebar
+        self.window._sidebar = self.categorized_sidebar
+        self.window.categorized_sidebar = self.categorized_sidebar
 
-        # Build the hierarchical navigation structure
-        self._build_navigation_tree()
+        # Create onboarding wizard
+        self.onboarding_wizard = OnboardingWizard(self.window)
+        self.window.onboarding_wizard = self.onboarding_wizard
 
+        # Connect sidebar signals for navigation
+        self._connect_sidebar_signals()
 
-        # Build the hierarchical navigation structure
-        self._build_navigation_tree()
+        # Setup navigation tree for backward compatibility
+        self._setup_compatibility_navigation()
 
-        # Connect tree item clicks
-        self.window.nav_tree.itemClicked.connect(self._on_nav_item_clicked)
+    def _connect_sidebar_signals(self):
+        """Connect signals from the categorized sidebar"""
+        if hasattr(self.categorized_sidebar, 'project_created'):
+            self.categorized_sidebar.project_created.connect(self.window.create_project)
+        if hasattr(self.categorized_sidebar, 'project_opened'):
+            self.categorized_sidebar.project_opened.connect(self.window.open_project)
+        if hasattr(self.categorized_sidebar, 'onboarding_requested'):
+            self.categorized_sidebar.onboarding_requested.connect(self.window.show_onboarding)
 
-        # Add tree widget with stretch factor to use all available vertical space
-        sidebar_layout.addWidget(self.window.nav_tree, 1)  # Stretch factor of 1
-
-        # Create content pages for each section/subsection
-        self._create_missing_widgets()  # Create missing widgets first
-        self._create_content_pages()
-
-        # Add sidebar and content area to main layout (1/4 and 3/4 split)
-        main_layout.addWidget(sidebar, 1)  # 1/4 width
-        main_layout.addWidget(content_area, 3)  # 3/4 width
-
-        # Set the central widget
-        self.window.setCentralWidget(central_widget)
-
-        # Store references to prevent garbage collection
-        self.window._ui_central_widget = central_widget
-        self.window._ui_sidebar = sidebar
-        self.window._ui_content_area = content_area
-
-        # Set default content page (switch project)
-        if hasattr(self.window, '_content_pages') and 'switch_project' in self.window._content_pages:
-            self.window._content_area.setCurrentIndex(self.window._content_pages['switch_project'])
+    def _setup_compatibility_navigation(self):
+        """Setup navigation tree for backward compatibility"""
+        # Create a dummy navigation tree for compatibility
+        from PyQt5.QtWidgets import QTreeWidget
+        self.window.nav_tree = QTreeWidget()
+        self.window.nav_tree.setVisible(False)  # Hidden since we use the new sidebar
 
     def _build_navigation_tree(self):
         """Build the hierarchical navigation tree structure"""
@@ -580,8 +543,13 @@ class UIComponents:
             group = QGroupBox("Load Project from File")
             form_layout = QFormLayout(group)
 
-            load_btn = QPushButton("Browse for Project File")
-            form_layout.addRow("Project File:", load_btn)
+            info_label = QLabel("Select a project folder to import into FANWS")
+            info_label.setStyleSheet("QLabel { color: #666; font-style: italic; }")
+            form_layout.addRow(info_label)
+
+            self.window.import_project_button = QPushButton("Browse for Project Folder")
+            self.window.import_project_button.setStyleSheet("QPushButton { background-color: #4CAF50; color: white; padding: 8px; }")
+            form_layout.addRow("Project Folder:", self.window.import_project_button)
             layout.addWidget(group)
 
         elif page_id == "delete_project":
@@ -674,8 +642,27 @@ class UIComponents:
         layout.addWidget(group)
 
     def _create_api_key_input_content(self, layout, page_id):
-        """Create API key input content"""
+        """Create API key input content with validation"""
         from PyQt5.QtWidgets import QGroupBox, QFormLayout, QLineEdit, QPushButton, QLabel
+        from PyQt5.QtCore import pyqtSignal
+        try:
+            from error_handling_system import validator, APIProvider
+        except ImportError:
+            # Fallback: define dummy validator and APIProvider to avoid errors
+            class DummyValidator:
+                @staticmethod
+                def validate_api_key(key, provider):
+                    class Result:
+                        is_valid = True
+                        message = "Validation not available"
+                        suggestions = []
+                    return Result()
+            class DummyAPIProvider:
+                OPENAI = "openai"
+                WORDSAPI = "wordsapi"
+            validator = DummyValidator()
+            APIProvider = DummyAPIProvider()
+        import logging
 
         group = QGroupBox("API Configuration")
         form_layout = QFormLayout(group)
@@ -684,6 +671,28 @@ class UIComponents:
             self.window.openai_key_input = QLineEdit()
             self.window.openai_key_input.setEchoMode(QLineEdit.Password)
             self.window.openai_key_input.setPlaceholderText("Enter your OpenAI API key...")
+
+            # Add validation on text change
+            def validate_openai_key():
+                key = self.window.openai_key_input.text()
+                if key:
+                    result = validator.validate_api_key(key, APIProvider.OPENAI)
+                    if result.is_valid:
+                        self.window.openai_key_input.setStyleSheet("border: 2px solid green;")
+                        info_label.setText("✓ API key format appears valid")
+                        info_label.setStyleSheet("color: green;")
+                    else:
+                        self.window.openai_key_input.setStyleSheet("border: 2px solid red;")
+                        info_label.setText(f"✗ {result.message}")
+                        info_label.setStyleSheet("color: red;")
+                        if result.suggestions:
+                            info_label.setText(f"✗ {result.message}\nTip: {result.suggestions[0]}")
+                else:
+                    self.window.openai_key_input.setStyleSheet("")
+                    info_label.setText("Your OpenAI API key is used for AI-powered writing assistance.")
+                    info_label.setStyleSheet("")
+
+            self.window.openai_key_input.textChanged.connect(validate_openai_key)
             form_layout.addRow("OpenAI API Key:", self.window.openai_key_input)
 
             info_label = QLabel("Your OpenAI API key is used for AI-powered writing assistance.")
@@ -694,13 +703,81 @@ class UIComponents:
             self.window.wordsapi_key_input = QLineEdit()
             self.window.wordsapi_key_input.setEchoMode(QLineEdit.Password)
             self.window.wordsapi_key_input.setPlaceholderText("Enter your WordsAPI key...")
+
+            # Add validation on text change
+            def validate_wordsapi_key():
+                key = self.window.wordsapi_key_input.text()
+                if key:
+                    result = validator.validate_api_key(key, APIProvider.WORDSAPI)
+                    if result.is_valid:
+                        self.window.wordsapi_key_input.setStyleSheet("border: 2px solid green;")
+                        words_info_label.setText("✓ API key format appears valid")
+                        words_info_label.setStyleSheet("color: green;")
+                    else:
+                        self.window.wordsapi_key_input.setStyleSheet("border: 2px solid red;")
+                        words_info_label.setText(f"✗ {result.message}")
+                        words_info_label.setStyleSheet("color: red;")
+                        if result.suggestions:
+                            words_info_label.setText(f"✗ {result.message}\nTip: {result.suggestions[0]}")
+                else:
+                    self.window.wordsapi_key_input.setStyleSheet("")
+                    words_info_label.setText("WordsAPI is used for synonym suggestions and word analysis.")
+                    words_info_label.setStyleSheet("")
+
+            self.window.wordsapi_key_input.textChanged.connect(validate_wordsapi_key)
             form_layout.addRow("WordsAPI Key:", self.window.wordsapi_key_input)
 
-            info_label = QLabel("WordsAPI is used for synonym suggestions and word analysis.")
-            info_label.setWordWrap(True)
-            form_layout.addRow(info_label)
+            words_info_label = QLabel("WordsAPI is used for synonym suggestions and word analysis.")
+            words_info_label.setWordWrap(True)
+            form_layout.addRow(words_info_label)
 
+        # Enhanced save button with validation
         self.window.save_api_keys_button = QPushButton("Save API Keys")
+
+        def save_with_validation():
+            """Save API keys with validation."""
+            try:
+                all_valid = True
+                validation_messages = []
+
+                # Validate OpenAI key if present
+                if hasattr(self.window, 'openai_key_input') and self.window.openai_key_input.text():
+                    result = validator.validate_api_key(self.window.openai_key_input.text(), APIProvider.OPENAI)
+                    if not result.is_valid:
+                        all_valid = False
+                        validation_messages.append(f"OpenAI API Key: {result.message}")
+
+                # Validate WordsAPI key if present
+                if hasattr(self.window, 'wordsapi_key_input') and self.window.wordsapi_key_input.text():
+                    result = validator.validate_api_key(self.window.wordsapi_key_input.text(), APIProvider.WORDSAPI)
+                    if not result.is_valid:
+                        all_valid = False
+                        validation_messages.append(f"WordsAPI Key: {result.message}")
+
+                if not all_valid:
+                    from PyQt5.QtWidgets import QMessageBox
+                    QMessageBox.warning(
+                        self.window,
+                        "Validation Error",
+                        "Please fix the following issues before saving:\n\n" + "\n".join(validation_messages)
+                    )
+                    return
+
+                # If validation passes, proceed with original save logic
+                if hasattr(self.window, 'save_api_keys_callback'):
+                    self.window.save_api_keys_callback()
+                    logging.info("API keys saved successfully after validation")
+
+            except Exception as e:
+                logging.error(f"Error saving API keys: {e}")
+                from PyQt5.QtWidgets import QMessageBox
+                QMessageBox.critical(
+                    self.window,
+                    "Save Error",
+                    f"Failed to save API keys: {str(e)}"
+                )
+
+        self.window.save_api_keys_button.clicked.connect(save_with_validation)
         form_layout.addRow(self.window.save_api_keys_button)
         layout.addWidget(group)
 
@@ -933,25 +1010,39 @@ Performance Optimization Recommendations:
         layout.addWidget(group)
 
     def _create_export_status_content(self, layout, page_id):
-        """Create export status content"""
-        from PyQt5.QtWidgets import QGroupBox, QVBoxLayout, QLabel, QProgressBar, QPushButton
+        """Create export status content with enhanced export manager"""
+        try:
+            from export_ui import ExportManagerWidget
 
-        group = QGroupBox("Export Status Monitor")
-        group_layout = QVBoxLayout(group)
+            # Create the export manager widget
+            export_manager = ExportManagerWidget()
 
-        status_label = QLabel("Last Export: Success")
-        status_label.setStyleSheet("QLabel { color: green; font-weight: bold; }")
-        group_layout.addWidget(status_label)
+            # Store reference for later use
+            if not hasattr(self.window, 'export_manager'):
+                self.window.export_manager = export_manager
 
-        export_progress = QProgressBar()
-        export_progress.setValue(100)
-        export_progress.setFormat("Export Complete")
-        group_layout.addWidget(export_progress)
+            layout.addWidget(export_manager)
 
-        self.window.export_button = QPushButton("Export Novel")
-        group_layout.addWidget(self.window.export_button)
+        except ImportError as e:
+            # Fallback to basic export status if import fails
+            from PyQt5.QtWidgets import QGroupBox, QVBoxLayout, QLabel, QProgressBar, QPushButton
 
-        layout.addWidget(group)
+            group = QGroupBox("Export Status Monitor")
+            group_layout = QVBoxLayout(group)
+
+            status_label = QLabel("Last Export: Success")
+            status_label.setStyleSheet("QLabel { color: green; font-weight: bold; }")
+            group_layout.addWidget(status_label)
+
+            export_progress = QProgressBar()
+            export_progress.setValue(100)
+            export_progress.setFormat("Export Complete")
+            group_layout.addWidget(export_progress)
+
+            self.window.export_button = QPushButton("Export Novel")
+            group_layout.addWidget(self.window.export_button)
+
+            layout.addWidget(group)
 
     def _create_export_formats_content(self, layout, page_id):
         """Create export formats content"""

@@ -1,0 +1,110 @@
+{
+  "id": "snapshot_1754175303",
+  "timestamp": "2025-08-02T18:55:03.841759",
+  "description": "Pre-reload backup",
+  "config": {
+    "ai": {
+      "openai": {
+        "api_key": "",
+        "model": "gpt-4",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "timeout": 30
+      },
+      "anthropic": {
+        "api_key": "",
+        "model": "claude-3-sonnet-20240229",
+        "temperature": 0.7,
+        "max_tokens": 2000
+      },
+      "default_provider": "openai",
+      "failover_enabled": true,
+      "load_balancing": false,
+      "api_timeout": 30,
+      "max_retries": 2
+    },
+    "ui": {
+      "theme": "light",
+      "font_size": 12,
+      "font_family": "Arial",
+      "auto_save": true,
+      "auto_save_interval": 60,
+      "show_line_numbers": true,
+      "word_wrap": true,
+      "gui": true
+    },
+    "database": {
+      "path": "fanws.db",
+      "pool_size": 2,
+      "query_timeout": 30,
+      "auto_vacuum": true,
+      "wal_mode": true,
+      "backup_enabled": false,
+      "name": "fanws_dev"
+    },
+    "project": {
+      "idea": "",
+      "tone": "neutral",
+      "sub_tone": "neutral",
+      "theme": "",
+      "soft_target": 50000,
+      "reading_level": "College",
+      "thesaurus_weight": 0.5,
+      "characters_seed": "",
+      "world_seed": "",
+      "themes_seed": "",
+      "structure_seed": "25 chapters, 5 sections each",
+      "custom_prompt": ""
+    },
+    "workflow": {
+      "default": "standard",
+      "auto_save_drafts": true,
+      "backup_frequency": 300,
+      "max_parallel_tasks": 3,
+      "async_enabled": true
+    },
+    "plugins": {
+      "directories": [
+        "plugins/"
+      ],
+      "auto_load": true,
+      "timeout": 10,
+      "hot_reload": false,
+      "enabled": [],
+      "enable_hot_reload": true
+    },
+    "analytics": {
+      "enabled": true,
+      "session_tracking": true,
+      "performance_monitoring": true,
+      "export_format": "json"
+    },
+    "collaboration": {
+      "enabled": false,
+      "server_url": "",
+      "auto_sync": true,
+      "conflict_resolution": "manual"
+    },
+    "app": {
+      "debug": true,
+      "log_level": "DEBUG",
+      "environment": "development"
+    },
+    "memory": {
+      "cache_size_limit": 52428800,
+      "monitoring_interval": 60
+    },
+    "gui": {
+      "auto_save_interval": 120
+    },
+    "security": {
+      "enable_encryption": false,
+      "session_timeout": 7200
+    },
+    "logging": {
+      "file_path": "logs/fanws_dev.log"
+    }
+  },
+  "environment": "development",
+  "project": "default"
+}

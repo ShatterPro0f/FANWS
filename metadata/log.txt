@@ -1,0 +1,1725 @@
+2025-07-08 21:23:45,170 - INFO - Performance monitoring started
+2025-07-08 21:23:45,469 - INFO - Found 0 projects
+2025-07-08 21:23:45,469 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 21:23:45,470 - INFO - FANWS application initialized successfully
+2025-07-08 21:24:14,629 - INFO - Performance monitoring started
+2025-07-08 21:24:14,943 - INFO - Found 0 projects
+2025-07-08 21:24:14,943 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 21:24:14,944 - INFO - FANWS application initialized successfully
+2025-07-08 21:25:26,721 - INFO - Performance monitoring started
+2025-07-08 21:25:27,027 - INFO - Found 0 projects
+2025-07-08 21:25:27,028 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 21:25:27,029 - INFO - FANWS application initialized successfully
+2025-07-08 21:25:34,235 - INFO - Found 0 projects
+2025-07-08 21:25:34,236 - INFO - Application configuration loaded
+2025-07-08 21:25:34,237 - INFO - Project configuration loaded for: Test
+2025-07-08 21:25:34,254 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,256 - INFO - Successfully saved synonyms_cache.txt to project Test
+2025-07-08 21:25:34,264 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,266 - INFO - Successfully saved wordsapi_log.txt to project Test
+2025-07-08 21:25:34,274 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,276 - INFO - Successfully saved context.txt to project Test
+2025-07-08 21:25:34,284 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,285 - INFO - Successfully saved story.txt to project Test
+2025-07-08 21:25:34,292 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,294 - INFO - Successfully saved plot_points.txt to project Test
+2025-07-08 21:25:34,303 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,304 - INFO - Successfully saved continuity_rules.txt to project Test
+2025-07-08 21:25:34,311 - INFO - Successfully saved API keys for project Test
+2025-07-08 21:25:34,311 - INFO - Event [project_load_start]: Loading project: Test
+2025-07-08 21:25:34,317 - INFO - Application configuration loaded
+2025-07-08 21:25:34,325 - INFO - Project configuration loaded for: Test
+2025-07-08 21:25:34,332 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,335 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,337 - INFO - Database initialized for project: Test
+2025-07-08 21:25:34,339 - INFO - Event [project_load_error]: Failed to load project 'Test': 'PerformanceMonitor' object has no attribute 'add_metric'
+2025-07-08 21:25:41,233 - ERROR - Failed to load project 'Test': 'PerformanceMonitor' object has no attribute 'add_metric'
+2025-07-08 21:25:41,233 - INFO - Event [project_load_start]: Loading project: Test
+2025-07-08 21:25:41,234 - INFO - Application configuration loaded
+2025-07-08 21:25:41,235 - INFO - Project configuration loaded for: Test
+2025-07-08 21:25:41,236 - INFO - Database initialized for project: Test
+2025-07-08 21:25:41,237 - INFO - Database initialized for project: Test
+2025-07-08 21:25:41,241 - INFO - Database initialized for project: Test
+2025-07-08 21:25:41,242 - INFO - Event [project_load_error]: Failed to load project 'Test': 'PerformanceMonitor' object has no attribute 'add_metric'
+2025-07-08 21:25:42,416 - ERROR - Failed to load project 'Test': 'PerformanceMonitor' object has no attribute 'add_metric'
+2025-07-08 21:25:43,738 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-08 21:25:44,749 - INFO - Performance monitoring stopped
+2025-07-08 21:25:44,749 - INFO - Application shutdown complete
+2025-07-08 21:33:00,528 - INFO - Performance monitoring started
+2025-07-08 21:33:00,895 - INFO - Found 1 projects
+2025-07-08 21:33:00,895 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 21:33:00,895 - INFO - FANWS application initialized successfully
+2025-07-08 21:33:11,458 - INFO - Found 1 projects
+2025-07-08 21:33:11,459 - INFO - Application configuration loaded
+2025-07-08 21:33:11,460 - INFO - Project configuration loaded for: Test 2
+2025-07-08 21:33:11,479 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,480 - INFO - Successfully saved synonyms_cache.txt to project Test 2
+2025-07-08 21:33:11,490 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,491 - INFO - Successfully saved wordsapi_log.txt to project Test 2
+2025-07-08 21:33:11,499 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,500 - INFO - Successfully saved context.txt to project Test 2
+2025-07-08 21:33:11,508 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,510 - INFO - Successfully saved story.txt to project Test 2
+2025-07-08 21:33:11,518 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,519 - INFO - Successfully saved plot_points.txt to project Test 2
+2025-07-08 21:33:11,527 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,529 - INFO - Successfully saved continuity_rules.txt to project Test 2
+2025-07-08 21:33:11,536 - INFO - Successfully saved API keys for project Test 2
+2025-07-08 21:33:11,536 - INFO - Event [project_load_start]: Loading project: Test 2
+2025-07-08 21:33:11,542 - INFO - Application configuration loaded
+2025-07-08 21:33:11,551 - INFO - Project configuration loaded for: Test 2
+2025-07-08 21:33:11,559 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,561 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,564 - INFO - Database initialized for project: Test 2
+2025-07-08 21:33:11,566 - INFO - Event [project_load_error]: Failed to load project 'Test 2': 'PerformanceMonitor' object has no attribute 'add_metric'
+2025-07-08 21:47:16,271 - INFO - Performance monitoring started
+2025-07-08 21:47:16,583 - INFO - Found 2 projects
+2025-07-08 21:47:16,584 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 21:47:16,585 - INFO - FANWS application initialized successfully
+2025-07-08 21:47:40,277 - ERROR - Failed to load project 'Test 2': 'PerformanceMonitor' object has no attribute 'add_metric'
+2025-07-08 21:47:40,280 - INFO - Event [project_load_start]: Loading project: Test 2
+2025-07-08 21:47:40,281 - INFO - Application configuration loaded
+2025-07-08 21:47:40,281 - INFO - Project configuration loaded for: Test 2
+2025-07-08 21:47:40,283 - INFO - Database initialized for project: Test 2
+2025-07-08 21:47:40,285 - INFO - Database initialized for project: Test 2
+2025-07-08 21:47:40,287 - INFO - Database initialized for project: Test 2
+2025-07-08 21:47:40,288 - INFO - Event [project_load_error]: Failed to load project 'Test 2': 'PerformanceMonitor' object has no attribute 'add_metric'
+2025-07-08 21:47:44,085 - ERROR - Failed to load project 'Test 2': 'PerformanceMonitor' object has no attribute 'add_metric'
+2025-07-08 21:47:45,760 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-08 21:47:46,120 - INFO - Performance monitoring stopped
+2025-07-08 21:47:46,121 - INFO - Application shutdown complete
+2025-07-08 21:47:55,544 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-08 21:47:56,297 - INFO - Performance monitoring stopped
+2025-07-08 21:47:56,297 - INFO - Application shutdown complete
+2025-07-08 21:51:28,932 - INFO - Performance monitoring started
+2025-07-08 21:51:29,265 - INFO - Found 3 projects
+2025-07-08 21:51:29,266 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 21:51:29,266 - INFO - FANWS application initialized successfully
+2025-07-08 21:53:04,406 - INFO - Performance monitoring started
+2025-07-08 21:53:04,873 - INFO - Found 3 projects
+2025-07-08 21:53:04,874 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 21:53:04,874 - INFO - FANWS application initialized successfully
+2025-07-08 21:53:13,192 - INFO - Found 3 projects
+2025-07-08 21:53:13,193 - INFO - Application configuration loaded
+2025-07-08 21:53:13,195 - INFO - Project configuration loaded for: Test 3
+2025-07-08 21:53:13,213 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,215 - INFO - Successfully saved synonyms_cache.txt to project Test 3
+2025-07-08 21:53:13,224 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,225 - INFO - Successfully saved wordsapi_log.txt to project Test 3
+2025-07-08 21:53:13,234 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,236 - INFO - Successfully saved context.txt to project Test 3
+2025-07-08 21:53:13,245 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,247 - INFO - Successfully saved story.txt to project Test 3
+2025-07-08 21:53:13,255 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,257 - INFO - Successfully saved plot_points.txt to project Test 3
+2025-07-08 21:53:13,267 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,268 - INFO - Successfully saved continuity_rules.txt to project Test 3
+2025-07-08 21:53:13,276 - INFO - Successfully saved API keys for project Test 3
+2025-07-08 21:53:13,276 - INFO - Event [project_load_start]: Loading project: Test 3
+2025-07-08 21:53:13,283 - INFO - Application configuration loaded
+2025-07-08 21:53:13,291 - INFO - Project configuration loaded for: Test 3
+2025-07-08 21:53:13,300 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,302 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,305 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,307 - INFO - Event [project_load_complete]: Project 'Test 3' loaded in 0.03s
+2025-07-08 21:53:13,308 - INFO - Event [project_load_start]: Loading project: Test 3
+2025-07-08 21:53:13,309 - INFO - Application configuration loaded
+2025-07-08 21:53:13,310 - INFO - Project configuration loaded for: Test 3
+2025-07-08 21:53:13,312 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,314 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,317 - INFO - Database initialized for project: Test 3
+2025-07-08 21:53:13,318 - INFO - Event [project_load_complete]: Project 'Test 3' loaded in 0.01s
+2025-07-08 21:58:53,175 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-08 21:58:54,189 - INFO - Performance monitoring stopped
+2025-07-08 21:58:54,190 - WARNING - Failed to generate performance recommendations: 'PerformanceMonitor' object has no attribute 'get_recommendations'
+2025-07-08 21:58:54,190 - INFO - Cleaning up project: Test 3
+2025-07-08 21:58:54,191 - ERROR - Failed to cleanup project Test 3: ConfigManager.get() takes 2 positional arguments but 3 were given
+2025-07-08 21:58:54,191 - INFO - Application shutdown complete
+2025-07-08 22:02:39,417 - INFO - Performance monitoring started
+2025-07-08 22:02:39,880 - INFO - Found 4 projects
+2025-07-08 22:02:39,881 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 22:02:39,881 - INFO - FANWS application initialized successfully
+2025-07-08 22:03:03,938 - INFO - Performance monitoring started
+2025-07-08 22:03:04,388 - INFO - Found 4 projects
+2025-07-08 22:03:04,389 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 22:03:04,389 - INFO - FANWS application initialized successfully
+2025-07-08 22:03:31,556 - INFO - Performance monitoring started
+2025-07-08 22:03:31,888 - INFO - Found 4 projects
+2025-07-08 22:03:31,889 - INFO - Event [application_startup]: Application started successfully
+2025-07-08 22:03:31,889 - INFO - FANWS application initialized successfully
+2025-07-08 22:27:42,116 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-08 22:27:42,709 - INFO - Performance monitoring stopped
+2025-07-08 22:27:42,710 - INFO - Application shutdown complete
+2025-07-09 20:12:34,382 - INFO - Performance monitoring started
+2025-07-09 20:15:32,786 - INFO - Performance monitoring started
+2025-07-09 20:15:32,787 - INFO - Performance recommendation: High CPU usage detected
+2025-07-09 20:15:33,338 - INFO - Found 4 projects
+2025-07-09 20:17:31,160 - INFO - Performance monitoring started
+2025-07-09 20:17:31,457 - INFO - Found 4 projects
+2025-07-09 20:17:31,458 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 20:17:31,458 - INFO - FANWS application initialized successfully
+2025-07-09 20:17:31,831 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 20:17:32,831 - INFO - Performance monitoring stopped
+2025-07-09 20:17:32,832 - INFO - Application shutdown complete
+2025-07-09 20:33:50,741 - INFO - Performance monitoring started
+2025-07-09 20:33:51,019 - INFO - Found 4 projects
+2025-07-09 20:33:51,020 - ERROR - Application startup failed: 'UIComponents' object has no attribute 'smart_switch_to_dashboard'
+2025-07-09 20:35:11,689 - INFO - Performance monitoring started
+2025-07-09 20:35:11,957 - INFO - Found 4 projects
+2025-07-09 20:35:11,958 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 20:35:11,959 - INFO - FANWS application initialized successfully
+2025-07-09 20:35:25,623 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 20:35:26,638 - INFO - Performance monitoring stopped
+2025-07-09 20:35:26,638 - INFO - Application shutdown complete
+2025-07-09 20:36:01,438 - INFO - Performance monitoring started
+2025-07-09 20:36:01,707 - INFO - Found 4 projects
+2025-07-09 20:36:01,709 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 20:36:01,709 - INFO - FANWS application initialized successfully
+2025-07-09 20:36:39,431 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 20:36:40,434 - INFO - Performance monitoring stopped
+2025-07-09 20:36:40,435 - INFO - Application shutdown complete
+2025-07-09 20:45:03,294 - INFO - Performance monitoring started
+2025-07-09 20:45:03,561 - INFO - Found 4 projects
+2025-07-09 20:45:03,562 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 20:45:03,562 - INFO - FANWS application initialized successfully
+2025-07-09 20:50:18,055 - INFO - Performance monitoring started
+2025-07-09 20:50:18,329 - INFO - Found 4 projects
+2025-07-09 20:50:18,330 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 20:50:18,331 - INFO - FANWS application initialized successfully
+2025-07-09 21:01:25,104 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 21:01:26,105 - INFO - Performance monitoring stopped
+2025-07-09 21:01:26,106 - INFO - Application shutdown complete
+2025-07-09 21:01:28,382 - INFO - Performance monitoring started
+2025-07-09 21:01:28,643 - INFO - Found 4 projects
+2025-07-09 21:01:28,644 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:01:28,644 - INFO - FANWS application initialized successfully
+2025-07-09 21:05:02,410 - INFO - Performance monitoring started
+2025-07-09 21:05:02,598 - INFO - Found 4 projects
+2025-07-09 21:05:02,599 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:05:02,599 - INFO - FANWS application initialized successfully
+2025-07-09 21:09:47,888 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 21:09:48,905 - INFO - Performance monitoring stopped
+2025-07-09 21:09:48,905 - INFO - Application shutdown complete
+2025-07-09 21:09:51,105 - INFO - Performance monitoring started
+2025-07-09 21:09:51,308 - INFO - Found 4 projects
+2025-07-09 21:09:51,309 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:09:51,309 - INFO - FANWS application initialized successfully
+2025-07-09 21:16:54,585 - INFO - Performance monitoring started
+2025-07-09 21:16:54,771 - INFO - Found 4 projects
+2025-07-09 21:16:54,771 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:16:54,772 - INFO - FANWS application initialized successfully
+2025-07-09 21:21:02,098 - INFO - Performance monitoring started
+2025-07-09 21:21:02,284 - INFO - Found 4 projects
+2025-07-09 21:21:02,284 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:21:02,285 - INFO - FANWS application initialized successfully
+2025-07-09 21:23:15,019 - INFO - Performance monitoring started
+2025-07-09 21:23:15,210 - INFO - Found 4 projects
+2025-07-09 21:23:15,211 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:23:15,211 - INFO - FANWS application initialized successfully
+2025-07-09 21:26:25,227 - INFO - Performance monitoring started
+2025-07-09 21:26:25,426 - INFO - Found 4 projects
+2025-07-09 21:26:25,427 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:26:25,427 - INFO - FANWS application initialized successfully
+2025-07-09 21:28:12,576 - INFO - Performance monitoring started
+2025-07-09 21:28:12,765 - INFO - Found 4 projects
+2025-07-09 21:28:12,766 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:28:12,766 - INFO - FANWS application initialized successfully
+2025-07-09 21:44:04,378 - INFO - Performance monitoring started
+2025-07-09 21:44:04,563 - INFO - Found 4 projects
+2025-07-09 21:44:04,563 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:44:04,564 - INFO - FANWS application initialized successfully
+2025-07-09 21:45:25,010 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 21:45:26,012 - INFO - Performance monitoring stopped
+2025-07-09 21:45:26,013 - INFO - Application shutdown complete
+2025-07-09 21:45:36,087 - INFO - Performance monitoring started
+2025-07-09 21:45:36,291 - INFO - Found 4 projects
+2025-07-09 21:45:36,292 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 21:45:36,292 - INFO - FANWS application initialized successfully
+2025-07-09 21:45:44,938 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 21:45:45,950 - INFO - Performance monitoring stopped
+2025-07-09 21:45:45,951 - INFO - Application shutdown complete
+2025-07-09 22:02:09,606 - INFO - Performance monitoring started
+2025-07-09 22:02:09,786 - INFO - Found 4 projects
+2025-07-09 22:02:09,786 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:02:09,787 - INFO - FANWS application initialized successfully
+2025-07-09 22:02:09,791 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:02:10,797 - INFO - Performance monitoring stopped
+2025-07-09 22:02:10,797 - INFO - Application shutdown complete
+2025-07-09 22:02:10,940 - INFO - Performance monitoring started
+2025-07-09 22:02:11,122 - INFO - Found 4 projects
+2025-07-09 22:02:11,123 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:02:11,123 - INFO - FANWS application initialized successfully
+2025-07-09 22:02:11,128 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:02:12,136 - INFO - Performance monitoring stopped
+2025-07-09 22:02:12,136 - INFO - Application shutdown complete
+2025-07-09 22:02:20,610 - INFO - Performance monitoring started
+2025-07-09 22:02:20,781 - INFO - Found 4 projects
+2025-07-09 22:02:20,782 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:02:20,782 - INFO - FANWS application initialized successfully
+2025-07-09 22:02:20,787 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:02:21,793 - INFO - Performance monitoring stopped
+2025-07-09 22:02:21,793 - INFO - Application shutdown complete
+2025-07-09 22:02:21,958 - INFO - Performance monitoring started
+2025-07-09 22:02:22,145 - INFO - Found 4 projects
+2025-07-09 22:02:22,145 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:02:22,146 - INFO - FANWS application initialized successfully
+2025-07-09 22:02:22,150 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:02:23,163 - INFO - Performance monitoring stopped
+2025-07-09 22:02:23,164 - INFO - Application shutdown complete
+2025-07-09 22:03:05,932 - INFO - Performance monitoring started
+2025-07-09 22:03:06,111 - INFO - Found 4 projects
+2025-07-09 22:03:06,112 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:03:06,112 - INFO - FANWS application initialized successfully
+2025-07-09 22:03:06,241 - INFO - Found 4 projects
+2025-07-09 22:03:06,242 - INFO - Application configuration loaded
+2025-07-09 22:03:06,244 - INFO - Project configuration loaded for: Debug_Test_20250709_220306
+2025-07-09 22:03:06,261 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,262 - INFO - Successfully saved synonyms_cache.txt to project Debug_Test_20250709_220306
+2025-07-09 22:03:06,271 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,272 - INFO - Successfully saved wordsapi_log.txt to project Debug_Test_20250709_220306
+2025-07-09 22:03:06,281 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,282 - INFO - Successfully saved context.txt to project Debug_Test_20250709_220306
+2025-07-09 22:03:06,293 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,294 - INFO - Successfully saved story.txt to project Debug_Test_20250709_220306
+2025-07-09 22:03:06,306 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,307 - INFO - Successfully saved plot_points.txt to project Debug_Test_20250709_220306
+2025-07-09 22:03:06,317 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,319 - INFO - Successfully saved continuity_rules.txt to project Debug_Test_20250709_220306
+2025-07-09 22:03:06,326 - INFO - Successfully saved API keys for project Debug_Test_20250709_220306
+2025-07-09 22:03:06,327 - INFO - Event [project_load_start]: Loading project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,329 - INFO - Application configuration loaded
+2025-07-09 22:03:06,340 - INFO - Project configuration loaded for: Debug_Test_20250709_220306
+2025-07-09 22:03:06,351 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,353 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,356 - INFO - Database initialized for project: Debug_Test_20250709_220306
+2025-07-09 22:03:06,358 - INFO - Event [project_load_complete]: Project 'Debug_Test_20250709_220306' loaded in 0.03s
+2025-07-09 22:03:06,359 - INFO - Event [project_load_error]: Failed to load project 'Debug_Test_20250709_220306': 'UIComponents' object has no attribute 'switch_to_project_workspace'
+2025-07-09 22:03:31,636 - ERROR - Failed to load project 'Debug_Test_20250709_220306': 'UIComponents' object has no attribute 'switch_to_project_workspace'
+2025-07-09 22:03:40,706 - INFO - Performance monitoring started
+2025-07-09 22:03:40,903 - INFO - Found 5 projects
+2025-07-09 22:03:40,904 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:03:40,904 - INFO - FANWS application initialized successfully
+2025-07-09 22:03:44,222 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:03:45,234 - INFO - Performance monitoring stopped
+2025-07-09 22:03:45,235 - INFO - Application shutdown complete
+2025-07-09 22:04:53,104 - INFO - Performance monitoring started
+2025-07-09 22:04:53,292 - INFO - Found 5 projects
+2025-07-09 22:04:53,292 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:04:53,293 - INFO - FANWS application initialized successfully
+2025-07-09 22:04:53,425 - INFO - Found 5 projects
+2025-07-09 22:04:53,426 - INFO - Application configuration loaded
+2025-07-09 22:04:53,427 - INFO - Project configuration loaded for: Debug_Test_20250709_220453
+2025-07-09 22:04:53,445 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,446 - INFO - Successfully saved synonyms_cache.txt to project Debug_Test_20250709_220453
+2025-07-09 22:04:53,455 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,456 - INFO - Successfully saved wordsapi_log.txt to project Debug_Test_20250709_220453
+2025-07-09 22:04:53,463 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,465 - INFO - Successfully saved context.txt to project Debug_Test_20250709_220453
+2025-07-09 22:04:53,473 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,474 - INFO - Successfully saved story.txt to project Debug_Test_20250709_220453
+2025-07-09 22:04:53,482 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,483 - INFO - Successfully saved plot_points.txt to project Debug_Test_20250709_220453
+2025-07-09 22:04:53,491 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,492 - INFO - Successfully saved continuity_rules.txt to project Debug_Test_20250709_220453
+2025-07-09 22:04:53,499 - INFO - Successfully saved API keys for project Debug_Test_20250709_220453
+2025-07-09 22:04:53,500 - INFO - Event [project_load_start]: Loading project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,501 - INFO - Application configuration loaded
+2025-07-09 22:04:53,509 - INFO - Project configuration loaded for: Debug_Test_20250709_220453
+2025-07-09 22:04:53,517 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,519 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,522 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,524 - INFO - Event [project_load_complete]: Project 'Debug_Test_20250709_220453' loaded in 0.02s
+2025-07-09 22:04:53,525 - ERROR - Error switching to project workspace: 'UIComponents' object has no attribute 'tab_widget'
+2025-07-09 22:04:53,525 - INFO - Event [project_load_start]: Loading project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,526 - INFO - Application configuration loaded
+2025-07-09 22:04:53,527 - INFO - Project configuration loaded for: Debug_Test_20250709_220453
+2025-07-09 22:04:53,528 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,529 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,532 - INFO - Database initialized for project: Debug_Test_20250709_220453
+2025-07-09 22:04:53,533 - INFO - Event [project_load_complete]: Project 'Debug_Test_20250709_220453' loaded in 0.01s
+2025-07-09 22:04:53,534 - ERROR - Error switching to project workspace: 'UIComponents' object has no attribute 'tab_widget'
+2025-07-09 22:04:53,537 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:04:54,546 - INFO - Performance monitoring stopped
+2025-07-09 22:04:54,547 - WARNING - Failed to generate performance recommendations: 'PerformanceMonitor' object has no attribute 'get_recommendations'
+2025-07-09 22:04:54,547 - INFO - Cleaning up project: Debug_Test_20250709_220453
+2025-07-09 22:04:54,547 - ERROR - Failed to cleanup project Debug_Test_20250709_220453: ConfigManager.get() takes 2 positional arguments but 3 were given
+2025-07-09 22:04:54,548 - INFO - Application shutdown complete
+2025-07-09 22:04:54,739 - INFO - Performance monitoring started
+2025-07-09 22:04:54,919 - INFO - Found 6 projects
+2025-07-09 22:04:54,919 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:04:54,919 - INFO - FANWS application initialized successfully
+2025-07-09 22:04:54,922 - INFO - Found 6 projects
+2025-07-09 22:04:54,923 - INFO - Application configuration loaded
+2025-07-09 22:04:54,924 - INFO - Project configuration loaded for: Button_Test_20250709_220454
+2025-07-09 22:04:54,938 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:54,939 - INFO - Successfully saved synonyms_cache.txt to project Button_Test_20250709_220454
+2025-07-09 22:04:54,948 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:54,950 - INFO - Successfully saved wordsapi_log.txt to project Button_Test_20250709_220454
+2025-07-09 22:04:54,958 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:54,959 - INFO - Successfully saved context.txt to project Button_Test_20250709_220454
+2025-07-09 22:04:54,967 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:54,969 - INFO - Successfully saved story.txt to project Button_Test_20250709_220454
+2025-07-09 22:04:54,977 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:54,978 - INFO - Successfully saved plot_points.txt to project Button_Test_20250709_220454
+2025-07-09 22:04:54,986 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:54,988 - INFO - Successfully saved continuity_rules.txt to project Button_Test_20250709_220454
+2025-07-09 22:04:54,993 - INFO - Successfully saved API keys for project Button_Test_20250709_220454
+2025-07-09 22:04:54,993 - INFO - Event [project_load_start]: Loading project: Button_Test_20250709_220454
+2025-07-09 22:04:54,994 - INFO - Application configuration loaded
+2025-07-09 22:04:55,002 - INFO - Project configuration loaded for: Button_Test_20250709_220454
+2025-07-09 22:04:55,010 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:55,012 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:55,014 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:55,016 - INFO - Event [project_load_complete]: Project 'Button_Test_20250709_220454' loaded in 0.02s
+2025-07-09 22:04:55,017 - ERROR - Error switching to project workspace: 'UIComponents' object has no attribute 'tab_widget'
+2025-07-09 22:04:55,018 - INFO - Event [project_load_start]: Loading project: Button_Test_20250709_220454
+2025-07-09 22:04:55,019 - INFO - Application configuration loaded
+2025-07-09 22:04:55,019 - INFO - Project configuration loaded for: Button_Test_20250709_220454
+2025-07-09 22:04:55,020 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:55,022 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:55,024 - INFO - Database initialized for project: Button_Test_20250709_220454
+2025-07-09 22:04:55,025 - INFO - Event [project_load_complete]: Project 'Button_Test_20250709_220454' loaded in 0.01s
+2025-07-09 22:04:55,026 - ERROR - Error switching to project workspace: 'UIComponents' object has no attribute 'tab_widget'
+2025-07-09 22:05:54,701 - INFO - Performance monitoring started
+2025-07-09 22:05:54,880 - INFO - Found 4 projects
+2025-07-09 22:05:54,881 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:05:54,881 - INFO - FANWS application initialized successfully
+2025-07-09 22:05:54,886 - INFO - Found 4 projects
+2025-07-09 22:05:54,887 - INFO - Application configuration loaded
+2025-07-09 22:05:54,888 - INFO - Project configuration loaded for: Test_Project_20250709_220554
+2025-07-09 22:05:54,906 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,907 - INFO - Successfully saved synonyms_cache.txt to project Test_Project_20250709_220554
+2025-07-09 22:05:54,917 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,919 - INFO - Successfully saved wordsapi_log.txt to project Test_Project_20250709_220554
+2025-07-09 22:05:54,926 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,928 - INFO - Successfully saved context.txt to project Test_Project_20250709_220554
+2025-07-09 22:05:54,936 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,937 - INFO - Successfully saved story.txt to project Test_Project_20250709_220554
+2025-07-09 22:05:54,945 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,946 - INFO - Successfully saved plot_points.txt to project Test_Project_20250709_220554
+2025-07-09 22:05:54,955 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,956 - INFO - Successfully saved continuity_rules.txt to project Test_Project_20250709_220554
+2025-07-09 22:05:54,963 - INFO - Successfully saved API keys for project Test_Project_20250709_220554
+2025-07-09 22:05:54,964 - INFO - Event [project_load_start]: Loading project: Test_Project_20250709_220554
+2025-07-09 22:05:54,965 - INFO - Application configuration loaded
+2025-07-09 22:05:54,973 - INFO - Project configuration loaded for: Test_Project_20250709_220554
+2025-07-09 22:05:54,980 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,983 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,985 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,987 - INFO - Event [project_load_complete]: Project 'Test_Project_20250709_220554' loaded in 0.02s
+2025-07-09 22:05:54,988 - ERROR - Error switching to project workspace: 'UIComponents' object has no attribute 'tab_widget'
+2025-07-09 22:05:54,988 - INFO - Event [project_load_start]: Loading project: Test_Project_20250709_220554
+2025-07-09 22:05:54,990 - INFO - Application configuration loaded
+2025-07-09 22:05:54,990 - INFO - Project configuration loaded for: Test_Project_20250709_220554
+2025-07-09 22:05:54,991 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,993 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,996 - INFO - Database initialized for project: Test_Project_20250709_220554
+2025-07-09 22:05:54,997 - INFO - Event [project_load_complete]: Project 'Test_Project_20250709_220554' loaded in 0.01s
+2025-07-09 22:05:54,998 - ERROR - Error switching to project workspace: 'UIComponents' object has no attribute 'tab_widget'
+2025-07-09 22:06:44,613 - INFO - Performance monitoring started
+2025-07-09 22:06:44,796 - INFO - Found 4 projects
+2025-07-09 22:06:44,796 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:06:44,796 - INFO - FANWS application initialized successfully
+2025-07-09 22:06:44,801 - INFO - Found 4 projects
+2025-07-09 22:06:44,802 - INFO - Application configuration loaded
+2025-07-09 22:06:44,804 - INFO - Project configuration loaded for: Test_Project_20250709_220644
+2025-07-09 22:06:44,821 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,823 - INFO - Successfully saved synonyms_cache.txt to project Test_Project_20250709_220644
+2025-07-09 22:06:44,832 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,833 - INFO - Successfully saved wordsapi_log.txt to project Test_Project_20250709_220644
+2025-07-09 22:06:44,841 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,842 - INFO - Successfully saved context.txt to project Test_Project_20250709_220644
+2025-07-09 22:06:44,850 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,852 - INFO - Successfully saved story.txt to project Test_Project_20250709_220644
+2025-07-09 22:06:44,861 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,862 - INFO - Successfully saved plot_points.txt to project Test_Project_20250709_220644
+2025-07-09 22:06:44,872 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,873 - INFO - Successfully saved continuity_rules.txt to project Test_Project_20250709_220644
+2025-07-09 22:06:44,880 - INFO - Successfully saved API keys for project Test_Project_20250709_220644
+2025-07-09 22:06:44,881 - INFO - Event [project_load_start]: Loading project: Test_Project_20250709_220644
+2025-07-09 22:06:44,882 - INFO - Application configuration loaded
+2025-07-09 22:06:44,892 - INFO - Project configuration loaded for: Test_Project_20250709_220644
+2025-07-09 22:06:44,902 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,904 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,906 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,908 - INFO - Event [project_load_complete]: Project 'Test_Project_20250709_220644' loaded in 0.03s
+2025-07-09 22:06:44,969 - INFO - Event [project_load_start]: Loading project: Test_Project_20250709_220644
+2025-07-09 22:06:44,970 - INFO - Application configuration loaded
+2025-07-09 22:06:44,971 - INFO - Project configuration loaded for: Test_Project_20250709_220644
+2025-07-09 22:06:44,975 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,977 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,982 - INFO - Database initialized for project: Test_Project_20250709_220644
+2025-07-09 22:06:44,985 - INFO - Event [project_load_complete]: Project 'Test_Project_20250709_220644' loaded in 0.02s
+2025-07-09 22:07:35,016 - INFO - Performance monitoring started
+2025-07-09 22:07:35,188 - INFO - Found 4 projects
+2025-07-09 22:07:35,188 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:07:35,188 - INFO - FANWS application initialized successfully
+2025-07-09 22:07:35,194 - INFO - Found 4 projects
+2025-07-09 22:07:35,195 - INFO - Application configuration loaded
+2025-07-09 22:07:35,196 - INFO - Project configuration loaded for: Test_Project_20250709_220735
+2025-07-09 22:07:35,214 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,215 - INFO - Successfully saved synonyms_cache.txt to project Test_Project_20250709_220735
+2025-07-09 22:07:35,223 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,225 - INFO - Successfully saved wordsapi_log.txt to project Test_Project_20250709_220735
+2025-07-09 22:07:35,232 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,234 - INFO - Successfully saved context.txt to project Test_Project_20250709_220735
+2025-07-09 22:07:35,242 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,243 - INFO - Successfully saved story.txt to project Test_Project_20250709_220735
+2025-07-09 22:07:35,251 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,253 - INFO - Successfully saved plot_points.txt to project Test_Project_20250709_220735
+2025-07-09 22:07:35,260 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,262 - INFO - Successfully saved continuity_rules.txt to project Test_Project_20250709_220735
+2025-07-09 22:07:35,269 - INFO - Successfully saved API keys for project Test_Project_20250709_220735
+2025-07-09 22:07:35,269 - INFO - Event [project_load_start]: Loading project: Test_Project_20250709_220735
+2025-07-09 22:07:35,270 - INFO - Application configuration loaded
+2025-07-09 22:07:35,277 - INFO - Project configuration loaded for: Test_Project_20250709_220735
+2025-07-09 22:07:35,286 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,288 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,290 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,292 - INFO - Event [project_load_complete]: Project 'Test_Project_20250709_220735' loaded in 0.02s
+2025-07-09 22:07:35,348 - INFO - Event [project_load_start]: Loading project: Test_Project_20250709_220735
+2025-07-09 22:07:35,351 - INFO - Application configuration loaded
+2025-07-09 22:07:35,356 - INFO - Project configuration loaded for: Test_Project_20250709_220735
+2025-07-09 22:07:35,358 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,361 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,367 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,369 - INFO - Event [project_load_complete]: Project 'Test_Project_20250709_220735' loaded in 0.02s
+2025-07-09 22:07:35,384 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,394 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,397 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,399 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,402 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,404 - INFO - Database initialized for project: Test_Project_20250709_220735
+2025-07-09 22:07:35,411 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:07:36,412 - INFO - Performance monitoring stopped
+2025-07-09 22:07:36,413 - WARNING - Failed to generate performance recommendations: 'PerformanceMonitor' object has no attribute 'get_recommendations'
+2025-07-09 22:07:36,413 - INFO - Cleaning up project: Test_Project_20250709_220735
+2025-07-09 22:07:36,413 - ERROR - Failed to cleanup project Test_Project_20250709_220735: ConfigManager.get() takes 2 positional arguments but 3 were given
+2025-07-09 22:07:36,414 - INFO - Application shutdown complete
+2025-07-09 22:08:14,934 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,935 - INFO - Successfully saved synonyms_cache.txt to project test_save_debug
+2025-07-09 22:08:14,944 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,945 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,947 - INFO - Successfully saved wordsapi_log.txt to project test_save_debug
+2025-07-09 22:08:14,955 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,957 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,959 - INFO - Successfully saved context.txt to project test_save_debug
+2025-07-09 22:08:14,967 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,969 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,970 - INFO - Successfully saved story.txt to project test_save_debug
+2025-07-09 22:08:14,978 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,980 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,981 - INFO - Successfully saved plot_points.txt to project test_save_debug
+2025-07-09 22:08:14,990 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,992 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:14,993 - INFO - Successfully saved continuity_rules.txt to project test_save_debug
+2025-07-09 22:08:15,001 - INFO - Database initialized for project: test_save_debug
+2025-07-09 22:08:15,364 - INFO - Performance monitoring started
+2025-07-09 22:08:15,554 - INFO - Found 6 projects
+2025-07-09 22:08:15,555 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:08:15,555 - INFO - FANWS application initialized successfully
+2025-07-09 22:08:15,556 - INFO - Application configuration loaded
+2025-07-09 22:08:15,558 - INFO - Project configuration loaded for: test_create_internals
+2025-07-09 22:08:15,575 - INFO - Database initialized for project: test_create_internals
+2025-07-09 22:08:15,576 - INFO - Successfully saved synonyms_cache.txt to project test_create_internals
+2025-07-09 22:08:15,585 - INFO - Database initialized for project: test_create_internals
+2025-07-09 22:08:15,587 - INFO - Successfully saved wordsapi_log.txt to project test_create_internals
+2025-07-09 22:08:15,596 - INFO - Database initialized for project: test_create_internals
+2025-07-09 22:08:15,597 - INFO - Successfully saved context.txt to project test_create_internals
+2025-07-09 22:08:15,606 - INFO - Database initialized for project: test_create_internals
+2025-07-09 22:08:15,607 - INFO - Successfully saved story.txt to project test_create_internals
+2025-07-09 22:08:15,615 - INFO - Database initialized for project: test_create_internals
+2025-07-09 22:08:15,616 - INFO - Successfully saved plot_points.txt to project test_create_internals
+2025-07-09 22:08:15,624 - INFO - Database initialized for project: test_create_internals
+2025-07-09 22:08:15,625 - INFO - Successfully saved continuity_rules.txt to project test_create_internals
+2025-07-09 22:08:15,632 - INFO - Successfully saved API keys for project test_create_internals
+2025-07-09 22:09:13,476 - INFO - Performance monitoring started
+2025-07-09 22:09:13,658 - INFO - Found 7 projects
+2025-07-09 22:09:13,658 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:09:13,659 - INFO - FANWS application initialized successfully
+2025-07-09 22:09:13,661 - INFO - Found 7 projects
+2025-07-09 22:09:13,662 - INFO - Application configuration loaded
+2025-07-09 22:09:13,663 - INFO - Project configuration loaded for: Final_Test_20250709_220913
+2025-07-09 22:09:13,679 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,681 - INFO - Successfully saved synonyms_cache.txt to project Final_Test_20250709_220913
+2025-07-09 22:09:13,690 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,692 - INFO - Successfully saved wordsapi_log.txt to project Final_Test_20250709_220913
+2025-07-09 22:09:13,700 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,701 - INFO - Successfully saved context.txt to project Final_Test_20250709_220913
+2025-07-09 22:09:13,710 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,712 - INFO - Successfully saved story.txt to project Final_Test_20250709_220913
+2025-07-09 22:09:13,721 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,722 - INFO - Successfully saved plot_points.txt to project Final_Test_20250709_220913
+2025-07-09 22:09:13,730 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,731 - INFO - Successfully saved continuity_rules.txt to project Final_Test_20250709_220913
+2025-07-09 22:09:13,739 - INFO - Successfully saved API keys for project Final_Test_20250709_220913
+2025-07-09 22:09:13,739 - INFO - Event [project_load_start]: Loading project: Final_Test_20250709_220913
+2025-07-09 22:09:13,740 - INFO - Application configuration loaded
+2025-07-09 22:09:13,749 - INFO - Project configuration loaded for: Final_Test_20250709_220913
+2025-07-09 22:09:13,758 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,760 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,762 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,764 - INFO - Event [project_load_complete]: Project 'Final_Test_20250709_220913' loaded in 0.02s
+2025-07-09 22:09:13,819 - INFO - Event [project_load_start]: Loading project: Final_Test_20250709_220913
+2025-07-09 22:09:13,821 - INFO - Application configuration loaded
+2025-07-09 22:09:13,822 - INFO - Project configuration loaded for: Final_Test_20250709_220913
+2025-07-09 22:09:13,825 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,830 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,836 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,838 - INFO - Event [project_load_complete]: Project 'Final_Test_20250709_220913' loaded in 0.02s
+2025-07-09 22:09:13,853 - INFO - Database initialized for project: Final_Test_20250709_220913
+2025-07-09 22:09:13,857 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:09:14,859 - INFO - Performance monitoring stopped
+2025-07-09 22:09:14,859 - WARNING - Failed to generate performance recommendations: 'PerformanceMonitor' object has no attribute 'get_recommendations'
+2025-07-09 22:09:14,859 - INFO - Cleaning up project: Final_Test_20250709_220913
+2025-07-09 22:09:14,860 - ERROR - Failed to cleanup project Final_Test_20250709_220913: ConfigManager.get() takes 2 positional arguments but 3 were given
+2025-07-09 22:09:14,860 - INFO - Application shutdown complete
+2025-07-09 22:09:49,917 - INFO - Performance monitoring started
+2025-07-09 22:09:50,105 - INFO - Found 8 projects
+2025-07-09 22:09:50,105 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:09:50,106 - INFO - FANWS application initialized successfully
+2025-07-09 22:09:50,108 - INFO - Found 8 projects
+2025-07-09 22:09:50,108 - INFO - Application configuration loaded
+2025-07-09 22:09:50,109 - INFO - Project configuration loaded for: Simple_Test_220950
+2025-07-09 22:09:50,127 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,129 - INFO - Successfully saved synonyms_cache.txt to project Simple_Test_220950
+2025-07-09 22:09:50,137 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,139 - INFO - Successfully saved wordsapi_log.txt to project Simple_Test_220950
+2025-07-09 22:09:50,147 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,148 - INFO - Successfully saved context.txt to project Simple_Test_220950
+2025-07-09 22:09:50,156 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,158 - INFO - Successfully saved story.txt to project Simple_Test_220950
+2025-07-09 22:09:50,165 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,167 - INFO - Successfully saved plot_points.txt to project Simple_Test_220950
+2025-07-09 22:09:50,175 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,177 - INFO - Successfully saved continuity_rules.txt to project Simple_Test_220950
+2025-07-09 22:09:50,183 - INFO - Successfully saved API keys for project Simple_Test_220950
+2025-07-09 22:09:50,184 - INFO - Event [project_load_start]: Loading project: Simple_Test_220950
+2025-07-09 22:09:50,185 - INFO - Application configuration loaded
+2025-07-09 22:09:50,193 - INFO - Project configuration loaded for: Simple_Test_220950
+2025-07-09 22:09:50,201 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,204 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,206 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,208 - INFO - Event [project_load_complete]: Project 'Simple_Test_220950' loaded in 0.02s
+2025-07-09 22:09:50,265 - INFO - Event [project_load_start]: Loading project: Simple_Test_220950
+2025-07-09 22:09:50,271 - INFO - Application configuration loaded
+2025-07-09 22:09:50,272 - INFO - Project configuration loaded for: Simple_Test_220950
+2025-07-09 22:09:50,273 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,275 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,279 - INFO - Database initialized for project: Simple_Test_220950
+2025-07-09 22:09:50,280 - INFO - Event [project_load_complete]: Project 'Simple_Test_220950' loaded in 0.02s
+2025-07-09 22:09:50,298 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:09:51,300 - INFO - Performance monitoring stopped
+2025-07-09 22:09:51,300 - WARNING - Failed to generate performance recommendations: 'PerformanceMonitor' object has no attribute 'get_recommendations'
+2025-07-09 22:09:51,300 - INFO - Cleaning up project: Simple_Test_220950
+2025-07-09 22:09:51,301 - ERROR - Failed to cleanup project Simple_Test_220950: ConfigManager.get() takes 2 positional arguments but 3 were given
+2025-07-09 22:09:51,301 - INFO - Application shutdown complete
+2025-07-09 22:13:22,191 - INFO - Performance monitoring started
+2025-07-09 22:13:22,379 - INFO - Found 9 projects
+2025-07-09 22:13:22,380 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:13:22,380 - INFO - FANWS application initialized successfully
+2025-07-09 22:13:22,381 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:13:23,388 - INFO - Performance monitoring stopped
+2025-07-09 22:13:23,388 - INFO - Application shutdown complete
+2025-07-09 22:16:37,908 - INFO - Application configuration loaded
+2025-07-09 22:16:37,909 - INFO - Project configuration loaded for: test_project
+2025-07-09 22:16:49,964 - INFO - Application configuration loaded
+2025-07-09 22:16:49,965 - INFO - Project configuration loaded for: test_project
+2025-07-09 22:17:16,566 - INFO - Application configuration loaded
+2025-07-09 22:17:16,567 - INFO - Project configuration loaded for: test_project
+2025-07-09 22:17:23,888 - INFO - Application configuration loaded
+2025-07-09 22:17:23,889 - INFO - Project configuration loaded for: test_project
+2025-07-09 22:17:59,892 - INFO - Application configuration loaded
+2025-07-09 22:17:59,892 - INFO - Project configuration loaded for: test_project
+2025-07-09 22:17:59,894 - INFO - Application configuration loaded
+2025-07-09 22:17:59,896 - INFO - Project configuration loaded for: test_cleanup_project
+2025-07-09 22:18:23,722 - INFO - Application configuration loaded
+2025-07-09 22:18:23,723 - INFO - Project configuration loaded for: test_project
+2025-07-09 22:19:02,595 - INFO - Application configuration loaded
+2025-07-09 22:19:02,597 - INFO - Project configuration loaded for: test_cleanup_integration
+2025-07-09 22:19:02,611 - INFO - Database initialized for project: test_cleanup_integration
+2025-07-09 22:19:02,611 - INFO - Cleaning up project: test_cleanup_integration
+2025-07-09 22:19:02,611 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:02,612 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:02,612 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:02,612 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:02,613 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:02,613 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:02,613 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:02,613 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:02,614 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:02,614 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:02,614 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:02,614 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:02,615 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:02,615 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:02,615 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:02,615 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:02,616 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:02,616 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:02,616 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:02,617 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:02,617 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:02,617 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:02,617 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:02,618 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:02,618 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:02,618 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:02,618 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:02,619 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:02,619 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:02,619 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:02,620 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:02,620 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:02,620 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:02,620 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:02,621 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:02,621 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:02,621 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:02,622 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:02,622 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:02,622 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:02,622 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:02,623 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:02,623 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:02,623 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:02,623 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:02,624 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:02,624 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:02,624 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:02,624 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:02,625 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:02,625 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:02,625 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:02,625 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:02,625 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:02,626 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:02,626 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:02,626 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:02,627 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:02,627 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:02,627 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:02,627 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:02,628 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:02,628 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:02,628 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:02,628 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:02,629 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:02,629 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:02,629 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:02,629 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:02,629 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:02,630 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:02,630 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:02,630 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:02,630 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:02,631 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:02,631 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:02,631 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:02,632 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:02,632 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:02,632 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:02,632 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:02,633 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:02,633 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:02,633 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:02,633 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:02,634 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:02,634 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:02,634 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:02,634 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:02,634 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:02,635 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:02,635 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:02,636 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:02,636 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:02,636 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:02,637 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:02,637 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:02,637 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:02,638 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:02,638 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:02,638 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:02,639 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:02,639 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:02,639 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:02,639 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:02,640 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:02,640 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:02,640 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:02,641 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:02,641 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:02,641 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:02,641 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:02,642 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:02,642 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:02,642 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:02,642 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:02,643 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:02,643 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:02,644 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:02,644 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:02,644 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:02,644 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:02,645 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:02,645 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:02,645 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:02,645 - INFO - Project cleanup completed for: test_cleanup_integration
+2025-07-09 22:19:12,570 - INFO - Application configuration loaded
+2025-07-09 22:19:12,578 - INFO - Project configuration loaded for: test_cleanup_integration
+2025-07-09 22:19:12,581 - INFO - Database initialized for project: test_cleanup_integration
+2025-07-09 22:19:12,582 - INFO - Cleaning up project: test_cleanup_integration
+2025-07-09 22:19:12,582 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:12,582 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:12,583 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:12,583 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:12,583 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter1
+2025-07-09 22:19:12,583 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:12,583 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:12,583 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:12,583 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:12,584 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter2
+2025-07-09 22:19:12,584 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:12,584 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:12,584 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:12,584 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:12,584 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter3
+2025-07-09 22:19:12,584 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:12,584 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:12,585 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:12,585 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:12,585 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter4
+2025-07-09 22:19:12,585 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:12,585 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:12,585 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:12,585 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:12,586 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter5
+2025-07-09 22:19:12,586 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:12,586 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:12,586 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:12,586 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:12,586 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter6
+2025-07-09 22:19:12,586 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:12,586 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:12,587 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:12,587 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:12,587 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter7
+2025-07-09 22:19:12,587 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:12,587 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:12,587 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:12,587 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:12,588 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter8
+2025-07-09 22:19:12,588 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:12,588 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:12,588 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:12,588 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:12,588 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter9
+2025-07-09 22:19:12,588 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:12,589 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:12,589 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:12,589 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:12,589 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter10
+2025-07-09 22:19:12,589 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:12,589 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:12,590 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:12,590 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:12,590 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter11
+2025-07-09 22:19:12,590 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:12,590 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:12,590 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:12,590 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:12,591 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter12
+2025-07-09 22:19:12,591 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:12,591 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:12,591 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:12,591 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:12,591 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter13
+2025-07-09 22:19:12,591 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:12,591 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:12,592 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:12,592 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:12,592 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter14
+2025-07-09 22:19:12,592 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:12,592 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:12,592 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:12,592 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:12,593 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter15
+2025-07-09 22:19:12,593 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:12,593 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:12,593 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:12,593 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:12,593 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter16
+2025-07-09 22:19:12,593 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:12,594 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:12,594 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:12,594 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:12,594 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter17
+2025-07-09 22:19:12,594 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:12,594 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:12,595 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:12,595 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:12,595 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter18
+2025-07-09 22:19:12,595 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:12,595 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:12,595 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:12,596 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:12,596 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter19
+2025-07-09 22:19:12,596 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:12,596 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:12,596 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:12,596 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:12,597 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter20
+2025-07-09 22:19:12,597 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:12,597 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:12,597 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:12,597 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:12,597 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter21
+2025-07-09 22:19:12,597 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:12,598 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:12,598 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:12,598 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:12,598 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter22
+2025-07-09 22:19:12,598 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:12,598 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:12,598 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:12,599 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:12,599 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter23
+2025-07-09 22:19:12,599 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:12,599 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:12,599 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:12,599 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:12,599 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter24
+2025-07-09 22:19:12,599 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:12,600 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:12,600 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:12,600 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:12,600 - INFO - Drafts directory not found: projects\test_cleanup_integration\drafts/chapter25
+2025-07-09 22:19:12,600 - INFO - Project cleanup completed for: test_cleanup_integration
+2025-07-09 22:25:16,529 - INFO - Performance monitoring started
+2025-07-09 22:25:16,699 - INFO - Found 11 projects
+2025-07-09 22:25:16,700 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:25:16,701 - INFO - FANWS application initialized successfully
+2025-07-09 22:25:47,188 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:25:48,203 - INFO - Performance monitoring stopped
+2025-07-09 22:25:48,204 - INFO - Application shutdown complete
+2025-07-09 22:26:16,924 - INFO - Performance monitoring started
+2025-07-09 22:26:17,105 - INFO - Found 11 projects
+2025-07-09 22:26:17,106 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:26:17,106 - INFO - FANWS application initialized successfully
+2025-07-09 22:26:32,916 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:26:33,921 - INFO - Performance monitoring stopped
+2025-07-09 22:26:33,921 - INFO - Application shutdown complete
+2025-07-09 22:28:21,311 - INFO - Performance monitoring started
+2025-07-09 22:28:21,500 - INFO - Found 11 projects
+2025-07-09 22:28:21,501 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:28:21,501 - INFO - FANWS application initialized successfully
+2025-07-09 22:28:21,506 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:28:22,521 - INFO - Performance monitoring stopped
+2025-07-09 22:28:22,522 - INFO - Application shutdown complete
+2025-07-09 22:28:22,682 - INFO - Performance monitoring started
+2025-07-09 22:28:22,863 - INFO - Found 11 projects
+2025-07-09 22:28:22,863 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:28:22,864 - INFO - FANWS application initialized successfully
+2025-07-09 22:28:22,868 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:28:23,871 - INFO - Performance monitoring stopped
+2025-07-09 22:28:23,872 - INFO - Application shutdown complete
+2025-07-09 22:28:30,334 - INFO - Performance monitoring started
+2025-07-09 22:28:30,510 - INFO - Found 11 projects
+2025-07-09 22:28:30,510 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:28:30,510 - INFO - FANWS application initialized successfully
+2025-07-09 22:28:30,515 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:28:31,521 - INFO - Performance monitoring stopped
+2025-07-09 22:28:31,521 - INFO - Application shutdown complete
+2025-07-09 22:28:31,664 - INFO - Performance monitoring started
+2025-07-09 22:28:31,841 - INFO - Found 11 projects
+2025-07-09 22:28:31,841 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:28:31,842 - INFO - FANWS application initialized successfully
+2025-07-09 22:28:31,847 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:28:32,858 - INFO - Performance monitoring stopped
+2025-07-09 22:28:32,858 - INFO - Application shutdown complete
+2025-07-09 22:29:04,012 - INFO - Performance monitoring started
+2025-07-09 22:29:04,196 - INFO - Found 11 projects
+2025-07-09 22:29:04,197 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:29:04,197 - INFO - FANWS application initialized successfully
+2025-07-09 22:29:04,199 - INFO - Found 11 projects
+2025-07-09 22:29:04,200 - INFO - Application configuration loaded
+2025-07-09 22:29:04,201 - INFO - Project configuration loaded for: Simple_Test_222904
+2025-07-09 22:29:04,219 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,221 - INFO - Successfully saved synonyms_cache.txt to project Simple_Test_222904
+2025-07-09 22:29:04,231 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,232 - INFO - Successfully saved wordsapi_log.txt to project Simple_Test_222904
+2025-07-09 22:29:04,240 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,242 - INFO - Successfully saved context.txt to project Simple_Test_222904
+2025-07-09 22:29:04,250 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,252 - INFO - Successfully saved story.txt to project Simple_Test_222904
+2025-07-09 22:29:04,261 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,262 - INFO - Successfully saved plot_points.txt to project Simple_Test_222904
+2025-07-09 22:29:04,270 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,271 - INFO - Successfully saved continuity_rules.txt to project Simple_Test_222904
+2025-07-09 22:29:04,279 - INFO - Successfully saved API keys for project Simple_Test_222904
+2025-07-09 22:29:04,280 - INFO - Event [project_load_start]: Loading project: Simple_Test_222904
+2025-07-09 22:29:04,281 - INFO - Application configuration loaded
+2025-07-09 22:29:04,288 - INFO - Project configuration loaded for: Simple_Test_222904
+2025-07-09 22:29:04,297 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,299 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,301 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,303 - INFO - Event [project_load_complete]: Project 'Simple_Test_222904' loaded in 0.02s
+2025-07-09 22:29:04,362 - INFO - Event [project_load_start]: Loading project: Simple_Test_222904
+2025-07-09 22:29:04,365 - INFO - Application configuration loaded
+2025-07-09 22:29:04,367 - INFO - Project configuration loaded for: Simple_Test_222904
+2025-07-09 22:29:04,370 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,373 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,388 - INFO - Database initialized for project: Simple_Test_222904
+2025-07-09 22:29:04,390 - INFO - Event [project_load_complete]: Project 'Simple_Test_222904' loaded in 0.03s
+2025-07-09 22:29:04,407 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:29:05,412 - INFO - Performance monitoring stopped
+2025-07-09 22:29:05,413 - INFO - Cleaning up project: Simple_Test_222904
+2025-07-09 22:29:05,413 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter1
+2025-07-09 22:29:05,413 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter1
+2025-07-09 22:29:05,414 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter1
+2025-07-09 22:29:05,414 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter1
+2025-07-09 22:29:05,415 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter1
+2025-07-09 22:29:05,415 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter2
+2025-07-09 22:29:05,415 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter2
+2025-07-09 22:29:05,416 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter2
+2025-07-09 22:29:05,416 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter2
+2025-07-09 22:29:05,416 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter2
+2025-07-09 22:29:05,417 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter3
+2025-07-09 22:29:05,417 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter3
+2025-07-09 22:29:05,417 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter3
+2025-07-09 22:29:05,418 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter3
+2025-07-09 22:29:05,418 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter3
+2025-07-09 22:29:05,419 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter4
+2025-07-09 22:29:05,419 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter4
+2025-07-09 22:29:05,419 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter4
+2025-07-09 22:29:05,420 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter4
+2025-07-09 22:29:05,420 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter4
+2025-07-09 22:29:05,420 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter5
+2025-07-09 22:29:05,421 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter5
+2025-07-09 22:29:05,421 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter5
+2025-07-09 22:29:05,422 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter5
+2025-07-09 22:29:05,422 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter5
+2025-07-09 22:29:05,422 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter6
+2025-07-09 22:29:05,423 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter6
+2025-07-09 22:29:05,423 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter6
+2025-07-09 22:29:05,423 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter6
+2025-07-09 22:29:05,424 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter6
+2025-07-09 22:29:05,424 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter7
+2025-07-09 22:29:05,424 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter7
+2025-07-09 22:29:05,425 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter7
+2025-07-09 22:29:05,425 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter7
+2025-07-09 22:29:05,426 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter7
+2025-07-09 22:29:05,426 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter8
+2025-07-09 22:29:05,426 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter8
+2025-07-09 22:29:05,427 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter8
+2025-07-09 22:29:05,427 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter8
+2025-07-09 22:29:05,427 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter8
+2025-07-09 22:29:05,428 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter9
+2025-07-09 22:29:05,428 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter9
+2025-07-09 22:29:05,429 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter9
+2025-07-09 22:29:05,429 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter9
+2025-07-09 22:29:05,430 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter9
+2025-07-09 22:29:05,430 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter10
+2025-07-09 22:29:05,430 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter10
+2025-07-09 22:29:05,430 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter10
+2025-07-09 22:29:05,431 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter10
+2025-07-09 22:29:05,431 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter10
+2025-07-09 22:29:05,431 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter11
+2025-07-09 22:29:05,432 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter11
+2025-07-09 22:29:05,432 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter11
+2025-07-09 22:29:05,432 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter11
+2025-07-09 22:29:05,432 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter11
+2025-07-09 22:29:05,433 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter12
+2025-07-09 22:29:05,433 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter12
+2025-07-09 22:29:05,433 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter12
+2025-07-09 22:29:05,434 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter12
+2025-07-09 22:29:05,434 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter12
+2025-07-09 22:29:05,434 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter13
+2025-07-09 22:29:05,435 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter13
+2025-07-09 22:29:05,435 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter13
+2025-07-09 22:29:05,435 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter13
+2025-07-09 22:29:05,435 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter13
+2025-07-09 22:29:05,436 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter14
+2025-07-09 22:29:05,436 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter14
+2025-07-09 22:29:05,436 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter14
+2025-07-09 22:29:05,436 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter14
+2025-07-09 22:29:05,437 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter14
+2025-07-09 22:29:05,437 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter15
+2025-07-09 22:29:05,437 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter15
+2025-07-09 22:29:05,437 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter15
+2025-07-09 22:29:05,438 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter15
+2025-07-09 22:29:05,438 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter15
+2025-07-09 22:29:05,439 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter16
+2025-07-09 22:29:05,439 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter16
+2025-07-09 22:29:05,439 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter16
+2025-07-09 22:29:05,440 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter16
+2025-07-09 22:29:05,440 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter16
+2025-07-09 22:29:05,440 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter17
+2025-07-09 22:29:05,441 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter17
+2025-07-09 22:29:05,441 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter17
+2025-07-09 22:29:05,441 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter17
+2025-07-09 22:29:05,442 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter17
+2025-07-09 22:29:05,442 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter18
+2025-07-09 22:29:05,442 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter18
+2025-07-09 22:29:05,442 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter18
+2025-07-09 22:29:05,443 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter18
+2025-07-09 22:29:05,443 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter18
+2025-07-09 22:29:05,443 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter19
+2025-07-09 22:29:05,443 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter19
+2025-07-09 22:29:05,444 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter19
+2025-07-09 22:29:05,444 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter19
+2025-07-09 22:29:05,444 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter19
+2025-07-09 22:29:05,444 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter20
+2025-07-09 22:29:05,445 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter20
+2025-07-09 22:29:05,445 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter20
+2025-07-09 22:29:05,445 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter20
+2025-07-09 22:29:05,445 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter20
+2025-07-09 22:29:05,446 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter21
+2025-07-09 22:29:05,446 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter21
+2025-07-09 22:29:05,446 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter21
+2025-07-09 22:29:05,447 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter21
+2025-07-09 22:29:05,447 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter21
+2025-07-09 22:29:05,447 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter22
+2025-07-09 22:29:05,447 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter22
+2025-07-09 22:29:05,448 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter22
+2025-07-09 22:29:05,448 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter22
+2025-07-09 22:29:05,448 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter22
+2025-07-09 22:29:05,448 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter23
+2025-07-09 22:29:05,449 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter23
+2025-07-09 22:29:05,449 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter23
+2025-07-09 22:29:05,449 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter23
+2025-07-09 22:29:05,449 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter23
+2025-07-09 22:29:05,450 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter24
+2025-07-09 22:29:05,450 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter24
+2025-07-09 22:29:05,450 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter24
+2025-07-09 22:29:05,450 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter24
+2025-07-09 22:29:05,450 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter24
+2025-07-09 22:29:05,451 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter25
+2025-07-09 22:29:05,451 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter25
+2025-07-09 22:29:05,451 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter25
+2025-07-09 22:29:05,451 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter25
+2025-07-09 22:29:05,452 - INFO - Drafts directory not found: projects\Simple_Test_222904\drafts/chapter25
+2025-07-09 22:29:05,452 - INFO - Project cleanup completed for: Simple_Test_222904
+2025-07-09 22:29:05,452 - INFO - Application shutdown complete
+2025-07-09 22:30:21,853 - INFO - Performance monitoring started
+2025-07-09 22:30:22,042 - INFO - Found 12 projects
+2025-07-09 22:30:22,043 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:30:22,043 - INFO - FANWS application initialized successfully
+2025-07-09 22:30:22,047 - INFO - Found 12 projects
+2025-07-09 22:30:22,048 - INFO - Application configuration loaded
+2025-07-09 22:30:22,049 - INFO - Project configuration loaded for: Interactive_Test
+2025-07-09 22:30:22,064 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,065 - INFO - Successfully saved synonyms_cache.txt to project Interactive_Test
+2025-07-09 22:30:22,075 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,077 - INFO - Successfully saved wordsapi_log.txt to project Interactive_Test
+2025-07-09 22:30:22,084 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,086 - INFO - Successfully saved context.txt to project Interactive_Test
+2025-07-09 22:30:22,095 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,096 - INFO - Successfully saved story.txt to project Interactive_Test
+2025-07-09 22:30:22,104 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,105 - INFO - Successfully saved plot_points.txt to project Interactive_Test
+2025-07-09 22:30:22,114 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,116 - INFO - Successfully saved continuity_rules.txt to project Interactive_Test
+2025-07-09 22:30:22,123 - INFO - Successfully saved API keys for project Interactive_Test
+2025-07-09 22:30:22,123 - INFO - Event [project_load_start]: Loading project: Interactive_Test
+2025-07-09 22:30:22,125 - INFO - Application configuration loaded
+2025-07-09 22:30:22,133 - INFO - Project configuration loaded for: Interactive_Test
+2025-07-09 22:30:22,141 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,143 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,144 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,147 - INFO - Event [project_load_complete]: Project 'Interactive_Test' loaded in 0.02s
+2025-07-09 22:30:22,204 - INFO - Event [project_load_start]: Loading project: Interactive_Test
+2025-07-09 22:30:22,210 - INFO - Application configuration loaded
+2025-07-09 22:30:22,211 - INFO - Project configuration loaded for: Interactive_Test
+2025-07-09 22:30:22,213 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,215 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,219 - INFO - Database initialized for project: Interactive_Test
+2025-07-09 22:30:22,220 - INFO - Event [project_load_complete]: Project 'Interactive_Test' loaded in 0.02s
+2025-07-09 22:30:22,246 - INFO - Found 13 projects
+2025-07-09 22:30:22,249 - INFO - Application configuration loaded
+2025-07-09 22:30:22,253 - INFO - Project configuration loaded for: Button_Click_Test
+2025-07-09 22:30:22,271 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,272 - INFO - Successfully saved synonyms_cache.txt to project Button_Click_Test
+2025-07-09 22:30:22,283 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,284 - INFO - Successfully saved wordsapi_log.txt to project Button_Click_Test
+2025-07-09 22:30:22,294 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,295 - INFO - Successfully saved context.txt to project Button_Click_Test
+2025-07-09 22:30:22,306 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,307 - INFO - Successfully saved story.txt to project Button_Click_Test
+2025-07-09 22:30:22,315 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,316 - INFO - Successfully saved plot_points.txt to project Button_Click_Test
+2025-07-09 22:30:22,323 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,324 - INFO - Successfully saved continuity_rules.txt to project Button_Click_Test
+2025-07-09 22:30:22,329 - INFO - Successfully saved API keys for project Button_Click_Test
+2025-07-09 22:30:22,330 - INFO - Event [project_load_start]: Loading project: Button_Click_Test
+2025-07-09 22:30:22,331 - INFO - Application configuration loaded
+2025-07-09 22:30:22,338 - INFO - Project configuration loaded for: Button_Click_Test
+2025-07-09 22:30:22,345 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,347 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,349 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,350 - INFO - Event [project_load_complete]: Project 'Button_Click_Test' loaded in 0.02s
+2025-07-09 22:30:22,358 - INFO - Event [project_load_start]: Loading project: Button_Click_Test
+2025-07-09 22:30:22,360 - INFO - Application configuration loaded
+2025-07-09 22:30:22,360 - INFO - Project configuration loaded for: Button_Click_Test
+2025-07-09 22:30:22,361 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,363 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,366 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:30:22,367 - INFO - Event [project_load_complete]: Project 'Button_Click_Test' loaded in 0.01s
+2025-07-09 22:33:38,909 - INFO - Performance monitoring started
+2025-07-09 22:33:39,080 - INFO - Found 14 projects
+2025-07-09 22:33:39,080 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:33:39,080 - INFO - FANWS application initialized successfully
+2025-07-09 22:33:48,868 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-09 22:33:48,914 - INFO - Performance monitoring stopped
+2025-07-09 22:33:48,915 - INFO - Application shutdown complete
+2025-07-09 22:35:44,022 - INFO - Found 14 projects
+2025-07-09 22:35:44,029 - INFO - Performance monitoring started
+2025-07-09 22:35:44,214 - INFO - Found 14 projects
+2025-07-09 22:35:44,215 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:35:44,215 - INFO - FANWS application initialized successfully
+2025-07-09 22:35:44,217 - INFO - Event [project_load_start]: Loading project: Button_Click_Test
+2025-07-09 22:35:44,218 - INFO - Application configuration loaded
+2025-07-09 22:35:44,219 - INFO - Project configuration loaded for: Button_Click_Test
+2025-07-09 22:35:44,222 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:35:44,226 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:35:44,229 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:35:44,230 - INFO - Event [project_load_complete]: Project 'Button_Click_Test' loaded in 0.01s
+2025-07-09 22:35:45,327 - INFO - Event [project_load_start]: Loading project: Button_Click_Test
+2025-07-09 22:35:45,329 - INFO - Application configuration loaded
+2025-07-09 22:35:45,330 - INFO - Project configuration loaded for: Button_Click_Test
+2025-07-09 22:35:45,331 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:35:45,333 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:35:45,341 - INFO - Database initialized for project: Button_Click_Test
+2025-07-09 22:35:45,345 - INFO - Event [project_load_complete]: Project 'Button_Click_Test' loaded in 0.02s
+2025-07-09 22:35:50,153 - INFO - Performance monitoring started
+2025-07-09 22:35:50,348 - INFO - Found 14 projects
+2025-07-09 22:35:50,349 - INFO - Event [application_startup]: Application started successfully
+2025-07-09 22:35:50,349 - INFO - FANWS application initialized successfully
+2025-07-10 09:13:48,298 - INFO - Found 14 projects
+2025-07-10 09:14:19,501 - INFO - Found 14 projects
+2025-07-10 09:18:47,945 - INFO - Performance monitoring started
+2025-07-10 09:18:48,120 - INFO - Found 14 projects
+2025-07-10 09:18:48,122 - INFO - Found 14 projects
+2025-07-10 09:18:48,123 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 09:18:48,124 - INFO - FANWS application initialized successfully
+2025-07-10 09:20:41,492 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 09:20:42,496 - INFO - Performance monitoring stopped
+2025-07-10 09:20:42,497 - INFO - Application shutdown complete
+2025-07-10 12:19:05,691 - INFO - Performance monitoring started
+2025-07-10 12:19:05,892 - INFO - Found 14 projects
+2025-07-10 12:19:05,893 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:19:05,902 - INFO - Found 14 projects
+2025-07-10 12:19:05,903 - INFO - Found 14 projects
+2025-07-10 12:19:05,903 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:19:05,904 - INFO - Found 14 projects
+2025-07-10 12:19:05,905 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:19:05,905 - INFO - FANWS application initialized successfully
+2025-07-10 12:19:08,397 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 12:19:08,399 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 12:19:08,401 - INFO - Found 14 projects
+2025-07-10 12:19:08,402 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:19:08,402 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 12:19:08,404 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 12:19:08,405 - INFO - Found 14 projects
+2025-07-10 12:19:08,406 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:19:12,525 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 12:19:12,526 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 12:19:12,528 - INFO - Found 14 projects
+2025-07-10 12:19:12,529 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:19:16,229 - ERROR - Failed to refresh project selector: wrapped C/C++ object of type QComboBox has been deleted
+2025-07-10 12:33:16,990 - INFO - Performance monitoring started
+2025-07-10 12:33:17,183 - INFO - Found 14 projects
+2025-07-10 12:33:17,183 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:33:17,185 - INFO - Found 14 projects
+2025-07-10 12:33:17,186 - INFO - Found 14 projects
+2025-07-10 12:33:17,187 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:33:17,188 - INFO - Found 14 projects
+2025-07-10 12:33:17,189 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:33:17,190 - INFO - FANWS application initialized successfully
+2025-07-10 12:34:23,854 - INFO - Performance monitoring started
+2025-07-10 12:34:24,048 - INFO - Found 14 projects
+2025-07-10 12:34:24,048 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:34:24,049 - INFO - Found 14 projects
+2025-07-10 12:34:24,051 - INFO - Found 14 projects
+2025-07-10 12:34:24,051 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:34:24,053 - INFO - Found 14 projects
+2025-07-10 12:34:24,054 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:34:24,054 - INFO - FANWS application initialized successfully
+2025-07-10 12:35:33,663 - INFO - Performance monitoring started
+2025-07-10 12:35:33,903 - INFO - Found 14 projects
+2025-07-10 12:35:33,903 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:35:33,905 - INFO - Found 14 projects
+2025-07-10 12:35:33,906 - INFO - Found 14 projects
+2025-07-10 12:35:33,906 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:35:33,907 - INFO - Found 14 projects
+2025-07-10 12:35:33,910 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:35:33,910 - INFO - FANWS application initialized successfully
+2025-07-10 12:35:47,926 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 12:35:47,928 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 12:35:47,930 - INFO - Found 14 projects
+2025-07-10 12:35:47,930 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:35:47,931 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 12:35:47,932 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 12:35:47,934 - INFO - Found 14 projects
+2025-07-10 12:35:47,935 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:35:53,569 - INFO - Event [project_load_start]: Loading project: Test 2
+2025-07-10 12:35:53,570 - INFO - Application configuration loaded
+2025-07-10 12:35:53,578 - INFO - Project configuration loaded for: Test 2
+2025-07-10 12:35:53,581 - INFO - Database initialized for project: Test 2
+2025-07-10 12:35:53,584 - INFO - Database initialized for project: Test 2
+2025-07-10 12:35:53,595 - INFO - Database initialized for project: Test 2
+2025-07-10 12:35:53,597 - INFO - Event [project_load_complete]: Project 'Test 2' loaded in 0.03s
+2025-07-10 12:36:04,751 - INFO - Found 14 projects
+2025-07-10 12:36:04,752 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:36:04,967 - INFO - Found 14 projects
+2025-07-10 12:36:04,967 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:36:05,239 - INFO - Found 14 projects
+2025-07-10 12:36:05,239 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:36:05,240 - INFO - Found 14 projects
+2025-07-10 12:36:05,241 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:36:13,262 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 12:36:13,689 - INFO - Performance monitoring stopped
+2025-07-10 12:36:13,690 - INFO - Cleaning up project: Test 2
+2025-07-10 12:36:13,690 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter1
+2025-07-10 12:36:13,691 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter1
+2025-07-10 12:36:13,691 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter1
+2025-07-10 12:36:13,692 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter1
+2025-07-10 12:36:13,692 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter1
+2025-07-10 12:36:13,692 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter2
+2025-07-10 12:36:13,693 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter2
+2025-07-10 12:36:13,693 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter2
+2025-07-10 12:36:13,694 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter2
+2025-07-10 12:36:13,694 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter2
+2025-07-10 12:36:13,694 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter3
+2025-07-10 12:36:13,695 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter3
+2025-07-10 12:36:13,695 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter3
+2025-07-10 12:36:13,695 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter3
+2025-07-10 12:36:13,696 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter3
+2025-07-10 12:36:13,696 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter4
+2025-07-10 12:36:13,697 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter4
+2025-07-10 12:36:13,697 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter4
+2025-07-10 12:36:13,697 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter4
+2025-07-10 12:36:13,698 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter4
+2025-07-10 12:36:13,698 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter5
+2025-07-10 12:36:13,698 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter5
+2025-07-10 12:36:13,699 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter5
+2025-07-10 12:36:13,699 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter5
+2025-07-10 12:36:13,699 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter5
+2025-07-10 12:36:13,700 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter6
+2025-07-10 12:36:13,700 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter6
+2025-07-10 12:36:13,701 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter6
+2025-07-10 12:36:13,701 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter6
+2025-07-10 12:36:13,701 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter6
+2025-07-10 12:36:13,702 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter7
+2025-07-10 12:36:13,702 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter7
+2025-07-10 12:36:13,702 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter7
+2025-07-10 12:36:13,703 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter7
+2025-07-10 12:36:13,703 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter7
+2025-07-10 12:36:13,703 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter8
+2025-07-10 12:36:13,704 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter8
+2025-07-10 12:36:13,704 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter8
+2025-07-10 12:36:13,704 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter8
+2025-07-10 12:36:13,705 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter8
+2025-07-10 12:36:13,705 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter9
+2025-07-10 12:36:13,705 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter9
+2025-07-10 12:36:13,705 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter9
+2025-07-10 12:36:13,706 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter9
+2025-07-10 12:36:13,706 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter9
+2025-07-10 12:36:13,706 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter10
+2025-07-10 12:36:13,707 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter10
+2025-07-10 12:36:13,707 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter10
+2025-07-10 12:36:13,708 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter10
+2025-07-10 12:36:13,708 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter10
+2025-07-10 12:36:13,708 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter11
+2025-07-10 12:36:13,709 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter11
+2025-07-10 12:36:13,709 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter11
+2025-07-10 12:36:13,710 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter11
+2025-07-10 12:36:13,710 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter11
+2025-07-10 12:36:13,710 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter12
+2025-07-10 12:36:13,711 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter12
+2025-07-10 12:36:13,711 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter12
+2025-07-10 12:36:13,711 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter12
+2025-07-10 12:36:13,712 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter12
+2025-07-10 12:36:13,712 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter13
+2025-07-10 12:36:13,712 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter13
+2025-07-10 12:36:13,713 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter13
+2025-07-10 12:36:13,713 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter13
+2025-07-10 12:36:13,713 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter13
+2025-07-10 12:36:13,714 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter14
+2025-07-10 12:36:13,714 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter14
+2025-07-10 12:36:13,714 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter14
+2025-07-10 12:36:13,714 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter14
+2025-07-10 12:36:13,715 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter14
+2025-07-10 12:36:13,715 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter15
+2025-07-10 12:36:13,715 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter15
+2025-07-10 12:36:13,716 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter15
+2025-07-10 12:36:13,716 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter15
+2025-07-10 12:36:13,716 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter15
+2025-07-10 12:36:13,716 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter16
+2025-07-10 12:36:13,717 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter16
+2025-07-10 12:36:13,717 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter16
+2025-07-10 12:36:13,718 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter16
+2025-07-10 12:36:13,718 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter16
+2025-07-10 12:36:13,718 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter17
+2025-07-10 12:36:13,719 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter17
+2025-07-10 12:36:13,719 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter17
+2025-07-10 12:36:13,720 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter17
+2025-07-10 12:36:13,720 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter17
+2025-07-10 12:36:13,720 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter18
+2025-07-10 12:36:13,721 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter18
+2025-07-10 12:36:13,721 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter18
+2025-07-10 12:36:13,721 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter18
+2025-07-10 12:36:13,721 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter18
+2025-07-10 12:36:13,722 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter19
+2025-07-10 12:36:13,722 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter19
+2025-07-10 12:36:13,722 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter19
+2025-07-10 12:36:13,723 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter19
+2025-07-10 12:36:13,723 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter19
+2025-07-10 12:36:13,724 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter20
+2025-07-10 12:36:13,724 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter20
+2025-07-10 12:36:13,724 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter20
+2025-07-10 12:36:13,725 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter20
+2025-07-10 12:36:13,725 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter20
+2025-07-10 12:36:13,726 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter21
+2025-07-10 12:36:13,726 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter21
+2025-07-10 12:36:13,726 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter21
+2025-07-10 12:36:13,727 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter21
+2025-07-10 12:36:13,727 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter21
+2025-07-10 12:36:13,727 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter22
+2025-07-10 12:36:13,728 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter22
+2025-07-10 12:36:13,728 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter22
+2025-07-10 12:36:13,728 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter22
+2025-07-10 12:36:13,729 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter22
+2025-07-10 12:36:13,729 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter23
+2025-07-10 12:36:13,729 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter23
+2025-07-10 12:36:13,730 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter23
+2025-07-10 12:36:13,730 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter23
+2025-07-10 12:36:13,730 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter23
+2025-07-10 12:36:13,731 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter24
+2025-07-10 12:36:13,731 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter24
+2025-07-10 12:36:13,732 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter24
+2025-07-10 12:36:13,733 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter24
+2025-07-10 12:36:13,734 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter24
+2025-07-10 12:36:13,738 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter25
+2025-07-10 12:36:13,739 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter25
+2025-07-10 12:36:13,757 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter25
+2025-07-10 12:36:13,757 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter25
+2025-07-10 12:36:13,757 - INFO - Drafts directory not found: projects\Test 2\drafts/chapter25
+2025-07-10 12:36:13,758 - INFO - Project cleanup completed for: Test 2
+2025-07-10 12:36:13,758 - INFO - Application shutdown complete
+2025-07-10 12:44:13,763 - INFO - Performance monitoring started
+2025-07-10 12:44:13,962 - INFO - Found 14 projects
+2025-07-10 12:44:14,014 - INFO - Found 14 projects
+2025-07-10 12:44:14,014 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:44:14,016 - INFO - Found 14 projects
+2025-07-10 12:44:14,017 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:44:14,017 - INFO - FANWS application initialized successfully
+2025-07-10 12:44:34,447 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 12:44:35,458 - INFO - Performance monitoring stopped
+2025-07-10 12:44:35,459 - INFO - Application shutdown complete
+2025-07-10 12:45:30,358 - INFO - Performance monitoring started
+2025-07-10 12:45:30,537 - INFO - Found 14 projects
+2025-07-10 12:45:30,538 - INFO - Found 14 projects
+2025-07-10 12:45:30,538 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:45:30,539 - INFO - Found 14 projects
+2025-07-10 12:45:30,541 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:45:30,541 - INFO - FANWS application initialized successfully
+2025-07-10 12:50:54,075 - INFO - Performance monitoring started
+2025-07-10 12:50:54,267 - INFO - Found 14 projects
+2025-07-10 12:50:54,268 - INFO - Found 14 projects
+2025-07-10 12:50:54,268 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:50:54,269 - INFO - Found 14 projects
+2025-07-10 12:50:54,270 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:50:54,271 - INFO - FANWS application initialized successfully
+2025-07-10 12:51:36,822 - INFO - Performance monitoring started
+2025-07-10 12:51:37,012 - INFO - Found 14 projects
+2025-07-10 12:51:37,013 - INFO - Found 14 projects
+2025-07-10 12:51:37,013 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:51:37,014 - INFO - Found 14 projects
+2025-07-10 12:51:37,016 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:51:37,016 - INFO - FANWS application initialized successfully
+2025-07-10 12:54:42,730 - INFO - Performance monitoring started
+2025-07-10 12:54:42,922 - INFO - Found 14 projects
+2025-07-10 12:54:42,925 - INFO - Found 14 projects
+2025-07-10 12:54:42,926 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:54:42,927 - INFO - Found 14 projects
+2025-07-10 12:54:42,928 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 12:54:42,929 - INFO - FANWS application initialized successfully
+2025-07-10 12:54:52,919 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 12:54:52,921 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 12:54:52,923 - INFO - Found 14 projects
+2025-07-10 12:54:52,924 - INFO - Project selector refreshed with 14 projects
+2025-07-10 12:54:52,924 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 12:54:52,926 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 12:54:52,928 - INFO - Found 14 projects
+2025-07-10 12:54:52,929 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:01:43,710 - INFO - Performance monitoring started
+2025-07-10 13:01:43,782 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:01:43,906 - INFO - Found 14 projects
+2025-07-10 13:01:43,906 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:01:43,916 - INFO - Found 14 projects
+2025-07-10 13:01:43,917 - INFO - Found 14 projects
+2025-07-10 13:01:43,917 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:01:43,918 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:01:43,920 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:01:43,922 - INFO - Found 14 projects
+2025-07-10 13:01:43,922 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:01:43,927 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:01:43,928 - INFO - FANWS application initialized successfully
+2025-07-10 13:01:44,793 - INFO - Performance monitoring stopped
+2025-07-10 13:01:44,793 - INFO - Application shutdown complete
+2025-07-10 13:02:28,583 - INFO - Performance monitoring started
+2025-07-10 13:02:28,764 - INFO - Found 14 projects
+2025-07-10 13:02:28,765 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:02:28,778 - INFO - Found 14 projects
+2025-07-10 13:02:28,779 - INFO - Found 14 projects
+2025-07-10 13:02:28,779 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:02:28,780 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:02:28,782 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:02:28,784 - INFO - Found 14 projects
+2025-07-10 13:02:28,784 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:02:28,791 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:02:28,792 - INFO - FANWS application initialized successfully
+2025-07-10 13:03:08,785 - INFO - Performance monitoring started
+2025-07-10 13:03:09,013 - INFO - Found 14 projects
+2025-07-10 13:03:09,013 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:03:09,025 - INFO - Found 14 projects
+2025-07-10 13:03:09,026 - INFO - Found 14 projects
+2025-07-10 13:03:09,026 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:03:09,028 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:03:09,030 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:03:09,032 - INFO - Found 14 projects
+2025-07-10 13:03:09,032 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:03:09,039 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:03:09,039 - INFO - FANWS application initialized successfully
+2025-07-10 13:03:46,687 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:03:47,703 - INFO - Performance monitoring stopped
+2025-07-10 13:03:47,703 - INFO - Application shutdown complete
+2025-07-10 13:07:48,595 - INFO - Performance monitoring started
+2025-07-10 13:07:48,787 - INFO - Found 14 projects
+2025-07-10 13:07:48,787 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:07:48,801 - INFO - Found 14 projects
+2025-07-10 13:07:48,802 - INFO - Found 14 projects
+2025-07-10 13:07:48,802 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:07:48,803 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:07:48,805 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:07:48,808 - INFO - Found 14 projects
+2025-07-10 13:07:48,809 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:07:48,818 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:07:48,818 - INFO - FANWS application initialized successfully
+2025-07-10 13:07:49,605 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:07:50,614 - INFO - Performance monitoring stopped
+2025-07-10 13:07:50,614 - INFO - Application shutdown complete
+2025-07-10 13:07:50,795 - INFO - Performance monitoring started
+2025-07-10 13:07:50,979 - INFO - Found 14 projects
+2025-07-10 13:07:50,979 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:07:50,988 - INFO - Found 14 projects
+2025-07-10 13:07:50,989 - INFO - Found 14 projects
+2025-07-10 13:07:50,989 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:07:50,990 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:07:50,992 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:07:50,995 - INFO - Found 14 projects
+2025-07-10 13:07:50,995 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:07:51,002 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:07:51,002 - INFO - FANWS application initialized successfully
+2025-07-10 13:07:51,493 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:07:52,508 - INFO - Performance monitoring stopped
+2025-07-10 13:07:52,508 - INFO - Application shutdown complete
+2025-07-10 13:08:36,981 - INFO - Performance monitoring started
+2025-07-10 13:08:37,163 - INFO - Found 14 projects
+2025-07-10 13:08:37,163 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:08:37,176 - INFO - Found 14 projects
+2025-07-10 13:08:37,178 - INFO - Found 14 projects
+2025-07-10 13:08:37,178 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:08:37,179 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:08:37,181 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:08:37,183 - INFO - Found 14 projects
+2025-07-10 13:08:37,184 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:08:37,192 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:08:37,192 - INFO - FANWS application initialized successfully
+2025-07-10 13:08:37,829 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:08:38,837 - INFO - Performance monitoring stopped
+2025-07-10 13:08:38,838 - INFO - Application shutdown complete
+2025-07-10 13:08:38,991 - INFO - Performance monitoring started
+2025-07-10 13:08:39,167 - INFO - Found 14 projects
+2025-07-10 13:08:39,167 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:08:39,180 - INFO - Found 14 projects
+2025-07-10 13:08:39,181 - INFO - Found 14 projects
+2025-07-10 13:08:39,181 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:08:39,182 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:08:39,184 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:08:39,186 - INFO - Found 14 projects
+2025-07-10 13:08:39,187 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:08:39,195 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:08:39,195 - INFO - FANWS application initialized successfully
+2025-07-10 13:08:39,691 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:08:40,705 - INFO - Performance monitoring stopped
+2025-07-10 13:08:40,705 - INFO - Application shutdown complete
+2025-07-10 13:09:10,475 - INFO - Performance monitoring started
+2025-07-10 13:09:10,656 - INFO - Found 14 projects
+2025-07-10 13:09:10,656 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:09:10,668 - INFO - Found 14 projects
+2025-07-10 13:09:10,669 - INFO - Found 14 projects
+2025-07-10 13:09:10,670 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:09:10,671 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:09:10,672 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:09:10,674 - INFO - Found 14 projects
+2025-07-10 13:09:10,675 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:09:10,682 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:09:10,682 - INFO - FANWS application initialized successfully
+2025-07-10 13:09:13,005 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:09:14,017 - INFO - Performance monitoring stopped
+2025-07-10 13:09:14,018 - INFO - Application shutdown complete
+2025-07-10 13:09:54,106 - INFO - Performance monitoring started
+2025-07-10 13:09:54,284 - INFO - Found 14 projects
+2025-07-10 13:09:54,284 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:09:54,295 - INFO - Found 14 projects
+2025-07-10 13:09:54,297 - INFO - Found 14 projects
+2025-07-10 13:09:54,297 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:09:54,298 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:09:54,300 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:09:54,302 - INFO - Found 14 projects
+2025-07-10 13:09:54,302 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:09:54,308 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:09:54,308 - INFO - FANWS application initialized successfully
+2025-07-10 13:09:54,978 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:09:55,983 - INFO - Performance monitoring stopped
+2025-07-10 13:09:55,983 - INFO - Application shutdown complete
+2025-07-10 13:12:38,055 - INFO - Performance monitoring started
+2025-07-10 13:12:38,239 - INFO - Found 14 projects
+2025-07-10 13:12:38,240 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:12:38,253 - INFO - Found 14 projects
+2025-07-10 13:12:38,254 - INFO - Found 14 projects
+2025-07-10 13:12:38,254 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:12:38,255 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:12:38,256 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:12:38,258 - INFO - Found 14 projects
+2025-07-10 13:12:38,258 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:12:38,266 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:12:38,267 - INFO - FANWS application initialized successfully
+2025-07-10 13:12:38,957 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:12:39,959 - INFO - Performance monitoring stopped
+2025-07-10 13:12:39,959 - INFO - Application shutdown complete
+2025-07-10 13:12:48,324 - INFO - Performance monitoring started
+2025-07-10 13:12:48,508 - INFO - Found 14 projects
+2025-07-10 13:12:48,509 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:12:48,522 - INFO - Found 14 projects
+2025-07-10 13:12:48,523 - INFO - Found 14 projects
+2025-07-10 13:12:48,523 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:12:48,524 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:12:48,526 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:12:48,529 - INFO - Found 14 projects
+2025-07-10 13:12:48,530 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:12:48,538 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:12:48,538 - INFO - FANWS application initialized successfully
+2025-07-10 13:12:49,863 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:12:50,875 - INFO - Performance monitoring stopped
+2025-07-10 13:12:50,903 - INFO - Application shutdown complete
+2025-07-10 13:13:54,253 - INFO - Performance monitoring started
+2025-07-10 13:13:54,427 - INFO - Found 14 projects
+2025-07-10 13:13:54,428 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:13:54,438 - INFO - Found 14 projects
+2025-07-10 13:13:54,439 - INFO - Found 14 projects
+2025-07-10 13:13:54,440 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:13:54,441 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:13:54,442 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:13:54,444 - INFO - Found 14 projects
+2025-07-10 13:13:54,445 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:13:54,453 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:13:54,453 - INFO - FANWS application initialized successfully
+2025-07-10 13:17:17,547 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:17:18,561 - INFO - Performance monitoring stopped
+2025-07-10 13:17:18,563 - INFO - Application shutdown complete
+2025-07-10 13:21:40,982 - INFO - Performance monitoring started
+2025-07-10 13:22:58,156 - INFO - Performance monitoring started
+2025-07-10 13:22:58,345 - INFO - Found 14 projects
+2025-07-10 13:22:58,346 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:22:58,357 - INFO - Found 14 projects
+2025-07-10 13:22:58,359 - INFO - Found 14 projects
+2025-07-10 13:22:58,359 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:22:58,360 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 13:22:58,361 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 13:22:58,364 - INFO - Found 14 projects
+2025-07-10 13:22:58,365 - INFO - Project selector refreshed with 14 projects
+2025-07-10 13:22:58,372 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 13:22:58,372 - INFO - FANWS application initialized successfully
+2025-07-10 13:22:58,373 - INFO - Event [application_shutdown]: Application shutting down
+2025-07-10 13:22:59,376 - INFO - Performance monitoring stopped
+2025-07-10 13:22:59,376 - INFO - Application shutdown complete
+2025-07-10 14:53:49,201 - INFO - Performance monitoring started
+2025-07-10 14:53:49,398 - INFO - Found 14 projects
+2025-07-10 14:53:49,398 - INFO - Project selector refreshed with 14 projects
+2025-07-10 14:53:49,401 - ERROR - Application startup failed: 'UIComponents' object has no attribute 'add_missing_widgets'
+2025-07-10 15:16:13,955 - INFO - Performance monitoring started
+2025-07-10 15:16:13,966 - ERROR - Application startup failed: 'UIComponents' object has no attribute '_on_tree_item_expanded'
+2025-07-10 15:52:47,469 - INFO - Performance monitoring started
+2025-07-10 15:52:47,648 - ERROR - Application startup failed: 'UIComponents' object has no attribute '_create_project_content_panel'
+2025-07-10 16:36:10,597 - INFO - Performance monitoring started
+2025-07-10 16:36:10,772 - INFO - Found 14 projects
+2025-07-10 16:36:10,774 - INFO - Found 14 projects
+2025-07-10 16:36:10,774 - INFO - Project selector refreshed with 14 projects
+2025-07-10 16:36:10,782 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 16:36:10,782 - INFO - FANWS application initialized successfully
+2025-07-10 17:06:27,801 - INFO - Performance monitoring started
+2025-07-10 17:06:27,991 - INFO - Found 14 projects
+2025-07-10 17:06:27,992 - INFO - Found 14 projects
+2025-07-10 17:06:27,992 - INFO - Project selector refreshed with 14 projects
+2025-07-10 17:06:28,003 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 17:06:28,003 - INFO - FANWS application initialized successfully
+2025-07-10 17:09:49,489 - INFO - Performance monitoring started
+2025-07-10 17:09:49,679 - INFO - Found 14 projects
+2025-07-10 17:09:49,680 - INFO - Found 14 projects
+2025-07-10 17:09:49,681 - INFO - Project selector refreshed with 14 projects
+2025-07-10 17:09:49,689 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 17:09:49,690 - INFO - FANWS application initialized successfully
+2025-07-10 17:09:49,703 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 17:09:49,711 - INFO - Switched to new project mode
+2025-07-10 17:09:49,712 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 17:09:49,721 - INFO - Switched to new project mode
+2025-07-10 17:09:49,722 - INFO - Found 14 projects
+2025-07-10 17:09:49,722 - INFO - Project selector refreshed with 14 projects
+2025-07-10 17:10:34,340 - INFO - Performance monitoring started
+2025-07-10 17:10:34,518 - INFO - Found 14 projects
+2025-07-10 17:10:34,520 - INFO - Found 14 projects
+2025-07-10 17:10:34,520 - INFO - Project selector refreshed with 14 projects
+2025-07-10 17:10:34,528 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 17:10:34,529 - INFO - FANWS application initialized successfully
+2025-07-10 17:17:41,052 - INFO - Performance monitoring started
+2025-07-10 17:17:41,233 - INFO - Found 14 projects
+2025-07-10 17:17:41,234 - INFO - Found 14 projects
+2025-07-10 17:17:41,234 - INFO - Project selector refreshed with 14 projects
+2025-07-10 17:17:41,242 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 17:17:41,242 - INFO - FANWS application initialized successfully
+2025-07-10 17:23:49,410 - INFO - Performance monitoring started
+2025-07-10 17:26:19,604 - INFO - Performance monitoring started
+2025-07-10 17:30:46,429 - INFO - Performance monitoring started
+2025-07-10 17:34:08,030 - INFO - Performance monitoring started
+2025-07-10 17:34:08,221 - INFO - Found 14 projects
+2025-07-10 17:34:08,222 - INFO - Found 14 projects
+2025-07-10 17:34:08,222 - INFO - Project selector refreshed with 14 projects
+2025-07-10 17:34:08,231 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 17:34:08,231 - INFO - FANWS application initialized successfully
+2025-07-10 17:34:57,176 - INFO - Performance monitoring started
+2025-07-10 17:34:57,368 - INFO - Found 14 projects
+2025-07-10 17:34:57,369 - INFO - Found 14 projects
+2025-07-10 17:34:57,369 - INFO - Project selector refreshed with 14 projects
+2025-07-10 17:34:57,378 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 17:34:57,378 - INFO - FANWS application initialized successfully
+2025-07-10 17:54:09,768 - INFO - Performance monitoring started
+2025-07-10 17:54:09,959 - INFO - Found 14 projects
+2025-07-10 17:54:09,960 - INFO - Found 14 projects
+2025-07-10 17:54:09,960 - INFO - Project selector refreshed with 14 projects
+2025-07-10 17:54:09,968 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 17:54:09,968 - INFO - FANWS application initialized successfully
+2025-07-10 18:28:14,627 - INFO - Performance monitoring started
+2025-07-10 18:28:14,831 - INFO - Found 14 projects
+2025-07-10 18:28:14,832 - INFO - Found 14 projects
+2025-07-10 18:28:14,832 - INFO - Project selector refreshed with 14 projects
+2025-07-10 18:28:14,839 - INFO - Event [application_startup]: Application started successfully
+2025-07-10 18:28:14,839 - INFO - FANWS application initialized successfully
+2025-07-10 18:28:18,979 - INFO - Event [project_load_start]: Loading project: 
+2025-07-10 18:28:18,987 - INFO - Switched to new project mode
+2025-07-10 18:28:18,987 - INFO - Event [project_load_start]: Loading project: Select a project
+2025-07-10 18:28:18,996 - INFO - Switched to new project mode
+2025-07-10 18:28:18,997 - INFO - Found 14 projects
+2025-07-10 18:28:18,997 - INFO - Project selector refreshed with 14 projects

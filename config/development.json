@@ -1,0 +1,33 @@
+{
+    "app": {
+        "debug": true,
+        "log_level": "DEBUG",
+        "environment": "development"
+    },
+    "database": {
+        "name": "fanws_dev",
+        "pool_size": 2,
+        "backup_enabled": false
+    },
+    "ai": {
+        "api_timeout": 30,
+        "max_retries": 2
+    },
+    "memory": {
+        "cache_size_limit": 52428800,
+        "monitoring_interval": 60
+    },
+    "plugins": {
+        "enable_hot_reload": true
+    },
+    "gui": {
+        "auto_save_interval": 120
+    },
+    "security": {
+        "enable_encryption": false,
+        "session_timeout": 7200
+    },
+    "logging": {
+        "file_path": "logs/fanws_dev.log"
+    }
+}

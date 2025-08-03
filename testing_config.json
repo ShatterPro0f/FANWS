@@ -1,0 +1,34 @@
+{
+  "testing_schedule": {
+    "quick_tests": "every_startup",
+    "full_tests": "daily",
+    "stress_tests": "weekly"
+  },
+  "test_categories": {
+    "critical": [
+      "imports",
+      "cache_operations",
+      "project_loading"
+    ],
+    "important": [
+      "configuration",
+      "api_manager",
+      "file_operations"
+    ],
+    "optional": [
+      "performance",
+      "ui_responsiveness",
+      "memory_usage"
+    ]
+  },
+  "failure_actions": {
+    "critical_failure": "stop_application",
+    "important_failure": "log_and_continue",
+    "optional_failure": "log_only"
+  },
+  "reporting": {
+    "save_logs": true,
+    "email_alerts": false,
+    "console_output": true
+  }
+}

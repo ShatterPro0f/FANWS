@@ -1,0 +1,94 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.defaultInterpreterPath": "python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Enabled": true,
+		"files.exclude": {
+			"**/__pycache__": true,
+			"**/*.pyc": true,
+			"**/.git": true,
+			"**/.DS_Store": true,
+			"**/node_modules": true,
+			"**/*.tmp": true,
+			"**/*_report.json": true,
+			"**/*_backup.py": true,
+			"**/temp": true,
+			"**/tmp": true,
+			"**/*.log": true,
+			"**/logs": true,
+			"**/.pytest_cache": true,
+			"**/.coverage": true,
+			"**/*.db-journal": true,
+			"**/backups": true
+		},
+		"search.exclude": {
+			"**/__pycache__": true,
+			"**/*.pyc": true,
+			"**/.git": true,
+			"**/node_modules": true,
+			"**/*.tmp": true,
+			"**/*_report.json": true,
+			"**/temp": true,
+			"**/tmp": true,
+			"**/*.log": true,
+			"**/logs": true,
+			"**/.pytest_cache": true,
+			"**/.coverage": true,
+			"**/*.db-journal": true,
+			"**/backups": true
+		},
+		"files.watcherExclude": {
+			"**/__pycache__/**": true,
+			"**/*.pyc": true,
+			"**/.git/**": true,
+			"**/node_modules/**": true,
+			"**/*.tmp": true,
+			"**/temp/**": true,
+			"**/tmp/**": true,
+			"**/*.log": true,
+			"**/logs/**": true,
+			"**/.pytest_cache/**": true,
+			"**/.coverage": true,
+			"**/*.db-journal": true,
+			"**/backups/**": true
+		},
+		"python.analysis.autoImportCompletions": true,
+		"python.analysis.memory.keepLibraryAst": false,
+		"python.analysis.indexing": true,
+		"python.analysis.packageIndexDepths": [
+			{
+				"name": "",
+				"depth": 2
+			}
+		],
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true,
+		"editor.formatOnSave": true,
+		"editor.minimap.enabled": false,
+		"editor.codeLens": false,
+		"editor.hover.delay": 1000,
+		"editor.lightbulb.enabled": "off",
+		"breadcrumbs.enabled": false,
+		"git.enabled": false,
+		"extensions.autoUpdate": false,
+		"telemetry.telemetryLevel": "off",
+		"workbench.startupEditor": "none",
+		"workbench.enableExperiments": false,
+		"workbench.settings.enableNaturalLanguageSearch": false,
+		"search.smartCase": true,
+		"search.useIgnoreFiles": true,
+		"search.followSymlinks": false,
+		"explorer.compactFolders": false,
+		"explorer.incrementalNaming": "smart",
+		"files.hotExit": "off",
+		"files.autoSave": "afterDelay",
+		"files.autoSaveDelay": 5000
+	}
+}

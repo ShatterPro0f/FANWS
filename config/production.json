@@ -1,0 +1,37 @@
+{
+    "app": {
+        "debug": false,
+        "log_level": "INFO",
+        "environment": "production"
+    },
+    "database": {
+        "name": "fanws_prod",
+        "pool_size": 10,
+        "backup_enabled": true,
+        "backup_interval": 43200
+    },
+    "ai": {
+        "api_timeout": 60,
+        "max_retries": 5
+    },
+    "memory": {
+        "cache_size_limit": 209715200,
+        "monitoring_interval": 15
+    },
+    "plugins": {
+        "enable_hot_reload": false
+    },
+    "gui": {
+        "auto_save_interval": 600
+    },
+    "security": {
+        "enable_encryption": true,
+        "session_timeout": 1800,
+        "max_login_attempts": 3
+    },
+    "logging": {
+        "file_path": "logs/fanws_prod.log",
+        "max_file_size": 52428800,
+        "backup_count": 10
+    }
+}

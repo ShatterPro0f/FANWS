@@ -1,0 +1,50 @@
+{
+  "fanws_version": "2.1.0",
+  "metadata_version": "1.0.0",
+  "last_updated": "2025-08-02T17:12:26.530378",
+  "template_collections": 8,
+  "total_templates": 5,
+  "supported_genres": [
+    "Fantasy",
+    "Mystery",
+    "Romance",
+    "Science Fiction",
+    "Horror",
+    "Historical Fiction",
+    "Literary Fiction",
+    "Young Adult",
+    "Thriller",
+    "Adventure"
+  ],
+  "template_types": [
+    "character",
+    "plot",
+    "world_building",
+    "structure",
+    "dialogue",
+    "setting",
+    "theme",
+    "conflict"
+  ],
+  "recommendation_engine": {
+    "enabled": true,
+    "learning_enabled": true,
+    "confidence_threshold": 0.7,
+    "analytics_tracking": true
+  },
+  "database_info": {
+    "collections_db_size": "20KB",
+    "recommendations_db_size": "24KB",
+    "versions_db_size": "16KB",
+    "total_size": "60KB",
+    "last_optimized": "2025-08-02T17:12:26.530390"
+  },
+  "features": {
+    "template_versioning": true,
+    "collaborative_editing": true,
+    "usage_analytics": true,
+    "recommendation_system": true,
+    "custom_templates": false,
+    "template_sharing": true
+  }
+}

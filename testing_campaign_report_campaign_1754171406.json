@@ -1,0 +1,466 @@
+{
+  "campaign": {
+    "campaign_id": "campaign_1754171406",
+    "start_time": "2025-08-02 17:50:06.429496",
+    "end_time": "2025-08-02 17:50:06.964954",
+    "total_tests": 52,
+    "passed_tests": 49,
+    "failed_tests": 3,
+    "errors_found": 0,
+    "fixes_applied": 0,
+    "performance_issues": 0,
+    "recommendations": []
+  },
+  "summary": {
+    "total_tests": 52,
+    "passed_tests": 49,
+    "failed_tests": 3,
+    "success_rate": 94.23076923076923,
+    "duration_minutes": 0.0089243,
+    "critical_issues": 0
+  },
+  "phase_results": {
+    "Pre-Flight Check": {
+      "phase": "Pre-Flight Check",
+      "tests": [
+        {
+          "test": "Python Version Check",
+          "status": "PASSED",
+          "details": "Python 3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]"
+        },
+        {
+          "test": "Directory src",
+          "status": "PASSED",
+          "details": "Directory exists"
+        },
+        {
+          "test": "Directory config",
+          "status": "PASSED",
+          "details": "Directory exists"
+        },
+        {
+          "test": "Directory projects",
+          "status": "PASSED",
+          "details": "Directory exists"
+        },
+        {
+          "test": "Directory logs",
+          "status": "PASSED",
+          "details": "Directory exists"
+        },
+        {
+          "test": "File fanws.py",
+          "status": "PASSED",
+          "details": "File exists"
+        },
+        {
+          "test": "File requirements.txt",
+          "status": "PASSED",
+          "details": "File exists"
+        },
+        {
+          "test": "Testing Modules",
+          "status": "PASSED",
+          "details": "All testing modules available"
+        }
+      ],
+      "passed": 8,
+      "failed": 0
+    },
+    "State Validation": {
+      "phase": "State Validation",
+      "tests": [
+        {
+          "test": "Import fanws",
+          "status": "PASSED",
+          "description": "Main application module",
+          "details": "Module imported successfully"
+        },
+        {
+          "test": "Import src.memory_manager",
+          "status": "PASSED",
+          "description": "Memory management with FileCache fix",
+          "details": "Module imported successfully"
+        },
+        {
+          "test": "Import src.file_operations",
+          "status": "PASSED",
+          "description": "File operations",
+          "details": "Module imported successfully"
+        },
+        {
+          "test": "Import src.api_manager",
+          "status": "PASSED",
+          "description": "API management",
+          "details": "Module imported successfully"
+        },
+        {
+          "test": "Import src.text_processing",
+          "status": "PASSED",
+          "description": "Text processing",
+          "details": "Module imported successfully"
+        },
+        {
+          "test": "Import src.error_handling_system",
+          "status": "PASSED",
+          "description": "Error handling",
+          "details": "Module imported successfully"
+        },
+        {
+          "test": "Import src.configuration_manager",
+          "status": "PASSED",
+          "description": "Configuration management",
+          "details": "Module imported successfully"
+        },
+        {
+          "test": "FileCache with ttl_seconds",
+          "status": "PASSED",
+          "description": "FileCache accepts ttl_seconds parameter",
+          "details": "Successfully created FileCache with ttl_seconds=300"
+        },
+        {
+          "test": "ProjectFileCache operations",
+          "status": "FAILED",
+          "description": "ProjectFileCache basic operations",
+          "details": "Expected 'test content', got 'None'",
+          "error": "Content mismatch"
+        },
+        {
+          "test": "API Manager and Text Analyzer initialization",
+          "status": "PASSED",
+          "description": "Components that use MemoryCache with ttl_seconds",
+          "details": "Successfully initialized without ttl_seconds errors"
+        },
+        {
+          "test": "Get project list",
+          "status": "PASSED",
+          "description": "Retrieve list of existing projects",
+          "details": "Found projects: []"
+        },
+        {
+          "test": "Project name validation",
+          "status": "PASSED",
+          "description": "Validate project names",
+          "details": "Correctly validated valid and invalid names"
+        },
+        {
+          "test": "Configuration file config/app_config.json",
+          "status": "PASSED",
+          "description": "Load config/app_config.json",
+          "details": "Successfully loaded with 13 settings"
+        },
+        {
+          "test": "Configuration file config/development.json",
+          "status": "PASSED",
+          "description": "Load config/development.json",
+          "details": "Successfully loaded with 8 settings"
+        },
+        {
+          "test": "Configuration file config/production.json",
+          "status": "PASSED",
+          "description": "Load config/production.json",
+          "details": "Successfully loaded with 8 settings"
+        },
+        {
+          "test": "Configuration file config/testing.json",
+          "status": "PASSED",
+          "description": "Load config/testing.json",
+          "details": "Successfully loaded with 8 settings"
+        },
+        {
+          "test": "API Manager initialization",
+          "status": "PASSED",
+          "description": "Initialize API manager",
+          "details": "Successfully created API manager instance"
+        },
+        {
+          "test": "Application class import",
+          "status": "PASSED",
+          "description": "Import main application class",
+          "details": "Successfully imported FANWSWindow"
+        }
+      ],
+      "passed": 17,
+      "failed": 1
+    },
+    "Component Testing": {
+      "phase": "Component Testing",
+      "tests": [
+        {
+          "test": "FileCache Component",
+          "status": "PASSED",
+          "details": "Component test passed"
+        },
+        {
+          "test": "ProjectFileCache Component",
+          "status": "FAILED",
+          "details": "Component test failed"
+        },
+        {
+          "test": "APIManager Component",
+          "status": "PASSED",
+          "details": "Component test passed"
+        },
+        {
+          "test": "Configuration Component",
+          "status": "PASSED",
+          "details": "Component test passed"
+        },
+        {
+          "test": "ErrorHandling Component",
+          "status": "PASSED",
+          "details": "Component test passed"
+        }
+      ],
+      "passed": 4,
+      "failed": 1
+    },
+    "User Interaction Testing": {
+      "phase": "User Interaction Testing",
+      "tests": [
+        {
+          "test": "UI Framework Initialization",
+          "status": "PASSED",
+          "details": "UI testing framework ready"
+        },
+        {
+          "test": "Button Click Simulation",
+          "status": "PASSED",
+          "details": "Simulated Button Click Simulation test"
+        },
+        {
+          "test": "Text Input Validation",
+          "status": "PASSED",
+          "details": "Simulated Text Input Validation test"
+        },
+        {
+          "test": "Tab Navigation",
+          "status": "PASSED",
+          "details": "Simulated Tab Navigation test"
+        },
+        {
+          "test": "Project Selection",
+          "status": "PASSED",
+          "details": "Simulated Project Selection test"
+        }
+      ],
+      "passed": 5,
+      "failed": 0
+    },
+    "Performance Testing": {
+      "phase": "Performance Testing",
+      "tests": [
+        {
+          "test": "Memory Usage",
+          "status": "PASSED",
+          "details": "Peak memory: 178.7MB"
+        }
+      ],
+      "passed": 1,
+      "failed": 0
+    },
+    "Error Simulation": {
+      "phase": "Error Simulation",
+      "tests": [
+        {
+          "test": "Error Simulation: ImportError",
+          "status": "PASSED",
+          "details": "Error properly tracked: ImportError_test_component_5582"
+        },
+        {
+          "test": "Error Simulation: FileNotFoundError",
+          "status": "PASSED",
+          "details": "Error properly tracked: FileNotFoundError_test_component_2560"
+        },
+        {
+          "test": "Error Simulation: ValueError",
+          "status": "PASSED",
+          "details": "Error properly tracked: ValueError_test_component_573"
+        },
+        {
+          "test": "Error Simulation: KeyError",
+          "status": "PASSED",
+          "details": "Error properly tracked: KeyError_test_component_1649"
+        },
+        {
+          "test": "Error Simulation: RuntimeError",
+          "status": "PASSED",
+          "details": "Error properly tracked: RuntimeError_test_component_2997"
+        }
+      ],
+      "passed": 5,
+      "failed": 0
+    },
+    "Integration Testing": {
+      "phase": "Integration Testing",
+      "tests": [
+        {
+          "test": "FileCache + ProjectFileCache",
+          "status": "FAILED",
+          "details": "Integration test failed"
+        },
+        {
+          "test": "Error Monitoring + Components",
+          "status": "PASSED",
+          "details": "Integration test passed"
+        },
+        {
+          "test": "Configuration + Components",
+          "status": "PASSED",
+          "details": "Integration test passed"
+        }
+      ],
+      "passed": 2,
+      "failed": 1
+    },
+    "Stress Testing": {
+      "phase": "Stress Testing",
+      "tests": [
+        {
+          "test": "High Memory Operations",
+          "status": "PASSED",
+          "details": "Stress test passed"
+        },
+        {
+          "test": "Rapid Cache Operations",
+          "status": "PASSED",
+          "details": "Stress test passed"
+        },
+        {
+          "test": "Error Flood Handling",
+          "status": "PASSED",
+          "details": "Stress test passed"
+        }
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    "Final Validation": {
+      "phase": "Final Validation",
+      "tests": [
+        {
+          "test": "System Stability",
+          "status": "PASSED",
+          "details": "Final check passed"
+        },
+        {
+          "test": "Error Monitoring Health",
+          "status": "PASSED",
+          "details": "Final check passed"
+        },
+        {
+          "test": "Performance Metrics",
+          "status": "PASSED",
+          "details": "Final check passed"
+        },
+        {
+          "test": "Critical Components",
+          "status": "PASSED",
+          "details": "Final check passed"
+        }
+      ],
+      "passed": 4,
+      "failed": 0
+    }
+  },
+  "critical_issues": [],
+  "monitoring_summaries": {
+    "error_monitoring": {
+      "error_summary": {
+        "total_errors": 46,
+        "severity_breakdown": {
+          "CRITICAL": 1,
+          "HIGH": 1,
+          "MEDIUM": 1,
+          "LOW": 43,
+          "INFO": 0
+        },
+        "category_breakdown": {
+          "IMPORT_ERROR": 1,
+          "RUNTIME_ERROR": 1,
+          "FILE_OPERATION_ERROR": 1,
+          "CACHE_ERROR": 0,
+          "API_ERROR": 0,
+          "UI_ERROR": 0,
+          "CONFIGURATION_ERROR": 1,
+          "VALIDATION_ERROR": 42,
+          "PERMISSION_ERROR": 0,
+          "NETWORK_ERROR": 0
+        },
+        "recent_errors_count": 46,
+        "auto_fixes_applied": 0,
+        "most_common_errors": [
+          [
+            "ImportError_test_component_5582",
+            1
+          ],
+          [
+            "FileNotFoundError_test_component_2560",
+            1
+          ],
+          [
+            "ValueError_test_component_573",
+            1
+          ],
+          [
+            "KeyError_test_component_1649",
+            1
+          ],
+          [
+            "RuntimeError_test_component_2997",
+            1
+          ]
+        ],
+        "error_patterns": 6,
+        "monitoring_active": true
+      },
+      "health_report": {
+        "system_status": "HEALTHY",
+        "uptime_hours": 0.00014731857511732314,
+        "total_errors": 46,
+        "recent_error_rate": 46,
+        "auto_fixes_success_rate": 100.0,
+        "monitoring_active": true
+      }
+    },
+    "performance_monitoring": {
+      "memory_usage": {
+        "min_mb": 178.67578125,
+        "max_mb": 178.67578125,
+        "avg_mb": 178.67578125
+      },
+      "cpu_usage": {
+        "min_percent": 0.0,
+        "max_percent": 0.0,
+        "avg_percent": 0.0
+      },
+      "response_times": {},
+      "total_operations": 0
+    },
+    "action_logging": {
+      "total_actions": 0,
+      "action_types": {},
+      "components_tested": {},
+      "errors_encountered": 0,
+      "error_details": [],
+      "session_duration": "0:00:00.528171"
+    }
+  },
+  "recommendations": [
+    "\ud83d\udea8 Address 3 failed tests before production",
+    "\ud83d\udc1b Review and fix 46 tracked errors"
+  ],
+  "next_steps": [
+    "Fix remaining failed tests",
+    "Address performance issues",
+    "Run another testing cycle",
+    "Deploy to staging environment"
+  ],
+  "files_generated": [
+    "testing_campaign_campaign_1754171406.log",
+    "actions_campaign_1754171406.json",
+    "fanws_state_report.json",
+    "user_testing_report.json",
+    "error_tracking.json"
+  ]
+}

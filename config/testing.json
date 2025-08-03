@@ -1,0 +1,36 @@
+{
+    "app": {
+        "debug": false,
+        "log_level": "WARNING",
+        "environment": "testing"
+    },
+    "database": {
+        "name": "fanws_test",
+        "pool_size": 1,
+        "backup_enabled": false
+    },
+    "ai": {
+        "api_timeout": 10,
+        "max_retries": 1
+    },
+    "memory": {
+        "cache_size_limit": 26214400,
+        "monitoring_interval": 300
+    },
+    "plugins": {
+        "enable_hot_reload": false,
+        "auto_discover": false
+    },
+    "gui": {
+        "auto_save_interval": 60
+    },
+    "security": {
+        "enable_encryption": false,
+        "session_timeout": 300
+    },
+    "logging": {
+        "file_path": "logs/fanws_test.log",
+        "max_file_size": 1048576,
+        "backup_count": 1
+    }
+}

@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "FANWS",
+    "version": "1.0.0",
+    "debug": false,
+    "log_level": "INFO",
+    "environment": "development"
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "fanws",
+    "pool_size": 5,
+    "timeout": 30,
+    "backup_enabled": true,
+    "backup_interval": 86400
+  },
+  "ai": {
+    "provider": "openai",
+    "model": "gpt-3.5-turbo",
+    "api_timeout": 30,
+    "max_retries": 3,
+    "rate_limit": {
+      "requests_per_minute": 60,
+      "tokens_per_minute": 100000
+    }
+  },
+  "memory": {
+    "lazy_loading_threshold": 1048576,
+    "cache_size_limit": 104857600,
+    "monitoring_interval": 30,
+    "gc_threshold": 0.8
+  },
+  "plugins": {
+    "directory": "plugins",
+    "auto_discover": true,
+    "enable_hot_reload": false,
+    "allowed_modules": [
+      "workflow",
+      "content",
+      "analysis"
+    ]
+  },
+  "gui": {
+    "theme": "dark",
+    "window_width": 1400,
+    "window_height": 900,
+    "auto_save_interval": 300,
+    "max_recent_files": 10,
+    "font_size": 12,
+    "font_family": "Segoe UI"
+  },
+  "security": {
+    "enable_encryption": false,
+    "session_timeout": 3600,
+    "max_login_attempts": 5
+  },
+  "logging": {
+    "file_path": "logs/fanws.log",
+    "max_file_size": 10485760,
+    "backup_count": 5,
+    "log_rotation": true
+  },
+  "legacy": {
+    "max_concurrent_requests": 5,
+    "request_timeout": 30,
+    "cache_expiry": 3600,
+    "api_retry_attempts": 3,
+    "api_retry_delay": 1,
+    "max_file_size": 52428800,
+    "allowed_file_types": [
+      ".txt",
+      ".md",
+      ".docx",
+      ".pdf",
+      ".epub",
+      ".html"
+    ]
+  },
+  "OpenAI_API_Key": "python scripts\\diagnostics.py",
+  "Anthropic_API_Key": "echo | python scripts\\setup_api_keys.py",
+  "XAI_API_Key": "python scripts\\diagnostics.py",
+  "WordsAPI_Key": "python -c \"print('Testing FANWS import...'); import fanws; print('Import successful!')\""
+}

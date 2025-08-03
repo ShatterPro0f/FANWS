@@ -1,0 +1,84 @@
+{
+  "session_info": {
+    "session_id": "test_session",
+    "start_time": "2025-08-02T19:18:29.982358",
+    "end_time": "2025-08-02T19:18:34.023661",
+    "duration_minutes": 0.06735505
+  },
+  "summary": {
+    "total_actions": 3,
+    "total_errors": 1,
+    "total_fixes_needed": 1,
+    "critical_issues": 0,
+    "success_rate": 100.0
+  },
+  "detailed_results": {
+    "actions": [
+      {
+        "timestamp": "2025-08-02T19:18:29.985752",
+        "phase": "initialization",
+        "action_type": "system",
+        "action": "monitoring_started",
+        "component": "UserTestingMonitor",
+        "details": "User testing monitoring system started",
+        "success": true,
+        "duration_ms": 0,
+        "memory_mb": 18.6640625
+      },
+      {
+        "timestamp": "2025-08-02T19:18:29.992404",
+        "phase": "manual_testing",
+        "action_type": "phase",
+        "action": "phase_change",
+        "component": "TestingPhase",
+        "details": "Changed to phase: manual_testing",
+        "success": true,
+        "duration_ms": 0,
+        "memory_mb": 18.90625
+      },
+      {
+        "timestamp": "2025-08-02T19:18:29.997636",
+        "phase": "manual_testing",
+        "action_type": "user",
+        "action": "click",
+        "component": "MainWindow",
+        "details": "User clicked main window",
+        "success": true,
+        "duration_ms": 0,
+        "memory_mb": 19.0625
+      }
+    ],
+    "errors": [
+      {
+        "timestamp": "2025-08-02T19:18:30.003118",
+        "phase": "manual_testing",
+        "error_type": "test_error",
+        "component": "TestComponent",
+        "message": "This is a test error",
+        "severity": "medium",
+        "context": "",
+        "traceback": ""
+      }
+    ],
+    "performance": [
+      {
+        "timestamp": "2025-08-02T19:18:30.013810",
+        "phase": "manual_testing",
+        "metric_name": "response_time",
+        "value": 150.5,
+        "unit": "ms",
+        "context": "Button click response"
+      }
+    ],
+    "fixes": [
+      {
+        "timestamp": "2025-08-02T19:18:30.008208",
+        "priority": 3,
+        "component": "TestComponent",
+        "issue": "This is a test error",
+        "recommended_fix": "Investigate TestComponent issue: This is a test error... - Review code and add proper error handling",
+        "status": "pending"
+      }
+    ]
+  }
+}

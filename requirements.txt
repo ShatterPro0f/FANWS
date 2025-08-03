@@ -1,0 +1,40 @@
+# FANWS - Fiction Author Novel Writing Software
+# All Required Dependencies
+
+# GUI Framework
+PyQt5>=5.15.0
+PyQtWebEngine>=5.15.0
+
+# Core Functionality
+PyYAML>=6.0
+python-dotenv>=0.19.0
+psutil>=5.8.0
+tenacity>=8.0.0
+
+# Text Processing
+python-docx>=0.8.11
+markdown2>=2.4.0
+
+# Database and Data
+lz4>=4.0.0
+
+# Network and API
+aiohttp>=3.8.0
+requests>=2.28.0
+
+# Analytics and NLP
+nltk>=3.8
+textstat>=0.7.0
+scikit-learn>=1.2.0
+numpy>=1.24.0
+
+# Document Generation
+reportlab>=4.0.0
+ebooklib>=0.18
+pdfkit>=1.0.0
+
+# Plotting and Visualization
+matplotlib>=3.6.0
+
+# Development and Testing
+pytest>=7.0.0

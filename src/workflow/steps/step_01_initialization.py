@@ -10,10 +10,10 @@ import logging
 from datetime import datetime
 from typing import Dict, Any
 try:
-    from ...project.project_manager import PerProjectConfigManager
-    from .base_step import BaseWorkflowStep
+    from ...project.per_project_config_manager import PerProjectConfigManager
 except ImportError:
-    from base_step import BaseWorkflowStep
+    PerProjectConfigManager = None
+from .base_step import BaseWorkflowStep
 
 class Step01Initialization(BaseWorkflowStep):
     """

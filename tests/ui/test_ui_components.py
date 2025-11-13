@@ -21,7 +21,7 @@ except ImportError:
     QWidget = Mock
     QPushButton = Mock
 
-# Only run these tests if PyQt5 is available
+# Only run these tests if PyQt5 and pytest-qt are available
 pytestmark = pytest.mark.skipif(not PYQT_AVAILABLE, reason="PyQt5 not available")
 
 try:

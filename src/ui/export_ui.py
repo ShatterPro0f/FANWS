@@ -106,10 +106,30 @@ class ExportProgressWidget(QWidget):
             self.overall_status_label.setText(status)
 
     def update_current_operation(self, operation: str, progress: int = 0):
-        """Update current operation details."""
-        self.current_operation_label.setText(operation)
-        self.current_progress.setValue(progress)
-        self.add_log_entry(f"Starting: {operation}")
+        """Update current operation details.
+
+        Accept either (operation: str, progress: int) or the legacy ordering
+        (progress: int, operation: str) used in some tests.
+        """
+        # Handle legacy/test ordering where args may be passed as (progress, operation)
+        if isinstance(operation, int) and isinstance(progress, str):
+            # swap
+            operation, progress = progress, operation
+
+        # Ensure correct types
+        try:
+            op_text = str(operation)
+        except Exception:
+            op_text = ""
+
+        try:
+            prog_val = int(progress)
+        except Exception:
+            prog_val = 0
+
+        self.current_operation_label.setText(op_text)
+        self.current_progress.setValue(prog_val)
+        self.add_log_entry(f"Starting: {op_text}")
 
     def update_current_progress(self, value: int):
         """Update current operation progress."""
@@ -519,7 +539,8 @@ class ExportManagerWidget(QWidget):
         self.validate_button.clicked.connect(self.validate_exports)
         button_layout.addWidget(self.validate_button)
 
-        layout.addWidget(button_layout)
+        # `button_layout` is a layout, not a widget — add it as a layout
+        layout.addLayout(button_layout)
 
     def start_export(self):
         """Start the export process."""

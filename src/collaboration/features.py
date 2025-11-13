@@ -19,11 +19,18 @@ try:
         NotificationType, create_user_joined_notification,
         create_version_conflict_notification, create_export_complete_notification
     )
-    from ..ui.collaboration_notifications import get_bug_report_manager, submit_bug_report, report_exception
+    from .bug_reporting import get_bug_report_manager, submit_bug_report, report_exception
     FEATURES_AVAILABLE = True
 except ImportError as e:
     logging.warning(f"Some new features not available: {e}")
     FEATURES_AVAILABLE = False
+    # Create fallback classes
+    class WorkflowManager:
+        pass
+    class ConflictResolution:
+        pass
+    class ConflictInfo:
+        pass
 
 logger = logging.getLogger(__name__)
 
@@ -112,7 +119,8 @@ class CollaborationManager(QObject):
         """Initialize collaboration notifications with system tray"""
         try:
             # Check if system tray is available
-            if not QApplication.instance() or not QApplication.instance().desktop().systemTrayIcon():
+            from PyQt5.QtWidgets import QSystemTrayIcon
+            if not QSystemTrayIcon.isSystemTrayAvailable():
                 logger.warning("System tray not available, notifications disabled")
                 return
 
@@ -465,3 +473,38 @@ def report_exception(exception: Exception, context: str = "") -> str:
     """Report an exception automatically"""
     manager = get_collaboration_manager()
     return manager.report_exception_automatically(exception, context)
+
+def create_collaborative_manager() -> CollaborationManager:
+    """Create and return a collaborative manager instance."""
+    return CollaborationManager()
+
+class CollaborationSession:
+    """Represents a collaboration session."""
+
+    def __init__(self, session_id: str, project_name: str):
+        self.session_id = session_id
+        self.project_name = project_name
+        self.members = []
+        self.created_at = datetime.now()
+
+class TeamMember:
+    """Represents a team member."""
+
+    def __init__(self, user_id: str, name: str, role: str = "writer"):
+        self.user_id = user_id
+        self.name = name
+        self.role = role
+        self.joined_at = datetime.now()
+
+class CollaborativeIntegration:
+    """Integration layer for collaborative features."""
+
+    def __init__(self, collaboration_manager):
+        self.collaboration_manager = collaboration_manager
+
+# Import the full CollaborativeManager from system module
+try:
+    from .system import CollaborativeManager
+except ImportError:
+    # Create an alias if import fails
+    CollaborativeManager = CollaborationManager

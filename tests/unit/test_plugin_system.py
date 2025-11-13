@@ -11,13 +11,14 @@ import json
 import os
 from unittest.mock import Mock, patch, MagicMock
 from datetime import datetime
+import types
 import concurrent.futures
 
 import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from plugin_system import (
+from src.plugins.plugin_system import (
     PluginInterface, PluginRegistry, PluginInfo, PluginType, PluginStatus,
     PluginValidationResult, WorkflowStepPlugin, ContentGeneratorPlugin,
     ExportFormatPlugin, TextProcessorPlugin
@@ -32,6 +33,10 @@ class MockPlugin(PluginInterface):
         self.should_timeout = should_timeout
         self.initialized = False
         self.cleaned_up = False
+        # Bind test_method to the instance so tests can delattr() on the instance
+        func = getattr(self.__class__, 'test_method', None)
+        if func is not None:
+            self.test_method = types.MethodType(func, self)
 
     def get_info(self) -> PluginInfo:
         return PluginInfo(
@@ -63,6 +68,13 @@ class MockPlugin(PluginInterface):
         if self.should_timeout:
             time.sleep(40)  # Timeout after 30 seconds
         return "test_result"
+
+    # Type-specific methods for ContentGenerator plugins used in tests
+    def generate_content(self, prompt: str, context: dict) -> str:
+        return f"generated for: {prompt}"
+
+    def get_supported_types(self) -> list:
+        return ["text"]
 
 
 class BadMockPlugin:
@@ -144,12 +156,30 @@ class TestPluginInterface:
         """Test validation with missing methods"""
         plugin = MockPlugin()
 
-        # Remove a required method
-        delattr(plugin, 'test_method')
+        # Remove a required method from both the class and instance temporarily
+        orig_class = getattr(MockPlugin, 'test_method', None)
+        orig_inst = getattr(plugin, 'test_method', None)
+        try:
+            if hasattr(MockPlugin, 'test_method'):
+                delattr(MockPlugin, 'test_method')
+            if hasattr(plugin, 'test_method'):
+                try:
+                    delattr(plugin, 'test_method')
+                except Exception:
+                    # Some Python objects disallow deleting bound attributes
+                    pass
 
-        result = plugin.validate_environment()
-        assert result.is_valid is False
-        assert 'test_method' in result.missing_methods
+            result = plugin.validate_environment()
+            assert result.is_valid is False
+            assert 'test_method' in result.missing_methods
+        finally:
+            if orig_class is not None:
+                setattr(MockPlugin, 'test_method', orig_class)
+            if orig_inst is not None:
+                try:
+                    setattr(plugin, 'test_method', orig_inst)
+                except Exception:
+                    pass
 
     def test_plugin_run_in_thread(self):
         """Test running plugin method in thread"""
@@ -192,7 +222,8 @@ class TestPluginRegistry:
         assert isinstance(registry.loaded_plugins, dict)
         assert isinstance(registry.plugin_types, dict)
         assert isinstance(registry.listeners, dict)
-        assert isinstance(registry._lock, threading.RLock)
+        # Check that _lock is an RLock instance using type comparison
+        assert type(registry._lock).__name__ == 'RLock'
 
     def test_register_valid_plugin(self, registry, valid_plugin_info):
         """Test registering a valid plugin"""

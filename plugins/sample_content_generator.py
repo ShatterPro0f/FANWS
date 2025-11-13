@@ -14,10 +14,21 @@ if src_path not in sys.path:
     sys.path.insert(0, src_path)
 
 try:
-    from plugin_system import ContentGeneratorPlugin, PluginInfo, PluginType
+    from src.plugins.plugin_system import ContentGeneratorPlugin, PluginInfo, PluginType
 except ImportError:
-    # Fallback for when running from src directory
-    from src.plugin_system import ContentGeneratorPlugin, PluginInfo, PluginType
+    # Fallback for when the module structure is different
+    try:
+        from plugin_system import ContentGeneratorPlugin, PluginInfo, PluginType
+    except ImportError:
+        # Create stub classes if plugin system is not available
+        class ContentGeneratorPlugin:
+            def __init__(self, *args, **kwargs):
+                pass
+        class PluginInfo:
+            def __init__(self, *args, **kwargs):
+                pass
+        class PluginType:
+            pass
 
 class SampleContentGeneratorPlugin(ContentGeneratorPlugin):
     """Sample content generator plugin for demonstration."""

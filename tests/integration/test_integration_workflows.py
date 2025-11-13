@@ -14,8 +14,10 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from api_manager import APIManager, APIError, SQLiteCache
-from export_formats.validator import ExportValidator, ExportValidationResult
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+
+from src.system.api_manager import APIManager, APIError
+from src.export_formats.validator import ExportValidator, ExportValidationResult
 
 
 class TestAPIManagerIntegration:
@@ -347,7 +349,7 @@ class TestExportWorkflowIntegration:
             f.write(pdf_content)
 
         # Mock PyPDF2 if available
-        with patch('export_formats.validator.PyPDF2', create=True) as mock_pypdf2:
+        with patch('src.export_formats.validator.PyPDF2', create=True) as mock_pypdf2:
             mock_reader = Mock()
             mock_reader.pages = [Mock(), Mock()]  # 2 pages
             mock_reader.metadata = {'Title': 'Test Document'}

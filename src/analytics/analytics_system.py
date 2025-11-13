@@ -700,5 +700,79 @@ __all__ = [
     'AnalyticsDashboard'
 ]
 
+# Missing classes required by fanws.py
+class AnalyticsManager:
+    """Main analytics management class."""
+
+    def __init__(self, project_name: str = "default"):
+        self.project_name = project_name
+        self.analytics_engine = AnalyticsEngine()
+        self.session_tracker = WritingSessionTracker()
+        self.performance_analyzer = PerformanceAnalyzer()
+        self.goal_tracker = GoalTracker()
+
+    def get_analytics_dashboard(self):
+        """Get the analytics dashboard."""
+        return AnalyticsDashboard()
+
+class WritingSessionTracker:
+    """Tracks writing sessions."""
+
+    def __init__(self):
+        self.sessions = []
+
+    def start_session(self):
+        """Start a new writing session."""
+        session = WritingSession(
+            start_time=datetime.datetime.now(),
+            word_count_start=0,
+            project_name=""
+        )
+        self.sessions.append(session)
+        return session
+
+    def end_session(self, session, final_word_count):
+        """End a writing session."""
+        session.end_time = datetime.datetime.now()
+        session.word_count_end = final_word_count
+
+class PerformanceAnalyzer:
+    """Analyzes writing performance."""
+
+    def __init__(self):
+        self.metrics = []
+
+    def analyze_session(self, session):
+        """Analyze a writing session."""
+        return ProgressMetrics()
+
+    def get_performance_trends(self):
+        """Get performance trends."""
+        return []
+
+class GoalTracker:
+    """Tracks writing goals."""
+
+    def __init__(self):
+        self.goals = []
+
+    def add_goal(self, goal):
+        """Add a writing goal."""
+        self.goals.append(goal)
+
+    def get_progress(self, goal_id):
+        """Get progress on a goal."""
+        return 0.0
+
+class AnalyticsIntegration:
+    """Integration layer for analytics."""
+
+    def __init__(self, analytics_manager):
+        self.analytics_manager = analytics_manager
+
+def create_analytics_manager(project_name: str = "default") -> AnalyticsManager:
+    """Create and return an analytics manager instance."""
+    return AnalyticsManager(project_name)
+
 # Initialize logger for module
 logger.info('Analytics system module loaded successfully')

@@ -733,6 +733,10 @@ def get_db_manager(config: DatabaseConfig = None) -> DatabaseManager:
 
     return _enhanced_db_manager
 
+def get_database_manager(config: Optional[Dict] = None) -> DatabaseManager:
+    """Get or create the global database manager instance."""
+    return get_db_manager(config)
+
 # Legacy compatibility alias - now points to the main class
 class DatabaseIntegrationLayer:
     """Integration layer for database operations."""

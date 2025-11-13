@@ -18,11 +18,23 @@ if src_path not in sys.path:
 try:
     from .plugin_manager import PluginManager
     from .plugin_system import PluginType, PluginInfo
+    from ..ui.collaboration_notifications import (
+        CollaborationTrayIcon, BugReportDialog, CollaborationNotification, NotificationType,
+        create_user_joined_notification, create_version_conflict_notification,
+        create_export_complete_notification
+    )
 except ImportError:
     # Fallback for when running from different directories
     PluginManager = None
     PluginType = None
     PluginInfo = None
+    CollaborationTrayIcon = None
+    BugReportDialog = None
+    CollaborationNotification = None
+    NotificationType = None
+    create_user_joined_notification = None
+    create_version_conflict_notification = None
+    create_export_complete_notification = None
 
 class PluginManagementWidget(QWidget):
     """Widget for managing plugins in FANWS"""

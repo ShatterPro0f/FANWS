@@ -12,9 +12,10 @@ from datetime import datetime
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
+# Ensure project root is on path so imports like `from src...` work
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 
-from template_manager import (
+from src.templates.template_manager import (
     TemplateManager, CustomTemplateCreator, TemplateType, TemplateCategory,
     TemplateMetadata, ProjectTemplate, PromptTemplate, WorkflowContext,
     get_template_manager, get_custom_template_creator
@@ -353,7 +354,7 @@ class TestTemplateManager:
         assert loaded_proj['metadata']['name'] == "Persistent Project"
         assert loaded_prompt['metadata']['name'] == "Persistent Prompt"
 
-    @patch('template_manager.logger')
+    @patch('src.templates.template_manager.logger')
     def test_error_handling(self, mock_logger, temp_dir):
         """Test error handling in various scenarios"""
         manager = TemplateManager(temp_dir)
@@ -440,7 +441,7 @@ class TestCustomTemplateCreator:
         assert template['metadata']['name'] == "Project Template"
         assert template['metadata']['description'] == "Template from test project"
 
-    @patch('template_manager.logger')
+    @patch('src.templates.template_manager.logger')
     def test_create_from_project_error_handling(self, mock_logger, creator):
         """Test error handling when creating template from project"""
         # Test with non-existent project directory

@@ -629,3 +629,59 @@ def create_export_complete_notification(export_type: str, file_path: str) -> Col
         project_name="current",
         data={'export_type': export_type, 'file_path': file_path}
     )
+
+def create_collaborative_ui() -> 'CollaborativeUI':
+    """Create and return a collaborative UI instance."""
+    return CollaborativeUI()
+
+class CollaborativeUI(QWidget):
+    """Main collaborative UI widget."""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.init_ui()
+
+    def init_ui(self):
+        """Initialize the user interface."""
+        layout = QVBoxLayout(self)
+
+        # Title
+        title = QLabel("Collaborative Features")
+        title.setFont(QFont("Arial", 16, QFont.Bold))
+        layout.addWidget(title)
+
+        # Collaboration content
+        content = QTextEdit()
+        content.setPlainText("Collaborative features UI goes here...")
+        layout.addWidget(content)
+
+class CollaborativeDialog(QDialog):
+    """Dialog for collaborative features."""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Collaboration")
+        self.init_ui()
+
+    def init_ui(self):
+        """Initialize the dialog UI."""
+        layout = QVBoxLayout(self)
+        layout.addWidget(QLabel("Collaboration dialog content..."))
+
+        # OK button
+        buttons = QDialogButtonBox(QDialogButtonBox.Ok)
+        buttons.accepted.connect(self.accept)
+        layout.addWidget(buttons)
+
+class TeamMemberWidget(QWidget):
+    """Widget for displaying team member information."""
+
+    def __init__(self, member_name: str = "Unknown", parent=None):
+        super().__init__(parent)
+        self.member_name = member_name
+        self.init_ui()
+
+    def init_ui(self):
+        """Initialize the widget UI."""
+        layout = QHBoxLayout(self)
+        layout.addWidget(QLabel(f"Team Member: {self.member_name}"))

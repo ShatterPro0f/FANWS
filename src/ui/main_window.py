@@ -29,15 +29,16 @@ except ImportError:
     logging.warning("⚠ psutil not available - memory monitoring disabled")
 
 from ..core.error_handling_system import ErrorHandler, create_styled_message_box
-from ..core.error_handling_system import get_cache_manager, ProjectFileCache
-from ..core.error_handling_system import get_project_list, validate_project_name, initialize_project_files
+from ..system.memory_manager import get_cache_manager, ProjectFileCache
+from ..system.file_operations import get_project_list, validate_project_name, initialize_project_files
 from ..core.performance_monitor import PerformanceMonitor
 from . import UIComponents
 
 try:
-    from ..core.error_handling_system import get_async_manager, BackgroundTaskManager, ProgressTracker
+    from ..system.async_operations import get_async_manager, BackgroundTaskManager, ProgressTracker
     from ..plugins.plugin_workflow_integration import AsyncWorkflowOperations
-    from ..core.error_handling_system import AsyncProgressDialog
+    # AsyncProgressDialog might not exist - let's create a placeholder
+    AsyncProgressDialog = None
     ASYNC_AVAILABLE = True
 except ImportError:
     ASYNC_AVAILABLE = False

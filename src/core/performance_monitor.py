@@ -447,3 +447,97 @@ def get_performance_summary() -> Dict[str, Any]:
     """Get performance summary."""
     monitor = get_performance_monitor()
     return monitor.get_performance_summary()
+
+class MemoryProfiler:
+    """Profiles memory usage."""
+
+    def __init__(self):
+        self.memory_snapshots = []
+
+    def take_snapshot(self):
+        """Take a memory snapshot."""
+        try:
+            process = psutil.Process()
+            memory_info = process.memory_info()
+            snapshot = {
+                'timestamp': datetime.now(),
+                'rss': memory_info.rss,
+                'vms': memory_info.vms,
+                'percent': process.memory_percent()
+            }
+            self.memory_snapshots.append(snapshot)
+            return snapshot
+        except Exception as e:
+            logging.error(f"Error taking memory snapshot: {e}")
+            return None
+
+class CPUProfiler:
+    """Profiles CPU usage."""
+
+    def __init__(self):
+        self.cpu_snapshots = []
+
+    def take_snapshot(self):
+        """Take a CPU snapshot."""
+        try:
+            cpu_percent = psutil.cpu_percent(interval=1)
+            snapshot = {
+                'timestamp': datetime.now(),
+                'cpu_percent': cpu_percent,
+                'cpu_count': psutil.cpu_count()
+            }
+            self.cpu_snapshots.append(snapshot)
+            return snapshot
+        except Exception as e:
+            logging.error(f"Error taking CPU snapshot: {e}")
+            return None
+
+class NetworkMonitor:
+    """Monitors network usage."""
+
+    def __init__(self):
+        self.network_snapshots = []
+
+    def take_snapshot(self):
+        """Take a network snapshot."""
+        try:
+            net_io = psutil.net_io_counters()
+            snapshot = {
+                'timestamp': datetime.now(),
+                'bytes_sent': net_io.bytes_sent,
+                'bytes_recv': net_io.bytes_recv,
+                'packets_sent': net_io.packets_sent,
+                'packets_recv': net_io.packets_recv
+            }
+            self.network_snapshots.append(snapshot)
+            return snapshot
+        except Exception as e:
+            logging.error(f"Error taking network snapshot: {e}")
+            return None
+
+class DiskIOMonitor:
+    """Monitors disk I/O."""
+
+    def __init__(self):
+        self.disk_snapshots = []
+
+    def take_snapshot(self):
+        """Take a disk I/O snapshot."""
+        try:
+            disk_io = psutil.disk_io_counters()
+            snapshot = {
+                'timestamp': datetime.now(),
+                'read_bytes': disk_io.read_bytes,
+                'write_bytes': disk_io.write_bytes,
+                'read_count': disk_io.read_count,
+                'write_count': disk_io.write_count
+            }
+            self.disk_snapshots.append(snapshot)
+            return snapshot
+        except Exception as e:
+            logging.error(f"Error taking disk I/O snapshot: {e}")
+            return None
+
+def create_performance_monitor() -> PerformanceMonitor:
+    """Create and return a performance monitor instance."""
+    return PerformanceMonitor()

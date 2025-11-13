@@ -20,7 +20,19 @@ import concurrent.futures
 import traceback
 import hashlib
 import subprocess
-import pkg_resources
+try:
+    import importlib.metadata as metadata
+    METADATA_AVAILABLE = True
+except ImportError:
+    # Fallback to pkg_resources for older Python versions
+    try:
+        import pkg_resources
+        metadata = None
+        METADATA_AVAILABLE = False
+    except ImportError:
+        pkg_resources = None
+        metadata = None
+        METADATA_AVAILABLE = False
 
 # Plugin system configuration
 PLUGIN_API_VERSION = "1.0.0"
@@ -147,10 +159,16 @@ class PluginInterface(ABC):
                 __import__(dependency)
             return True
         except ImportError:
-            # Try using pkg_resources for package checking
+            # Try using package distribution checking
             try:
-                pkg_resources.get_distribution(dependency)
-                return True
+                if METADATA_AVAILABLE and metadata:
+                    metadata.distribution(dependency)
+                    return True
+                elif pkg_resources:
+                    pkg_resources.get_distribution(dependency)
+                    return True
+                else:
+                    return False
             except:
                 return False
 
@@ -705,9 +723,15 @@ class PluginRegistry:
                 # pip package
                 package_name = dependency[4:]
                 try:
-                    pkg_resources.get_distribution(package_name)
-                    return True
-                except pkg_resources.DistributionNotFound:
+                    if METADATA_AVAILABLE and metadata:
+                        metadata.distribution(package_name)
+                        return True
+                    elif pkg_resources:
+                        pkg_resources.get_distribution(package_name)
+                        return True
+                    else:
+                        return False
+                except Exception:
                     return False
             elif dependency.startswith('python:'):
                 # Python version requirement

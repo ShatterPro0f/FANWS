@@ -17,6 +17,7 @@ import json
 import sqlite3
 import logging
 import uuid
+import copy
 from datetime import datetime
 from typing import Dict, List, Optional, Any, Union
 from dataclasses import dataclass, field
@@ -40,6 +41,7 @@ class TemplateCategory(Enum):
     ACADEMIC = "academic"
     BUSINESS = "business"
     CREATIVE = "creative"
+    CUSTOM = "custom"
 
 class WorkflowPromptType(Enum):
     """Specific prompt types for FANWS workflow steps"""
@@ -162,8 +164,19 @@ class TemplateManager:
             settings={}
         )
 
+        # Store metadata values as JSON-serializable primitives (strings)
         self.project_templates[template_id] = {
-            'metadata': metadata.__dict__,
+            'metadata': {
+                'id': metadata.id,
+                'name': metadata.name,
+                'description': metadata.description,
+                'category': metadata.category.value if hasattr(metadata.category, 'value') else str(metadata.category),
+                'template_type': metadata.template_type.value if hasattr(metadata.template_type, 'value') else str(metadata.template_type),
+                'version': metadata.version,
+                'author': metadata.author,
+                'created_at': metadata.created_at,
+                'tags': metadata.tags
+            },
             'structure': structure,
             'files': {},
             'settings': {}
@@ -193,7 +206,17 @@ class TemplateManager:
         )
 
         self.prompt_templates[template_id] = {
-            'metadata': metadata.__dict__,
+            'metadata': {
+                'id': metadata.id,
+                'name': metadata.name,
+                'description': metadata.description,
+                'category': metadata.category.value if hasattr(metadata.category, 'value') else str(metadata.category),
+                'template_type': metadata.template_type.value if hasattr(metadata.template_type, 'value') else str(metadata.template_type),
+                'version': metadata.version,
+                'author': metadata.author,
+                'created_at': metadata.created_at,
+                'tags': metadata.tags
+            },
             'template_text': template_text,
             'variables': variables,
             'examples': []
@@ -216,8 +239,27 @@ class TemplateManager:
 
             save_dir.mkdir(exist_ok=True)
 
+            # Sanitize template_data for JSON serialization: convert Enum objects to their values
+            sanitized = copy.deepcopy(template_data)
+            metadata = sanitized.get('metadata')
+            if isinstance(metadata, dict):
+                # Convert TemplateCategory and TemplateType enums to strings when present
+                cat = metadata.get('category')
+                if hasattr(cat, 'value'):
+                    try:
+                        metadata['category'] = cat.value
+                    except Exception:
+                        metadata['category'] = str(cat)
+
+                ttype = metadata.get('template_type')
+                if hasattr(ttype, 'value'):
+                    try:
+                        metadata['template_type'] = ttype.value
+                    except Exception:
+                        metadata['template_type'] = str(ttype)
+
             with open(save_dir / f"{template_id}.json", 'w', encoding='utf-8') as f:
-                json.dump(template_data, f, indent=2, ensure_ascii=False)
+                json.dump(sanitized, f, indent=2, ensure_ascii=False)
 
         except Exception as e:
             logger.error(f"Error saving template {template_id}: {e}")
@@ -310,8 +352,19 @@ class TemplateManager:
             if not template_data:
                 return False
 
+            # Sanitize template_data for JSON serialization
+            sanitized = copy.deepcopy(template_data)
+            meta = sanitized.get('metadata', {})
+            if isinstance(meta, dict):
+                cat = meta.get('category')
+                if hasattr(cat, 'value'):
+                    meta['category'] = cat.value
+                meta_type = meta.get('template_type')
+                if hasattr(meta_type, 'value'):
+                    meta['template_type'] = meta_type.value
+
             with open(export_path, 'w', encoding='utf-8') as f:
-                json.dump(template_data, f, indent=2, ensure_ascii=False)
+                json.dump(sanitized, f, indent=2, ensure_ascii=False)
 
             return True
 
@@ -356,6 +409,11 @@ class CustomTemplateCreator:
                           description: str = "") -> Optional[str]:
         """Create template from existing project structure"""
         try:
+            # Verify project path exists
+            if not os.path.exists(project_path):
+                logger.error(f"Project path does not exist: {project_path}")
+                return None
+
             project_structure = self._analyze_project_structure(project_path)
 
             template_id = self.template_manager.create_project_template(
@@ -425,3 +483,61 @@ __all__ = [
     'get_project_templates',
     'get_template_recommendation_engine'
 ]
+
+class TemplateSystem:
+    """Main template system class."""
+
+    def __init__(self):
+        self.templates = {}
+        self.manager = TemplateManager()
+
+    def register_template(self, name: str, template: Dict[str, Any]):
+        """Register a template."""
+        self.templates[name] = template
+
+    def get_template(self, name: str) -> Optional[Dict[str, Any]]:
+        """Get a template by name."""
+        return self.templates.get(name)
+
+class TemplateCollection:
+    """Collection of templates."""
+
+    def __init__(self, name: str):
+        self.name = name
+        self.templates = []
+
+    def add_template(self, template):
+        """Add a template to the collection."""
+        self.templates.append(template)
+
+class TemplateRecommendationEngine:
+    """Template recommendation engine."""
+
+    def __init__(self):
+        self.recommendations = []
+
+    def get_recommendations(self, context: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """Get template recommendations based on context."""
+        return self.recommendations
+
+class TemplateVersionManager:
+    """Manages template versions."""
+
+    def __init__(self):
+        self.versions = {}
+
+    def create_version(self, template_id: str, version_data: Dict[str, Any]):
+        """Create a new template version."""
+        if template_id not in self.versions:
+            self.versions[template_id] = []
+        self.versions[template_id].append(version_data)
+
+def create_template_manager() -> TemplateManager:
+    """Create and return a template manager instance."""
+    return TemplateManager()
+
+class TemplateIntegration:
+    """Integration layer for templates."""
+
+    def __init__(self, template_manager):
+        self.template_manager = template_manager

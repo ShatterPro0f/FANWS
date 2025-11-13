@@ -21,8 +21,8 @@ from PyQt5.QtCore import (
 from PyQt5.QtWidgets import QProgressBar, QLabel, QWidget, QVBoxLayout, QProgressDialog
 
 from ..core.error_handling_system import ErrorHandler
-from ..core.error_handling_system import DatabaseManager
-from ..core.error_handling_system import PerformanceMonitor
+from ..database.database_manager import DatabaseManager
+from ..core.performance_monitor import PerformanceMonitor
 
 class AsyncTaskSignals(QObject):
     """Signals for async task communication."""
@@ -278,6 +278,10 @@ class BackgroundTaskManager(QObject):
 
         self.manager_stopped.emit()
         logging.info("BackgroundTaskManager stopped")
+
+    def cleanup(self):
+        """Clean up resources and stop the manager."""
+        self.stop_manager()
 
     def submit_task(self, task_func: Callable, *args, **kwargs) -> str:
         """
@@ -591,3 +595,40 @@ def cancel_background_task(task_id: str) -> bool:
     """Cancel a background task."""
     manager = get_async_manager()
     return manager.cancel_task(task_id)
+
+class AsyncManager:
+    """High-level async manager class for compatibility."""
+
+    def __init__(self):
+        self.async_manager = get_async_manager()
+
+    def submit_task(self, task_func: Callable, *args, **kwargs) -> str:
+        """Submit a task for async execution."""
+        return self.async_manager.submit_task(task_func, *args, **kwargs)
+
+    def get_task_status(self, task_id: str) -> str:
+        """Get the status of a task."""
+        return self.async_manager.get_task_status(task_id)
+
+    def cancel_task(self, task_id: str) -> bool:
+        """Cancel a running task."""
+        return self.async_manager.cancel_task(task_id)
+
+class AsyncWorkflowHandler:
+    """Handles asynchronous workflow operations."""
+
+    def __init__(self):
+        self.async_manager = get_async_manager()
+        self.active_workflows = {}
+
+    def start_workflow(self, workflow_func: Callable, *args, **kwargs) -> str:
+        """Start an asynchronous workflow."""
+        return self.async_manager.submit_task(workflow_func, *args, **kwargs)
+
+    def stop_workflow(self, workflow_id: str) -> bool:
+        """Stop a running workflow."""
+        return self.async_manager.cancel_task(workflow_id)
+
+    def get_workflow_status(self, workflow_id: str) -> str:
+        """Get the status of a workflow."""
+        return self.async_manager.get_task_status(workflow_id)

@@ -24,7 +24,7 @@ try:
     PSUTIL_AVAILABLE = True
 except ImportError:
     PSUTIL_AVAILABLE = False
-    logging.warning("⚠ psutil not available - memory monitoring disabled")
+    logging.warning("psutil not available - memory monitoring disabled")
 
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QTabWidget,
@@ -67,6 +67,7 @@ from src.ai.content_generator import (
 
 # Import UI modules (now enhanced)
 from src.ui.main_window import FANWSMainWindow, create_main_window
+from src.ui.main_gui import create_modern_gui
 try:
     from src.ui import UIComponents
 except ImportError:
@@ -263,11 +264,41 @@ except ImportError as e:
     ASYNC_OPERATIONS_AVAILABLE = False
 
 
-class FANWSWindow(FANWSMainWindow):
+class FANWSWindow(QMainWindow):
     """Main FANWS application window - focuses on application logic"""
 
     def __init__(self):
         super().__init__()
+
+        # Initialize basic attributes early to prevent AttributeError
+        self.current_project = None
+        self.current_directory = os.path.dirname(os.path.abspath(__file__))
+
+        # Create the modern GUI as the main interface
+        try:
+            self.modern_gui = create_modern_gui()
+
+            # Set up the modern GUI as the central widget
+            self.setCentralWidget(self.modern_gui)
+            self.setWindowTitle("FANWS - Fully Automated Novel Writing System")
+            self.setGeometry(100, 100, 1400, 900)
+            self.setMinimumSize(1200, 800)
+
+            # Copy over any window properties from the modern GUI
+            if hasattr(self.modern_gui, 'windowIcon'):
+                self.setWindowIcon(self.modern_gui.windowIcon())
+
+            print("✓ Modern GUI integrated successfully")
+        except Exception as e:
+            print(f"⚠ Failed to integrate modern GUI, using fallback: {e}")
+            # Fallback to basic window
+            self.modern_gui = None
+            self.setWindowTitle("FANWS - Fully Automated Novel Writing System")
+            self.setGeometry(100, 100, 1400, 900)
+            central_widget = QWidget()
+            self.setCentralWidget(central_widget)
+            layout = QVBoxLayout(central_widget)
+            layout.addWidget(QLabel("FANWS is loading..."))
 
         # Application-specific initialization
         self.initialize_application_components()
@@ -485,10 +516,10 @@ class FANWSWindow(FANWSMainWindow):
             # Check for wkhtmltopdf
             wkhtmltopdf_available = self.check_wkhtmltopdf()
             if wkhtmltopdf_available:
-                logging.info("✓ wkhtmltopdf is available for PDF generation")
+                logging.info("wkhtmltopdf is available for PDF generation")
                 self.wkhtmltopdf_available = True
             else:
-                logging.warning("⚠ wkhtmltopdf not found - PDF export may be limited")
+                logging.warning("wkhtmltopdf not found - PDF export may be limited")
                 self.wkhtmltopdf_available = False
 
             # Check for other dependencies
@@ -563,29 +594,29 @@ class FANWSWindow(FANWSMainWindow):
             # Check docx library
             try:
                 from docx import Document
-                logging.info("✓ python-docx available for DOCX export")
+                logging.info("python-docx available for DOCX export")
                 self.docx_available = True
             except ImportError:
-                logging.warning("⚠ python-docx not available - DOCX export disabled")
+                logging.warning("python-docx not available - DOCX export disabled")
                 self.docx_available = False
 
             # Check reportlab for PDF
             try:
                 from reportlab.lib.pagesizes import letter
-                logging.info("✓ ReportLab available for PDF generation")
+                logging.info("ReportLab available for PDF generation")
                 self.reportlab_available = True
             except ImportError:
-                logging.warning("⚠ ReportLab not available - basic PDF export disabled")
+                logging.warning("ReportLab not available - basic PDF export disabled")
                 self.reportlab_available = False
 
             # Check for EPUB generation dependencies
             try:
                 import zipfile
                 import xml.etree.ElementTree as ET
-                logging.info("✓ Standard library components available for EPUB generation")
+                logging.info("Standard library components available for EPUB generation")
                 self.epub_available = True
             except ImportError:
-                logging.warning("⚠ XML/ZIP libraries not available - EPUB export may be limited")
+                logging.warning("XML/ZIP libraries not available - EPUB export may be limited")
                 self.epub_available = False
 
         except Exception as e:

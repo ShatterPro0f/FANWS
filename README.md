@@ -1,5 +1,7 @@
 # Fiction AI Novel Writing Suite (FANWS)
 
+[![Tests](https://github.com/ShatterPro0f/FANWS/actions/workflows/tests.yml/badge.svg)](https://github.com/ShatterPro0f/FANWS/actions/workflows/tests.yml)
+
 **FANWS** is a comprehensive, AI-powered novel writing application designed to assist fiction authors with every aspect of the creative writing process. From initial concept to final export, FANWS provides intelligent tools, templates, and workflow management to enhance your writing productivity.
 
 ## ✨ Key Features

@@ -166,7 +166,7 @@ python run_tests.py
 # Unit tests
 python run_tests.py --type unit
 
-# Integration tests  
+# Integration tests
 python run_tests.py --type integration
 
 # UI tests
@@ -220,7 +220,7 @@ FANWS/
                "version": "1.0.0",
                "description": "Custom functionality"
            }
-       
+
        def execute(self, context):
            # Plugin logic here
            return {"success": True, "data": "result"}

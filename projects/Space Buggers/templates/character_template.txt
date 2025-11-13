@@ -1,0 +1,33 @@
+# Character Profile: [NAME]
+
+## Basic Information
+- Full Name:
+- Age:
+- Occupation:
+- Location:
+
+## Physical Description
+- Height:
+- Build:
+- Hair:
+- Eyes:
+- Notable Features:
+
+## Personality
+- Core Traits:
+- Strengths:
+- Flaws:
+- Fears:
+- Desires:
+
+## Background
+- Childhood:
+- Education:
+- Family:
+- Significant Events:
+
+## Role in Story
+- Character Arc:
+- Relationships:
+- Conflicts:
+- Growth:

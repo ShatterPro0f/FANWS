@@ -1,0 +1,13 @@
+{
+  "tone": "neutral",
+  "sub_tone": "descriptive",
+  "reading_level": "adult",
+  "perspective": "third_person",
+  "tense": "past",
+  "style_preferences": {
+    "show_vs_tell_ratio": 0.7,
+    "dialogue_frequency": "moderate",
+    "description_detail": "moderate",
+    "pacing": "moderate"
+  }
+}

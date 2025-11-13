@@ -407,7 +407,7 @@ class TestPluginRegistry:
         invalid_info.api_version = "2.0.0"
         assert registry._validate_plugin_info(invalid_info) is False
 
-    @patch('plugin_system.importlib.util.spec_from_file_location')
+    @patch('src.plugins.plugin_system.importlib.util.spec_from_file_location')
     def test_load_plugin_instance_file_not_found(self, mock_spec, registry):
         """Test loading plugin when file doesn't exist"""
         plugin_info = PluginInfo(

@@ -33,7 +33,7 @@ class TestAPIManagerIntegration:
     @pytest.fixture
     def api_manager(self, temp_cache_dir):
         """Create APIManager with temporary cache"""
-        with patch('api_manager.SQLiteCache') as mock_cache_class:
+        with patch('src.system.api_manager.SQLiteCache') as mock_cache_class:
             mock_cache = Mock()
             mock_cache_class.return_value = mock_cache
 
@@ -544,8 +544,8 @@ class TestWorkflowIntegration:
         assert content == "Generated story content from AI"
         assert len(content) > 0
 
-    @patch('api_manager.APIManager')
-    @patch('export_formats.validator.ExportValidator')
+    @patch('src.system.api_manager.APIManager')
+    @patch('src.export_formats.validator.ExportValidator')
     def test_integrated_ai_export_pipeline(self, mock_validator_class, mock_api_class, temp_dir):
         """Test integrated pipeline with mocked components"""
         # Setup mocks

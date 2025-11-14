@@ -165,6 +165,20 @@ def assert_directory_exists(dir_path):
     assert os.path.isdir(dir_path), f"Directory should exist: {dir_path}"
 
 
+# Database cleanup fixture
+@pytest.fixture(scope="function", autouse=True)
+def cleanup_database_connections():
+    """Cleanup database connections after each test"""
+    yield
+    # Cleanup after test
+    try:
+        from src.database.database_manager import _enhanced_db_manager
+        if _enhanced_db_manager is not None:
+            _enhanced_db_manager.pool._shutdown = True
+    except (ImportError, AttributeError):
+        pass
+
+
 # Provide a lightweight fallback `qtbot` fixture when `pytest-qt` is not available.
 try:
     import pytestqt

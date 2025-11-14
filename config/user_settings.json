@@ -1,0 +1,51 @@
+{
+  "ui": {
+    "theme": "light",
+    "window": {
+      "width": 1280,
+      "height": 800
+    },
+    "font": {
+      "family": "Arial",
+      "size": 12
+    }
+  },
+  "general": {
+    "autosave_interval": 60,
+    "default_project_dir": "projects"
+  },
+  "writing": {
+    "default_tone": "Professional",
+    "default_pov": "Third Limited",
+    "default_genre": "Fiction",
+    "daily_word_goal": 1000,
+    "enable_spell_check": true,
+    "enable_grammar_check": true
+  },
+  "api": {
+    "openai_key": "",
+    "anthropic_key": "",
+    "google_key": "",
+    "default_provider": "openai",
+    "default_model": "gpt-3.5-turbo",
+    "request_timeout": 30,
+    "enable_api_caching": true,
+    "cache_expiration_days": 7
+  },
+  "export": {
+    "default_format": "docx",
+    "default_export_dir": "exports",
+    "include_metadata": true,
+    "include_statistics": true
+  },
+  "performance": {
+    "connection_pool_size": 5,
+    "cache_size_mb": 100,
+    "analytics_update_interval": 5
+  },
+  "advanced": {
+    "database_path": "config/fanws.db",
+    "debug_mode": false,
+    "logging_level": "INFO"
+  }
+}

@@ -67,7 +67,7 @@ class TextAnalyzer:
                 analysis['average_sentences_per_paragraph'] = analysis['sentence_count'] / analysis['paragraph_count']
 
             # Cache result
-            self.readability_cache.put(cache_key, analysis)
+            self.readability_cache[cache_key] = analysis
 
             return analysis
 

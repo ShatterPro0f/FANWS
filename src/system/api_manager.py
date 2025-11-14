@@ -1068,6 +1068,125 @@ class APIManager(QObject):
         # In a full implementation, this would use the async worker
         return self.generate_text_openai(prompt, max_tokens, api_key)
 
+    def generate_text_ollama(self, prompt: str, max_tokens: int = 2000, 
+                            model: str = "llama2", temperature: float = 0.7,
+                            base_url: str = "http://localhost:11434") -> Dict[str, Any]:
+        """
+        Generate text using Ollama local LLM server.
+        
+        Args:
+            prompt: The text prompt to generate from
+            max_tokens: Maximum tokens to generate (Ollama uses 'num_predict')
+            model: Model name (e.g., 'llama2', 'mistral', 'codellama')
+            temperature: Sampling temperature (0.0-1.0)
+            base_url: Ollama server URL (default: http://localhost:11434)
+            
+        Returns:
+            Response dict with 'choices' key compatible with OpenAI format
+        """
+        try:
+            # Ollama API endpoint
+            endpoint = f"{base_url}/api/generate"
+            
+            # Prepare request data for Ollama
+            data = {
+                'model': model,
+                'prompt': prompt,
+                'stream': False,  # Get complete response at once
+                'options': {
+                    'num_predict': max_tokens,
+                    'temperature': temperature,
+                }
+            }
+            
+            # Make request directly (Ollama doesn't need API keys)
+            response = requests.post(
+                endpoint,
+                json=data,
+                headers={'Content-Type': 'application/json'},
+                timeout=300  # 5 minutes for long generation
+            )
+            
+            if response.status_code == 200:
+                ollama_response = response.json()
+                
+                # Convert to OpenAI-compatible format
+                openai_format = {
+                    'choices': [{
+                        'message': {
+                            'content': ollama_response.get('response', ''),
+                            'role': 'assistant'
+                        },
+                        'finish_reason': 'stop'
+                    }],
+                    'model': model,
+                    'usage': {
+                        'prompt_tokens': ollama_response.get('prompt_eval_count', 0),
+                        'completion_tokens': ollama_response.get('eval_count', 0),
+                        'total_tokens': ollama_response.get('prompt_eval_count', 0) + ollama_response.get('eval_count', 0)
+                    }
+                }
+                
+                logging.info(f"Ollama generation successful with model {model}")
+                return openai_format
+            else:
+                logging.error(f"Ollama API error: {response.status_code} - {response.text}")
+                return self._empty_response()
+                
+        except requests.exceptions.ConnectionError:
+            logging.error("Cannot connect to Ollama server. Is it running on http://localhost:11434?")
+            return self._empty_response()
+        except requests.exceptions.Timeout:
+            logging.error("Ollama request timed out after 5 minutes")
+            return self._empty_response()
+        except Exception as e:
+            logging.error(f"Ollama API error: {e}")
+            return self._empty_response()
+    
+    def _empty_response(self) -> Dict[str, Any]:
+        """Return empty response in OpenAI-compatible format"""
+        return {
+            'choices': [],
+            'error': 'API request failed'
+        }
+    
+    def check_ollama_availability(self, base_url: str = "http://localhost:11434") -> bool:
+        """
+        Check if Ollama server is available and running.
+        
+        Args:
+            base_url: Ollama server URL
+            
+        Returns:
+            True if Ollama is available, False otherwise
+        """
+        try:
+            response = requests.get(f"{base_url}/api/tags", timeout=5)
+            return response.status_code == 200
+        except Exception:
+            return False
+    
+    def list_ollama_models(self, base_url: str = "http://localhost:11434") -> List[str]:
+        """
+        List available Ollama models.
+        
+        Args:
+            base_url: Ollama server URL
+            
+        Returns:
+            List of model names
+        """
+        try:
+            response = requests.get(f"{base_url}/api/tags", timeout=5)
+            if response.status_code == 200:
+                data = response.json()
+                models = [model['name'] for model in data.get('models', [])]
+                return models
+            return []
+        except Exception as e:
+            logging.error(f"Error listing Ollama models: {e}")
+            return []
+
 # Global API manager instance
 _api_manager = None
 

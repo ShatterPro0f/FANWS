@@ -419,10 +419,19 @@ def initialize_project_files(project_name: str) -> bool:
         directories = [
             'config',           # Configuration files
             'drafts',          # Draft versions
+            'drafts/chapters', # Chapter drafts
+            'drafts/scenes',   # Scene drafts
+            'drafts/versions', # Version tracking
             'exports',         # Export outputs
+            'exports/formats', # Different export formats
             'cache',           # Cached data
             'logs',            # Project logs
+            'logs/workflow',   # Workflow execution logs
+            'logs/ai',         # AI generation logs
             'backups',         # Backup files
+            'backups/daily',   # Daily backups
+            'backups/weekly',  # Weekly backups
+            'backups/auto',    # Auto backups
             'research',        # Research materials
             'characters',      # Character development files
             'world_building',  # World building files
@@ -432,8 +441,13 @@ def initialize_project_files(project_name: str) -> bool:
             'templates',       # Project-specific templates
             'collaboration',   # Collaboration files
             'analytics',       # Writing analytics data
+            'analytics/performance',  # Performance metrics
+            'analytics/progress',     # Progress tracking
             'metadata',        # Project metadata
-            'assets'           # Images, references, etc.
+            'metadata/characters',   # Character metadata
+            'metadata/world',        # World metadata
+            'assets',          # Images, references, etc.
+            'temp'             # Temporary files
         ]
 
         for dir_name in directories:
@@ -499,19 +513,82 @@ def initialize_project_files(project_name: str) -> bool:
                 'relationship_mapping': {}
             }, indent=2),
 
+            'config/ai_generation_config.json': json.dumps({
+                'last_ai_provider': 'openai',  # Per-project: last used provider
+                'preferred_provider': None,     # Per-project: preferred provider for this novel
+                'generation_history': [],       # Per-project: track what was generated
+                'ai_settings': {
+                    'temperature': 0.7,         # Per-project: preferred temperature
+                    'max_tokens': 2000,         # Per-project: preferred max tokens
+                    'model_preference': None    # Per-project: preferred model (e.g., 'llama2', 'gpt-4')
+                },
+                'content_customization': {
+                    'style_instructions': '',   # Per-project: custom style instructions
+                    'avoid_topics': [],         # Per-project: topics to avoid
+                    'emphasize_topics': []      # Per-project: topics to emphasize
+                },
+                'approval_workflow': {
+                    'auto_approve_synopsis': False,
+                    'auto_approve_outline': False,
+                    'auto_approve_sections': False,
+                    'require_review': True
+                }
+            }, indent=2),
+
+            'config/workflow_config.json': json.dumps({
+                'workflow_version': '1.0',
+                'total_chapters': 25,
+                'sections_per_chapter': 5,
+                'words_per_section': 1000,
+                'current_chapter': 1,
+                'current_section': 1,
+                'workflow_state': 'initialized',
+                'completed_steps': [],
+                'pending_approvals': [],
+                'last_checkpoint': None
+            }, indent=2),
+
             # Analytics and tracking files
             'analytics/writing_sessions.json': json.dumps({
                 'sessions': [],
                 'total_writing_time': 0,
                 'average_words_per_minute': 0,
-                'productive_hours': []
+                'productive_hours': [],
+                'session_statistics': {
+                    'total_sessions': 0,
+                    'longest_session': 0,
+                    'most_productive_day': None,
+                    'consistency_score': 0
+                }
             }, indent=2),
 
             'analytics/progress_tracking.json': json.dumps({
                 'daily_word_counts': {},
                 'chapter_completion_dates': {},
                 'revision_history': [],
-                'milestone_dates': {}
+                'milestone_dates': {},
+                'word_count_history': [],
+                'velocity_metrics': {
+                    'current_velocity': 0,
+                    'average_velocity': 0,
+                    'projected_completion': None
+                }
+            }, indent=2),
+
+            'analytics/ai_usage.json': json.dumps({
+                'total_generations': 0,
+                'provider_usage': {
+                    'openai': 0,
+                    'ollama': 0
+                },
+                'generation_stats': {
+                    'synopsis_generations': 0,
+                    'outline_generations': 0,
+                    'character_generations': 0,
+                    'section_generations': 0
+                },
+                'quality_ratings': [],
+                'refinement_requests': 0
             }, indent=2),
 
             # Collaboration files
@@ -533,7 +610,25 @@ def initialize_project_files(project_name: str) -> bool:
                 'last_backup': None,
                 'backup_frequency': 'daily',
                 'backup_retention': 30,
-                'auto_backup_enabled': True
+                'auto_backup_enabled': True,
+                'backup_locations': []
+            }, indent=2),
+
+            'metadata/project_info.json': json.dumps({
+                'project_id': project_name,
+                'created_date': datetime.now().isoformat(),
+                'last_accessed': datetime.now().isoformat(),
+                'total_edits': 0,
+                'contributors': [],
+                'project_notes': ''
+            }, indent=2),
+
+            'metadata/workflow_state.json': json.dumps({
+                'current_workflow': None,
+                'workflow_progress': 0,
+                'last_step_completed': None,
+                'next_step': 'initialization',
+                'checkpoints': []
             }, indent=2),
 
             # Template files
@@ -541,12 +636,18 @@ def initialize_project_files(project_name: str) -> bool:
 
             'templates/character_template.txt': '# Character Profile: [NAME]\n\n## Basic Information\n- Full Name:\n- Age:\n- Occupation:\n- Location:\n\n## Physical Description\n- Height:\n- Build:\n- Hair:\n- Eyes:\n- Notable Features:\n\n## Personality\n- Core Traits:\n- Strengths:\n- Flaws:\n- Fears:\n- Desires:\n\n## Background\n- Childhood:\n- Education:\n- Family:\n- Significant Events:\n\n## Role in Story\n- Character Arc:\n- Relationships:\n- Conflicts:\n- Growth:\n',
 
+            'templates/scene_template.txt': '# Scene: [NAME]\n\n## Scene Purpose\n- Plot advancement:\n- Character development:\n- Theme exploration:\n\n## Setting\n- Location:\n- Time:\n- Atmosphere:\n\n## Characters Present\n- \n\n## Key Events\n- \n\n## Conflicts/Tension\n- \n\n## Outcome\n- \n\n---\n\n[Scene content...]\n',
+
             # Notes and development files
             'notes/ideas.txt': '# Story Ideas and Inspiration\n\n## Random Ideas\n\n## "What If" Questions\n\n## Inspiration Sources\n\n## Future Story Possibilities\n',
 
             'notes/revision_notes.txt': '# Revision Notes\n\n## First Draft Issues\n\n## Plot Holes to Fix\n\n## Character Inconsistencies\n\n## Pacing Issues\n\n## Feedback to Address\n',
 
             'notes/worldbuilding_details.txt': '# Detailed World Building\n\n## Geography\n\n## Climate and Weather\n\n## Flora and Fauna\n\n## Resources and Economy\n\n## Politics and Government\n\n## Religion and Beliefs\n\n## Technology and Magic\n\n## Social Customs\n',
+
+            # Logs
+            'logs/workflow.log': f'# Workflow Log - {project_name}\nProject initialized: {datetime.now().isoformat()}\n',
+            'logs/ai_calls.log': f'# AI API Call Log - {project_name}\nLog initialized: {datetime.now().isoformat()}\n',
 
             # Legacy compatibility
             'config.json': json.dumps({
@@ -563,7 +664,7 @@ def initialize_project_files(project_name: str) -> bool:
                 os.makedirs(os.path.dirname(filepath), exist_ok=True)
                 save_to_file(filepath, content)
 
-        logging.info(f"Initialized comprehensive project structure for {project_name}")
+        logging.info(f"Initialized comprehensive project structure for {project_name} with {len(directories)} directories and {len(initial_files)} files")
         return True
     except Exception as e:
         logging.error(f"Failed to initialize project files for {project_name}: {str(e)}")

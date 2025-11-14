@@ -3151,10 +3151,20 @@ if __name__ == "__main__":
         # Setup error handling
         ErrorHandler.setup_logging()
 
-        app = QApplication(sys.argv)
-        window = FANWSWindow()
-        window.show()
-        sys.exit(app.exec_())
+        # Check for automated novel mode
+        if len(sys.argv) > 1 and sys.argv[1] == "--automated-novel":
+            # Launch automated novel writing GUI
+            from src.ui.automated_novel_gui import AutomatedNovelGUI
+            app = QApplication(sys.argv)
+            window = AutomatedNovelGUI()
+            window.show()
+            sys.exit(app.exec_())
+        else:
+            # Launch standard FANWS GUI
+            app = QApplication(sys.argv)
+            window = FANWSWindow()
+            window.show()
+            sys.exit(app.exec_())
     except Exception as e:
         print(f"Error starting FANWS: {e}")
         logging.error(f"Application startup failed: {e}")

@@ -11,6 +11,7 @@
 - **Intelligent Content Generation** - Characters, plot points, world-building, and narrative sections
 - **Dynamic Template System** - Genre-specific templates for fantasy, mystery, romance, sci-fi, and more
 - **Context-Aware Suggestions** - AI learns from your writing style and project history
+- **🆕 Automated Novel Writing** - Complete novel generation from concept to 200,000+ words with minimal input
 
 ### 📚 Comprehensive Project Management
 - **Multi-Project Workspace** - Manage multiple novels simultaneously
@@ -41,6 +42,7 @@
 - **Performance Monitoring** - Real-time performance tracking and optimization
 - **System Tray Integration** - Background notifications and status monitoring
 - **Analytics Dashboard** - Writing progress, productivity insights, and goal tracking
+- **🆕 Automated Novel GUI** - Specialized interface for automated novel generation
 
 ## 🚀 Installation
 
@@ -68,6 +70,11 @@
    python fanws.py
    ```
 
+4. **Run Automated Novel Writer** (New!)
+   ```bash
+   python fanws.py --automated-novel
+   ```
+
 ### Advanced Installation
 
 For development or testing purposes:
@@ -84,6 +91,19 @@ python fanws.py --enable-collaboration
 ```
 
 ## 📖 Usage
+
+### Automated Novel Writing (New!)
+
+Generate complete novels with minimal input:
+
+1. **Launch Automated Mode** - Run `python fanws.py --automated-novel`
+2. **Enter Your Idea** - Describe your novel concept
+3. **Set Tone & Target** - Specify tone and target word count
+4. **Review & Approve** - Review and approve synopsis, outline, characters, world-building
+5. **Monitor Progress** - Watch real-time generation with automatic section creation
+6. **Export** - Export finished novel in DOCX, PDF, or TXT format
+
+See the [Automated Novel Writing Guide](docs/AUTOMATED_NOVEL_GUIDE.md) for detailed instructions.
 
 ### Creating Your First Project
 

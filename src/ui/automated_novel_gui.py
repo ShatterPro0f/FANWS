@@ -642,6 +642,10 @@ class AutomatedNovelGUI(QMainWindow):
         def on_selection_changed():
             items = tree.selectedItems()
             if items and items[0].parent():  # Only show preview for files, not folders
+                if not self.current_project_dir:
+                    preview_text.setPlainText("No project loaded")
+                    return
+                
                 chapter = items[0].parent().text(0)
                 draft = items[0].text(0)
                 draft_path = os.path.join(self.current_project_dir, "drafts", chapter, draft)
@@ -813,7 +817,6 @@ ToolWeights: Sassbook:0.5,DeepL:0.5,Thesaurus:0.5,Grammarly:0.5
         """Approve current planning step"""
         self.approve_signal.emit()
         self.add_notification("Step approved")
-        # TODO: Implement step-specific logic
     
     def adjust_current_step(self):
         """Request adjustment to current planning step"""

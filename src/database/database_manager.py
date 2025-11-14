@@ -144,6 +144,7 @@ class ConnectionPool:
         self.active_connections = weakref.WeakSet()
         self.total_connections = 0
         self.pool_lock = threading.Lock()
+        self._shutdown = False
         self.metrics = {
             'connections_created': 0,
             'connections_reused': 0,
@@ -247,10 +248,11 @@ class ConnectionPool:
 
     def _health_check_loop(self):
         """Background health check for connections."""
-        while True:
+        while not self._shutdown:
             try:
                 time.sleep(60)  # Check every minute
-                self._perform_health_check()
+                if not self._shutdown:
+                    self._perform_health_check()
             except Exception as e:
                 logging.error(f"Health check error: {e}")
 
@@ -295,6 +297,9 @@ class ConnectionPool:
 
     def close_all(self):
         """Close all connections in the pool."""
+        # Signal shutdown to health check thread
+        self._shutdown = True
+        
         # Close connections in pool
         while True:
             try:
@@ -309,6 +314,10 @@ class ConnectionPool:
 
         with self.pool_lock:
             self.total_connections = 0
+        
+        # Wait for health check thread to finish
+        if self.health_check_thread.is_alive():
+            self.health_check_thread.join(timeout=2)
 
 class DatabaseMigration:
     """Database migration management."""

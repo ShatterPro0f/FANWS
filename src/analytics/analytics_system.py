@@ -741,6 +741,7 @@ class PerformanceAnalyzer:
 
     def __init__(self):
         self.metrics = []
+        self.sessions = []
 
     def analyze_session(self, session):
         """Analyze a writing session."""
@@ -749,6 +750,66 @@ class PerformanceAnalyzer:
     def get_performance_trends(self):
         """Get performance trends."""
         return []
+    
+    def analyze_writing_patterns(self, user_id: str = "default") -> WritingPattern:
+        """Analyze user writing patterns from collected sessions.
+        
+        Args:
+            user_id: User identifier for pattern tracking
+            
+        Returns:
+            WritingPattern object containing analyzed patterns
+        """
+        pattern = WritingPattern(user_id=user_id)
+        
+        if not self.sessions:
+            return pattern
+        
+        try:
+            # Analyze peak hours - when user writes most
+            hours = [s.start_time.hour for s in self.sessions if hasattr(s, 'start_time')]
+            if hours:
+                hour_counts = {}
+                for hour in hours:
+                    hour_counts[hour] = hour_counts.get(hour, 0) + 1
+                
+                # Find top 3 peak hours
+                sorted_hours = sorted(hour_counts.items(), key=lambda x: x[1], reverse=True)
+                pattern.peak_hours = [hour for hour, count in sorted_hours[:3]]
+            
+            # Analyze productive days of week
+            days = [s.start_time.strftime('%A') for s in self.sessions if hasattr(s, 'start_time')]
+            if days:
+                day_counts = {}
+                for day in days:
+                    day_counts[day] = day_counts.get(day, 0) + 1
+                
+                sorted_days = sorted(day_counts.items(), key=lambda x: x[1], reverse=True)
+                pattern.productive_days = [day for day, count in sorted_days[:3]]
+            
+            # Calculate average session length
+            durations = [s.duration_minutes for s in self.sessions 
+                        if hasattr(s, 'duration_minutes') and s.duration_minutes > 0]
+            if durations:
+                pattern.average_session_length = statistics.mean(durations)
+            
+            # Calculate preferred word count range
+            word_counts = [s.word_count for s in self.sessions 
+                          if hasattr(s, 'word_count') and s.word_count > 0]
+            if word_counts and len(word_counts) > 1:
+                mean_words = statistics.mean(word_counts)
+                stdev_words = statistics.stdev(word_counts)
+                pattern.preferred_word_count_range = (
+                    int(mean_words - stdev_words),
+                    int(mean_words + stdev_words)
+                )
+            elif word_counts:
+                pattern.preferred_word_count_range = (word_counts[0], word_counts[0])
+                
+        except Exception as e:
+            logger.warning(f"Error analyzing writing patterns: {e}")
+        
+        return pattern
 
 class GoalTracker:
     """Tracks writing goals."""
@@ -756,13 +817,62 @@ class GoalTracker:
     def __init__(self):
         self.goals = []
 
-    def add_goal(self, goal):
-        """Add a writing goal."""
+    def add_goal(self, goal: WritingGoal) -> str:
+        """Add a writing goal.
+        
+        Args:
+            goal: WritingGoal object to track
+            
+        Returns:
+            Goal ID (index as string)
+        """
         self.goals.append(goal)
+        return str(len(self.goals) - 1)
 
-    def get_progress(self, goal_id):
-        """Get progress on a goal."""
+    def get_progress(self, goal_id: int) -> float:
+        """Get progress on a goal.
+        
+        Args:
+            goal_id: Index of the goal
+            
+        Returns:
+            Progress percentage (0.0 to 100.0)
+        """
+        try:
+            if 0 <= goal_id < len(self.goals):
+                goal = self.goals[goal_id]
+                return goal.progress_percentage
+        except Exception as e:
+            logger.warning(f"Error getting goal progress: {e}")
         return 0.0
+    
+    def update_goal_progress(self, goal_id: int, current_value: int) -> bool:
+        """Update progress on a goal.
+        
+        Args:
+            goal_id: Index of the goal to update
+            current_value: New current value for the goal
+            
+        Returns:
+            True if update successful, False otherwise
+        """
+        try:
+            if 0 <= goal_id < len(self.goals):
+                goal = self.goals[goal_id]
+                goal.current_value = current_value
+                
+                # Check if goal is now completed
+                if goal.is_completed and goal.is_active:
+                    logger.info(f"Goal '{goal.name}' completed! Target: {goal.target_value}, Current: {goal.current_value}")
+                
+                return True
+            else:
+                logger.warning(f"Invalid goal_id: {goal_id}")
+                return False
+                
+        except Exception as e:
+            logger.error(f"Error updating goal progress: {e}")
+            return False
 
 class AnalyticsIntegration:
     """Integration layer for analytics."""

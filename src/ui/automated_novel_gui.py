@@ -89,6 +89,7 @@ class AutomatedNovelGUI(QMainWindow):
         self.current_step = "initialization"
         self.workflow_thread = None
         self.is_paused = False
+        self.is_dark_theme = True  # Track current theme
         
         # Setup UI
         self.init_ui()
@@ -446,7 +447,6 @@ class AutomatedNovelGUI(QMainWindow):
     def show_story(self):
         """Show story content"""
         self.set_active_nav_button("Story")
-        # TODO: Load and display story.txt
         self.update_central_panel_with_file("story.txt", "Story Content")
     
     def show_logs(self):
@@ -477,8 +477,7 @@ class AutomatedNovelGUI(QMainWindow):
     def show_drafts(self):
         """Show drafts tree view"""
         self.set_active_nav_button("Drafts")
-        # TODO: Implement tree view of drafts folder
-        QMessageBox.information(self, "Drafts", "Drafts viewer coming soon.")
+        self.update_central_panel_with_drafts_tree()
     
     def set_active_nav_button(self, name):
         """Set active state for navigation button"""
@@ -568,6 +567,98 @@ class AutomatedNovelGUI(QMainWindow):
         # Replace current central tab
         self.central_tabs.clear()
         self.central_tabs.addTab(widget, title)
+    
+    def update_central_panel_with_drafts_tree(self):
+        """Update central panel to show drafts in a tree view"""
+        widget = QWidget()
+        layout = QVBoxLayout(widget)
+        
+        title_label = QLabel("Draft Versions")
+        title_label.setFont(QFont("Arial", 16, QFont.Bold))
+        layout.addWidget(title_label)
+        
+        # Create tree widget
+        tree = QTreeWidget()
+        tree.setHeaderLabels(["Draft", "Size", "Modified"])
+        tree.setColumnWidth(0, 300)
+        
+        # Load drafts from project directory
+        if self.current_project_dir:
+            drafts_dir = os.path.join(self.current_project_dir, "drafts")
+            if os.path.exists(drafts_dir) and os.path.isdir(drafts_dir):
+                try:
+                    # List all chapter folders
+                    chapters = sorted([d for d in os.listdir(drafts_dir) 
+                                     if os.path.isdir(os.path.join(drafts_dir, d))])
+                    
+                    for chapter in chapters:
+                        chapter_path = os.path.join(drafts_dir, chapter)
+                        chapter_item = QTreeWidgetItem([chapter, "", ""])
+                        
+                        # List all draft files in chapter
+                        drafts = sorted([f for f in os.listdir(chapter_path) 
+                                       if os.path.isfile(os.path.join(chapter_path, f))])
+                        
+                        for draft in drafts:
+                            draft_path = os.path.join(chapter_path, draft)
+                            # Get file stats
+                            stat = os.stat(draft_path)
+                            size = f"{stat.st_size} bytes"
+                            modified = datetime.fromtimestamp(stat.st_mtime).strftime("%Y-%m-%d %H:%M")
+                            
+                            draft_item = QTreeWidgetItem([draft, size, modified])
+                            chapter_item.addChild(draft_item)
+                        
+                        tree.addTopLevelItem(chapter_item)
+                        chapter_item.setExpanded(True)
+                    
+                    if not chapters:
+                        info_item = QTreeWidgetItem(["No drafts found", "", ""])
+                        tree.addTopLevelItem(info_item)
+                        
+                except Exception as e:
+                    error_item = QTreeWidgetItem([f"Error loading drafts: {str(e)}", "", ""])
+                    tree.addTopLevelItem(error_item)
+            else:
+                info_item = QTreeWidgetItem(["Drafts folder not found", "", ""])
+                tree.addTopLevelItem(info_item)
+        else:
+            info_item = QTreeWidgetItem(["No project loaded", "", ""])
+            tree.addTopLevelItem(info_item)
+        
+        layout.addWidget(tree)
+        
+        # Add text preview area
+        preview_label = QLabel("Preview:")
+        preview_label.setFont(QFont("Arial", 12, QFont.Bold))
+        layout.addWidget(preview_label)
+        
+        preview_text = QTextEdit()
+        preview_text.setReadOnly(True)
+        preview_text.setMaximumHeight(200)
+        layout.addWidget(preview_text)
+        
+        # Connect tree selection to preview
+        def on_selection_changed():
+            items = tree.selectedItems()
+            if items and items[0].parent():  # Only show preview for files, not folders
+                chapter = items[0].parent().text(0)
+                draft = items[0].text(0)
+                draft_path = os.path.join(self.current_project_dir, "drafts", chapter, draft)
+                if os.path.exists(draft_path):
+                    try:
+                        with open(draft_path, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                        # Show first 500 characters
+                        preview_text.setPlainText(content[:500] + ("..." if len(content) > 500 else ""))
+                    except Exception as e:
+                        preview_text.setPlainText(f"Error loading preview: {str(e)}")
+        
+        tree.itemSelectionChanged.connect(on_selection_changed)
+        
+        # Replace current central tab
+        self.central_tabs.clear()
+        self.central_tabs.addTab(widget, "Draft Versions")
     
     # ============ Workflow Methods ============
     
@@ -734,13 +825,11 @@ ToolWeights: Sassbook:0.5,DeepL:0.5,Thesaurus:0.5,Grammarly:0.5
         if ok and text:
             self.adjust_signal.emit(text)
             self.add_notification("Adjustment requested")
-            # TODO: Implement adjustment logic
     
     def approve_section(self):
         """Approve current section"""
         self.approve_signal.emit()
         self.add_notification("Section approved")
-        # TODO: Move to next section
     
     def adjust_section(self):
         """Request adjustment to current section"""
@@ -752,7 +841,6 @@ ToolWeights: Sassbook:0.5,DeepL:0.5,Thesaurus:0.5,Grammarly:0.5
         if ok and text:
             self.adjust_signal.emit(text)
             self.add_notification("Section adjustment requested")
-            # TODO: Implement adjustment logic
     
     def pause_workflow(self):
         """Pause the workflow"""
@@ -927,8 +1015,11 @@ ToolWeights: Sassbook:0.5,DeepL:0.5,Thesaurus:0.5,Grammarly:0.5
     
     def toggle_theme(self):
         """Toggle between dark and light themes"""
-        # TODO: Implement theme toggle
-        QMessageBox.information(self, "Theme", "Theme toggle coming soon.")
+        self.is_dark_theme = not self.is_dark_theme
+        if self.is_dark_theme:
+            self.apply_dark_theme()
+        else:
+            self.apply_light_theme()
     
     def show_user_guide(self):
         """Show user guide"""
@@ -962,6 +1053,117 @@ FANWS - Automated Novel-Writing System User Guide
    - File > Export Novel to save as DOCX, PDF, or TXT
         """
         QMessageBox.information(self, "User Guide", guide_text)
+    
+    def apply_light_theme(self):
+        """Apply light theme styling"""
+        light_stylesheet = """
+        QMainWindow {
+            background-color: #ffffff;
+            color: #212121;
+        }
+        QWidget {
+            background-color: #ffffff;
+            color: #212121;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 11pt;
+        }
+        QFrame {
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+        }
+        QPushButton {
+            background-color: #f5f5f5;
+            color: #212121;
+            border: 1px solid #bdbdbd;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        QPushButton:hover {
+            background-color: #e0e0e0;
+        }
+        QPushButton:pressed {
+            background-color: #d0d0d0;
+        }
+        QPushButton[class="nav-button"] {
+            background-color: transparent;
+            color: #212121;
+            text-align: left;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 0px;
+        }
+        QPushButton[class="nav-button"]:hover {
+            background-color: #e3f2fd;
+        }
+        QPushButton[active="true"] {
+            background-color: #2196F3;
+            color: white;
+        }
+        QTextEdit, QLineEdit, QSpinBox {
+            background-color: #ffffff;
+            color: #212121;
+            border: 1px solid #bdbdbd;
+            padding: 4px;
+        }
+        QLabel {
+            background-color: transparent;
+            color: #212121;
+        }
+        QGroupBox {
+            border: 1px solid #bdbdbd;
+            border-radius: 4px;
+            margin-top: 8px;
+            padding-top: 8px;
+            font-weight: bold;
+        }
+        QGroupBox::title {
+            subcontrol-origin: margin;
+            subcontrol-position: top left;
+            padding: 0 3px;
+        }
+        QProgressBar {
+            border: 1px solid #bdbdbd;
+            border-radius: 4px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        QProgressBar::chunk {
+            background-color: #2196F3;
+        }
+        QMenuBar {
+            background-color: #f5f5f5;
+            color: #212121;
+        }
+        QMenuBar::item:selected {
+            background-color: #e0e0e0;
+        }
+        QMenu {
+            background-color: #ffffff;
+            color: #212121;
+            border: 1px solid #bdbdbd;
+        }
+        QMenu::item:selected {
+            background-color: #e0e0e0;
+        }
+        QStatusBar {
+            background-color: #f5f5f5;
+            color: #212121;
+        }
+        QTabWidget::pane {
+            border: 1px solid #bdbdbd;
+            background-color: #ffffff;
+        }
+        QTabBar::tab {
+            background-color: #f5f5f5;
+            color: #212121;
+            padding: 8px 16px;
+            border: 1px solid #bdbdbd;
+        }
+        QTabBar::tab:selected {
+            background-color: #e0e0e0;
+        }
+        """
+        self.setStyleSheet(light_stylesheet)
     
     def apply_dark_theme(self):
         """Apply dark theme styling"""

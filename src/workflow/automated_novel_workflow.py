@@ -46,13 +46,20 @@ class AutomatedNovelWorkflowThread(QThread):
     waiting_approval = pyqtSignal(str)  # Waiting for user approval (step name)
     workflow_completed = pyqtSignal()  # Workflow complete
     
-    def __init__(self, project_dir: str, idea: str, tone: str, target_words: int):
+    def __init__(self, project_dir: str, idea: str, tone: str, target_words: int, 
+                 ai_provider: str = "openai", ollama_model: str = "llama2", 
+                 ollama_url: str = "http://localhost:11434"):
         super().__init__()
         
         self.project_dir = project_dir
         self.idea = idea
         self.tone = tone
         self.target_words = target_words
+        
+        # AI provider configuration
+        self.ai_provider = ai_provider  # "openai" or "ollama"
+        self.ollama_model = ollama_model
+        self.ollama_url = ollama_url
         
         # Workflow state
         self.current_step = "initialization"
@@ -75,9 +82,24 @@ class AutomatedNovelWorkflowThread(QThread):
         # Initialize API manager for AI integration
         if API_MANAGER_AVAILABLE:
             self.api_manager = get_api_manager()
+            
+            # Check Ollama availability if selected
+            if self.ai_provider == "ollama":
+                if self.api_manager.check_ollama_availability(self.ollama_url):
+                    models = self.api_manager.list_ollama_models(self.ollama_url)
+                    self.log(f"Ollama connected. Available models: {', '.join(models)}")
+                    if self.ollama_model not in models:
+                        self.log(f"Warning: Model '{self.ollama_model}' not found. Using first available.")
+                        if models:
+                            self.ollama_model = models[0]
+                else:
+                    self.log(f"Warning: Ollama server not available at {self.ollama_url}")
+                    self.log("Falling back to simulation mode")
+                    self.ai_provider = "simulation"
         else:
             self.api_manager = None
             self.log("Warning: API manager not available - using simulation mode")
+            self.ai_provider = "simulation"
         
     def run(self):
         """Main workflow execution"""
@@ -165,17 +187,12 @@ The synopsis should be 500-1000 words and include:
 
 Write the synopsis in a {self.tone} tone and make it compelling for readers."""
 
-            # Call OpenAI API through API manager
-            self.log("Calling AI API for synopsis generation...")
-            response = self.api_manager.generate_text_openai(
-                prompt=prompt,
-                max_tokens=1500,
-                temperature=0.7
-            )
+            # Call AI API (works with both OpenAI and Ollama)
+            response = self.call_ai_api(prompt, max_tokens=1500, temperature=0.7)
             
             if response and 'choices' in response and len(response['choices']) > 0:
                 synopsis = response['choices'][0]['message']['content'].strip()
-                self.log("AI synopsis generated successfully")
+                self.log(f"AI synopsis generated successfully ({self.ai_provider})")
                 return synopsis
             else:
                 self.log("AI API returned empty response - using fallback")
@@ -223,7 +240,7 @@ User Feedback:
 
 Please revise the synopsis to address the feedback while maintaining coherence and quality."""
 
-                response = self.api_manager.generate_text_openai(
+                response = self.call_ai_api(
                     prompt=prompt,
                     max_tokens=1500,
                     temperature=0.7
@@ -292,16 +309,12 @@ Generate an outline with {self.total_chapters} chapters. For each chapter, provi
 
 Format each chapter clearly and maintain narrative flow."""
 
-            self.log("Calling AI API for outline generation...")
-            response = self.api_manager.generate_text_openai(
-                prompt=prompt,
-                max_tokens=3000,
-                temperature=0.7
-            )
+            # Call AI API (works with both OpenAI and Ollama)
+            response = self.call_ai_api(prompt, max_tokens=3000, temperature=0.7)
             
             if response and 'choices' in response:
                 outline = response['choices'][0]['message']['content'].strip()
-                self.log("AI outline generated successfully")
+                self.log(f"AI outline generated successfully ({self.ai_provider})")
                 return outline
             else:
                 return self.simulate_outline_generation()
@@ -374,7 +387,7 @@ Generate 3-5 main characters in JSON format. For each character include:
 Return as a JSON array of character objects."""
 
             self.log("Calling AI API for character generation...")
-            response = self.api_manager.generate_text_openai(
+            response = self.call_ai_api(
                 prompt=prompt,
                 max_tokens=2000,
                 temperature=0.7
@@ -479,7 +492,7 @@ Create world-building in JSON format with these categories:
 Return as a JSON object with detailed descriptions."""
 
             self.log("Calling AI API for world-building generation...")
-            response = self.api_manager.generate_text_openai(
+            response = self.call_ai_api(
                 prompt=prompt,
                 max_tokens=2000,
                 temperature=0.7
@@ -652,7 +665,7 @@ Write a compelling section of 800-1200 words that:
 Write only the prose content, no meta-commentary."""
 
             self.log(f"Calling AI API for section {chapter}.{section} generation...")
-            response = self.api_manager.generate_text_openai(
+            response = self.call_ai_api(
                 prompt=prompt,
                 max_tokens=2000,
                 temperature=0.8  # Slightly higher for creative writing
@@ -823,9 +836,61 @@ timeline. Each section builds upon the previous one, creating a cohesive whole.
         """Stop workflow"""
         self.should_stop = True
         self.log("Workflow stopped")
+    
+    def call_ai_api(self, prompt: str, max_tokens: int = 2000, temperature: float = 0.7) -> Dict[str, Any]:
+        """
+        Call AI API based on selected provider (OpenAI or Ollama).
+        
+        Args:
+            prompt: The prompt to send
+            max_tokens: Maximum tokens to generate
+            temperature: Sampling temperature
+            
+        Returns:
+            Response dict in OpenAI-compatible format
+        """
+        if not self.api_manager:
+            return {'choices': []}
+        
+        try:
+            if self.ai_provider == "ollama":
+                self.log(f"Calling Ollama ({self.ollama_model})...")
+                response = self.api_manager.generate_text_ollama(
+                    prompt=prompt,
+                    max_tokens=max_tokens,
+                    model=self.ollama_model,
+                    temperature=temperature,
+                    base_url=self.ollama_url
+                )
+                return response
+                
+            elif self.ai_provider == "openai":
+                self.log("Calling OpenAI...")
+                # Use OpenAI API
+                response = self.call_ai_api(
+                    prompt=prompt,
+                    max_tokens=max_tokens,
+                    temperature=temperature
+                )
+                return response
+            
+            else:
+                # Unknown provider
+                return {'choices': []}
+                
+        except Exception as e:
+            self.log(f"Error calling AI API: {str(e)}")
+            return {'choices': []}
 
 
 # Factory function
-def create_workflow_thread(project_dir: str, idea: str, tone: str, target_words: int):
-    """Create workflow thread instance"""
-    return AutomatedNovelWorkflowThread(project_dir, idea, tone, target_words)
+def create_workflow_thread(project_dir: str, idea: str, tone: str, target_words: int,
+                          ai_provider: str = "openai", ollama_model: str = "llama2",
+                          ollama_url: str = "http://localhost:11434"):
+    """Create workflow thread instance with AI provider configuration"""
+    return AutomatedNovelWorkflowThread(
+        project_dir, idea, tone, target_words,
+        ai_provider=ai_provider,
+        ollama_model=ollama_model,
+        ollama_url=ollama_url
+    )

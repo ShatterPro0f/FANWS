@@ -328,7 +328,13 @@ class APIManager(QObject):
         """Initialize API manager."""
         super().__init__()
 
-        self.db_manager = DatabaseManager()
+        try:
+            self.db_manager = DatabaseManager('config/fanws.db', pool_size=5)
+        except TypeError:
+            # If DatabaseManager requires different arguments, create without parameters
+            self.db_manager = None
+            logging.warning("Could not initialize database manager for API manager")
+        
         self.memory_cache = MemoryCache()  # In-memory cache wrapper
         self.sqlite_cache = SQLiteCache()  # New SQLite cache with compression
         self.rate_limiters = {}
